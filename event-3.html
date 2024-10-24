@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <title>TEDxTabaryElHegaz</title>
+    <link rel="stylesheet" href="Tedx CSS v1.1.css"/>
+    <link rel="stylesheet" href="web javascript.js"/>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Noto+Sans+Arabic:wght@500&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--Header-->
+    <div class="fixed">
+    <div class="header">
+        <a href="index.html">
+            <img class="logo" src="images/tedx.png" alt="Logo">
+        </a>
+        <div class="header-links"> 
+            <a href="index.html" class="link" data-en="Home" data-ar="الرئيسية" >الرئيسية</a>
+            <a href="more-speakers.html" class="link" data-en="Speakers" data-ar="المتحدثون">المتحدثون</a>
+            <a href="event-3.html" class="link active" data-en="Events" data-ar="الفعاليات">الفعاليات</a>
+            <a href="#" class="link" data-en="Contacts" data-ar="اتصل بنا">اتصل بنا</a>
+            <button id="language-toggle" class="btn_lang">AR</button>
+        </div>
+    </div>
+</div>
+<div class="margintop"></div>
+    <div class=" margintop events-container">
+            <div class="arabic-content" style="display: none;">
+                <span>الموسم 3</span>
+                <div class="EventsHeader">
+                    <h1>تسجيل الحدث</h1>
+                </div>
+            </div>
+            <div class="english-content">
+                <span>Season 3</span>
+                <div class="EventsHeader">
+                    <h1>Event Registeration</h1>
+                </div>
+            </div>
+    <div class="events-container">
+        <span class="section-title content arabic-content" style="display: none;">حجز تذكرة</span>
+        <span class="section-title content english-content">Book A Ticket</span>
+        <div class="contact">
+            <form action="" method="POST" name="registerform">
+                <div class="form-row">
+                    <label for="name" class="content arabic-content" style="display: none;">الاسم ثلاثيا: </label>
+                    <label for="name" class="content english-content">Name:</label>
+                    <input class="cont-input" type="text" id="Name" name="Name" required>
+                </div>
+                <div class="form-row">
+                    <label for="email" class="content arabic-content" style="display: none;">البريد الإلكتروني:</label>
+                    <label for="email" class="content english-content">Email:</label>
+                    <input class="cont-input" type="email" id="Email" name="Email" required>
+                </div>
+                <div class="form-row">
+                    <label for="phone" class="content arabic-content" style="display: none;">رقم الهاتف:</label>
+                    <label for="phone" class="content english-content">Phone Number:</label>
+                    <input class="cont-input" type="number" id="Phone" name="Phone" required>
+                </div>
+                <div class="form-row">
+                    <label for="address" class="content arabic-content" style="display: none;">العنوان:</label>
+                    <label for="address" class="content english-content">Address:</label>
+                    <input class="cont-input" type="text" id="Address" name="Address" required>
+                </div>
+                <div class="form-row">
+                    <label class="content arabic-content" style="display: none;">وسيلة الدفع:</label>
+                    <label class="content english-content">Payment Method:</label>
+                    <select class="cont-input" name="payment-method" required>
+                        <option class="instapay" value="instapay">Instapay</option>
+                        <option class="vodafone-cash" value="vodafone-cash">Vodafone Cash</option>
+                        <option class="promocode" value="promocode">Promocode</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="content arabic-content" style="display: none;"> صورة التحويل:</label>
+                    <label class="content english-content">Payment Screenshot:</label>
+                    <input class="cont-input" type="file" name="payment-screenshot" accept="image/*" required>
+                </div>
+                <div class="form-row">
+                    <label for="ask" class="content arabic-content" style="display: none;">ما هي توقعاتك؟: (الإجابة اختياري)</label>
+                    <label for="ask" class="content english-content">What Is Your Expectations?: (Optional)</label>
+                    <input class="cont-input" type="massage" id="Expectations" name="Expectations">
+                </div>
+                <div class="form-row">
+                    <label for="anyQuestion" class="content arabic-content" style="display: none;">أي أسئلة؟ (الإجابة اختياري)</label>
+                    <label for="anyQuestion" class="content english-content">Any Questions?: (Optional)</label>
+                    <input class="cont-input" type="massage" id="anyQuestion" name="anyQuestion">
+                </div>
+
+
+                <input class="btn1" type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+</div>
+    
+    <footer>
+        <img class="footer-logo" src="images/logo2.png" alt="TEDx Logo">
+        <p class="copyright content arabic-content" style="display: none;">حقوق الطبع والنشر © TEDxTabaryElHegazHS. جميع الحقوق محفوظة 2025</p>
+        <p class="copyright content english-content">Copyright © TEDxTabaryElHegazHS. All Rights Reserved 2025</p>
+    </footer>
+            <script src="web javascript.js"></script>
+</body>
+</html>

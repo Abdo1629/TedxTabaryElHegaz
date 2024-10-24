@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="TEDx طبري الحجاز هو حدث منظم بشكل مستقل بموجب ترخيص TED، يقام في مصر، تحديداً في منطقة الحجاز. يهدف الحدث إلى توفير منصة لمشاركة الأفكار المبتكرة والمبادرات الملهمة من مختلف المجالات، مع التركيز على تمكين المجتمع المحلي لمشاركة قصص وتجارب فريدة.">
+    <meta name="keywords" content="Tedx, TedxTabaryElHegazHS ,Events ,Ahmed Mostafa ,أول تيداكس في مدرسة حكومية ,Tedx In Public School ,">
+    <meta name="author" content="Ahmed Mostafa">
+    <meta name="copyright" content="Copyright © TedxTabaryElHegazHS. All Rights Reserved 2025">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Noto+Sans+Arabic:wght@500&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <title>TEDxTabaryElHegaz</title>
+    <link rel="stylesheet" href="Tedx CSS v1.1.css"/>
+    <link rel="stylesheet" href="web javascript.js"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--Header-->
+    <div class="fixed">
+    <div class="header">
+        <a href="index.html">
+            <img class="logo" src="images/tedx.png" alt="Logo">
+        </a>
+        <div class="header-links"> 
+            <a href="index.html" class="link active" data-en="Home" data-ar="الرئيسية" >الرئيسية</a>
+            <a href="more-speakers.html" class="link" data-en="Speakers" data-ar="المتحدثون">المتحدثون</a>
+            <a href="event-3.html" class="link" data-en="Events" data-ar="الفعاليات">الفعاليات</a>
+            <a href="#contactform" class="link" data-en="Contacts" data-ar="اتصل بنا">اتصل بنا</a>
+            <button id="language-toggle" class="btn_lang">AR</button>
+        </div>
+    </div>
+    <div class="countdown-bar">
+        <div class="countdown-overlay">
+        </div>
+        <div class="countdown-text">
+          <h3 id="countdown"></h3>
+        </div>
+        <div>
+            <h2> .بدأ العد التنازلي</h2>
+        </div>
+        <div class="register-btn">
+            <div class="arabic-content">
+                <a href="#" class="btn">سجل الأن</a>
+            </div>
+            <div class="english-content" style="display: none;">
+            <a href="#" class="btn">Register Now</a>
+        </div>
+        </div>
+      </div>
+</div>
+
+    
+    
+    <!--Landing Page-->
+                <div class="landing-page">
+                    <div class="landing-page-left-section">
+                        <div class="arabic-content">
+                <h1>نحن لسنا  <span class="highlight">مجرد فريق</span></h1> 
+                <h1> نحن <span class="highlight">عائلة</span>
+                <h1 class="skip">أول  <span class="highlight">TEDx </span>في مدرسة حكومية</h1>
+                <p>
+                    إدراكًا منا ولمواكبة التطور العلمي وأهمية دور الشباب الريادي لذلك يجب أن نكون موجودين لإعداد وتأهيل قادة المستقبل القريب, وهم طلاب الثانوية بعد أن أثبتوا أنهم قادرين علي التعلم والإصرار للوصول للنجاح، ولهذا اتخذنا خطوة إقامة حدث مهم وفريد من نوعه مثل تيد إكس يوث طبري الحجاز. 
+                </p>
+                <p>
+                    وما يجعل هذا الحدث فريد هو إنه لأول مرة يقام حدث تيد إكس لمدرسة حكومية علي مستوي جمهورية مصر العربية!
+                </p>
+            </div>
+            <div class="english-content" style="display: none;">
+                <h1>We<span class="highlight">'</span>re Not Just A Team,</h1> 
+                <h1> We<span class="highlight">'</span>re A <span class="highlight">Family</span></h1>
+                <h1 class="skip">First <span class="highlight">TEDx</span> in a public school</h1>
+            <p> 
+                In recognition of the importance of scientific development and the pioneering role of youth, we must be present to prepare and qualify the future leaders, who are the high school students, as they have proven their ability to learn and persevere to achieve success. 
+            </p>
+                <p> 
+For this reason, we took the step to organize a significant and unique event like TEDxYouth@TabaryEl-HegazHS. What makes this event truly special is that, for the first time, a TEDx event is being held in a public school across the entire Arab Republic of Egypt!
+                     </p>
+            </div>
+        </div>
+        <div class="carousel">
+            <img class="landing-page-photo" id="carousel-image" src="images/landing_photo2.png" alt="Landing Page Photo">
+        </div>
+    </div>
+
+
+    <div class="define">
+        <div class=" english-content">
+        <h2>What Is TED<span class="highlight">x</span>?</h2>
+    </div>
+    <div class="content arabic-content" style="display: none;">
+        <h2>ما هي TED<span class="highlight">x</span>؟</h2>
+    </div>
+    </div>
+        <div class="definition"> 
+            <div class="content english-content" style="display: none;">
+                <p>
+                    <span class="highlight">TED</span> (which stands for <span class="highlight">T</span>echnology, <span class="highlight">E</span>ntertainment, <span class="highlight">D</span>esign) Is a globally recognized non-profit organization committed to spreading innovative ideas through powerful, concise talks. Since its inception in 1984, TED has evolved into a platform for experts and thought leaders across a wide array of disciplines, including science, art, business, education, and global issues. 
+                </p>
+                <p>
+                    TED events feature short, impactful presentations - typically limited to 18 minutes - that distill complex topics into digestible and engaging insights. 
+                    The organization's flagship event, the annual TED Conference, attracts global leaders, entrepreneurs, visionaries, and influential thinkers who deliver talks designed to inspire, inform, and provoke thought. 
+                    The talks are made available for free on <a href="TED.com">TED.com</a> and other platforms, democratizing access to knowledge and allowing people around the world to learn from some of the brightest minds in various fields. 
+                </p>
+                <p>
+                     TED is known for its tagline, "Ideas worth spreading," emphasizing its mission to promote innovative solutions, inspiring stories, and transformative perspectives on critical global challenges. where <span class="highlight">x</span> = independently organized TED event.
+                </p>
+                <p>
+                    Follow TED on Twitter at: 
+                    <a href="http://twitter.com/TEDTalks,">http://twitter.com/TEDTalks,</a>
+                    </p>
+                    <p>
+                    or on Facebook at:
+                    <a href="http://www.facebook.com/TED.">http://www.facebook.com/TED.</a>
+                    </p>
+            </div>
+            <div class="content arabic-content">
+                <p>
+                    <span class="highlight">TED</span> (والتي تعني التكنولوجيا والترفيه والتصميم)  (<span class="highlight">T</span>echnology, <span class="highlight">E</span>ntertainment, <span class="highlight">D</span>esign)   هي منظمة غير ربحية معترف بها عالميًا، ملتزمة بنشر الأفكار المبتكرة من خلال محادثات قوية ومختصرة. منذ إنشائها في عام 1984، تطورت تيد إلى منصة للخبراء وقا~دة الفكر عبر مجموعة واسعة من التخصصات، بما في ذلك العلوم والفن والأعمال والتعليم والقضايا العالمية.</p>
+                <p>
+                    تتميز فعاليات تيد بعروض تقديمية قصيرة وفعالة - عادة ما تكون محددة بـ 18 دقيقة - تركز على تبسيط الموضوعات المعقدة وتحويلها إلى أفكار سهلة الفهم وجذابة. 
+                    الحدث الرئيسي للمنظمة، وهو مؤتمر تيد السنوي، يجذب قادة عالميين ورواد أعمال ورؤى ومفكرين مؤثرين يقدمون محادثات تهدف إلى الإلهام والتوعية وإثارة التفكير. 
+                    يتم إتاحة هذه المحادثات مجانًا على <a href="TED.com">TED.com</a> وغيرها من المنصات، مما يسهم في ديمقراطية الوصول إلى المعرفة ويسمح للأشخاص في جميع أنحاء العالم بالتعلم من بعض من أذكى العقول في مختلف المجالات. 
+                </p>
+                <p>
+                     
+تُعرف تيد بشعارها "أفكار تستحق الانتشار"، والذي يؤكد على رسالتها في تعزيز الحلول المبتكرة، والقصص الملهمة، ووجهات النظر التحويلية حول التحديات العالمية الحرجة. حيث <span class="highlight">x</span> = حدث تيد المنظم بشكل مستقل.
+                </p>  
+        <p>
+            تابع تيد على تويتر:
+            <a href="http://twitter.com/TEDTalks">http://twitter.com/TEDTalks</a>
+            </p>
+            <p>
+            أو على فيسبوك: 
+            <a href="http://www.facebook.com/TED">http://www.facebook.com/TED</a>
+            </p>
+        </div>
+        </div>
+
+        <section class="promo-section">
+            <div class="events-container">
+                <div class="promo-text english-content">
+                    <h2>About Us:</h2>
+                    <span class="section-title">
+                        TEDxYouth@TabaryElHegazHS
+                    </span>
+                    <p>
+                        TEDx Tabary El Hegaz is an independently organized event under the TED license, held in Egypt, specifically in the El Hegaz area. The event aims to provide a platform for sharing innovative ideas and inspiring initiatives from various fields, with a focus on empowering the local community to share unique stories and experiences. The event typically features a selection of speakers who are chosen based on their experiences or ideas worth spreading. to inspire the audience with their experiences.
+                    </p>
+                    <video class="promo-video" autoplay muted loop>
+                        <source src="promo1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="promo-text arabic-content" style="display:none;">
+                    <h2>عنا:</h2>
+                    <span class="section-title">
+                        TEDxYouth@TabaryElHegazHS
+                    </span>
+                    <p>TEDx طبري الحجاز هو حدث منظم بشكل مستقل بموجب ترخيص TED، يقام في مصر، تحديداً في منطقة الحجاز. يهدف الحدث إلى توفير منصة لمشاركة الأفكار المبتكرة والمبادرات الملهمة من مختلف المجالات، مع التركيز على تمكين المجتمع المحلي لمشاركة قصص وتجارب فريدة.
+        
+                        يتميز الحدث عادةً بمشاركة عدد من المتحدثين الذين يتم اختيارهم بعناية بناءً على تجاربهم أو أفكارهم التي تستحق النشر. يأتي هؤلاء المتحدثون من خلفيات متنوعة مثل التكنولوجيا والفن والأعمال والتعليم والعلوم، مما يقدم محتوى متنوعًا. قد تجد من بين المتحدثين رواد أعمال محليين أو مبتكرين في مجال التكنولوجيا أو حتى قادة مجتمعيين يلهمون الجمهور بتجاربهم.</p>
+                    <video class="promo-video" autoplay muted loop>
+                        <source src="promo1.mp4" type="video/mp4">
+                        متصفحك لا يدعم علامة الفيديو.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+         <!--Events-->
+         <div class="margintop"></div>
+    <div class="events-container">
+        <div class="content english-content" style="display: none;">
+            <span>Events</span>
+        <div class="EventsHeader">
+            <h1>Seasons</h1>
+        </div>
+        </div>
+        <div class="content arabic-content">
+            <span>الفعاليات</span>
+            <div class="EventsHeader">
+                <h1>المواسم</h1>
+        </div>
+    </div>
+        <div class="events-cards">
+            <!--Event 1-->
+            <a href="#" target="_self"><button class="content card">
+                <img class="thumb" src="images/tred.jpg" alt="Event Thumbnail">
+                <div class="english-content" style="display: none;">
+                <div class="card-info">
+                    <div class="card-name">
+                        <p>ليس سوى ان تريد</p>
+                        <h3>Season 1</h3>
+                        <h4 class="ended">Ended</h4>
+                    </div>
+                    <span>30/10/2021</span>
+                </div>
+            </div>
+            <div class="arabic-content">
+                <div class="card-info">
+                    <div class="card-name">
+                        <p>ليس سوى ان تريد</p>
+                        <h3>الموسم 1</h3>
+                        <h4 class="ended">إنتهى</h4>
+                    </div>
+                    <span>30/10/2021</span>
+                </div>
+            </div>
+            </button></a>
+
+            <!--Event 2-->
+            <a href="#" target="_self"><button class="content card">
+                <img class="thumb" src="images/3azm.jpg" alt="Event Thumbnail">
+                <div class="english-content" style="display: none;">
+                    <div class="card-info">
+                        <div class="card-name">
+                            <p>على قدر أهل العزم</p>
+                            <h3>Season 2</h3>
+                            <h4 class="ended">Ended</h4>
+                        </div>
+                        <span>27/8/2022</span>
+                    </div>
+                </div>
+            <div class="arabic-content">
+                <div class="card-info">
+                    <div class="card-name">
+                        <p>على قدر أهل العزم</p>
+                        <h3>الموسم 2</h3>
+                        <h4 class="ended">إنتهى</h4>
+                    </div>
+                    <span>27/8/2022</span>
+                </div>
+            </div>
+            </button></a>
+            
+            <!--Event 3-->
+            <a href="event-3.html" target="_self"><button class="content card-soon">
+                <img class="thumb" src="images/3azm.jpg" alt="Event Thumbnail">
+                <div class="english-content" style="display: none;">
+                    <div class="card-info">
+                        <div class="card-name">
+                            <p>عودُ على بِدء</p>
+                            <h3>Season 3</h3>
+                            <h4 class="soon">Soon</h4>
+                        </div>
+                        <span>15/2/2025</span>
+                    </div>
+                </div>
+            <div class="arabic-content">
+                <div class="card-info">
+                    <div class="card-name">
+                        <p>عودُ على بِدء</p>
+                        <h3>الموسم 3</h3>
+                        <h4 class="soon">قريبا</h4>
+                    </div>
+                    <span>15/2/2025</span>
+                </div>
+            </div>
+            </button></a>
+        </div>
+    </div>
+    <!--speakers-->
+    <div class="events-container">
+        <div class="content arabic-content">
+           <span>المتحدثون</span>
+           <div class="EventsHeader">
+               <h1>شخصيات هامة</h1>
+               <a href="more-speakers.html" target="_self"><button class="btn">عرض المزيد</button></a>
+           </div>
+        </div>
+        <div class="content english-content" style="display: none;">
+        <span>Speakers</span>
+           <div class="EventsHeader">
+               <h1>Important People</h1>
+               <a href="more-speakers.html" target="_self"><button class="btn">View All</button></a>
+           </div>
+       </div>
+   </div>
+    <div class="events-cards">
+        <!-- Speaker Ahmed -->
+        <a class="more-info">
+            <div class="content card1" data-name="Ahmed Mostafa" data-title="Founder & President">
+                <img class="thumb" src="images/ahmed.jpg" alt="Event Thumbnail">
+                <div class="card-info">
+                    <p><span class="highlight">TEDx</span></p>
+                    <div class="english-content" style="display: none;">
+                        <div class="card-name">
+                            <h3 class="whit">Ahmed Mostafa</h3>
+                            <h4 class="title-a">Founder & President</h4>
+                        </div>
+                    </div>
+                    <div class="arabic-content">
+                        <div class="card-name">
+                            <h3 class="whit">أحمد مصطفى</h3>
+                            <h4 class="title-a">المؤسس& الرئيس</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="more-details">
+                <div class="content arabic-content">
+                    <p class="description">أحمد مصطفى هو رائد أعمال طموح ومؤسس TEDx طبري. يدرس للحصول على درجة البكالوريوس في التجارة من جامعة القاهرة، مع تخصص في إدارة الأعمال. يتمتع بشغف كبير بالابتكار والقيادة، ويبحث باستمرار عن فرص للتعلم والنمو في مجال ريادة الأعمال والمشاريع الناشئة. أكمل أحمد العديد من الدورات التدريبية عبر الإنترنت في مجالات التسويق الرقمي، ريادة الأعمال، والذكاء العاطفي، مما يعزز معرفته ومهاراته في بناء الشركات والمبادرات الريادية.</p>
+                </div>
+                <div class="content english-content" style="display: none;">
+                    <p class="description">Ahmed Mostafa is an aspiring entrepreneur, pursuing a Bachelor of Commerce degree at Cairo University, with a focus on business administration and management. He has a passion for innovation and leadership and has been actively seeking opportunities to learn and grow in the startup ecosystem. He has completed multiple online courses in digital marketing, entrepreneurship, and emotional intelligence.</p>
+                </div>
+                <div class="social-media">
+                    <div>
+                        <a href="https://www.facebook.com/ahmdabdrabou" class="fa fa-facebook" target="_blank"></a>
+                        <a href="https://www.linkedin.com/in/ahmdabdrabou/" class="fa fa-linkedin" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Speaker Osama Elzero -->
+        <a class="more-info">
+            <div class="content card" data-name="Osama Elzero" data-title="Programmer">
+                <img class="thumb" src="images/elzero.jpg" alt="Event Thumbnail">
+                <div class="card-info">
+                    <div class="english-content" style="display: none;">
+                        <div class="card-name">
+                            <p>Season <span class="highlight">1</span></p>
+                            <h3>Osama Elzero</h3>
+                            <h4 class="title">Programmer</h4>
+                        </div>
+                    </div>
+                    <div class="arabic-content">
+                        <div class="card-name">
+                            <p>الموسم <span class="highlight">1</span></p>
+                            <h3>أسامة الزيرو</h3>
+                            <h4 class="title">مبرمج</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="more-details">
+                <div class="content arabic-content">
+                    <p class="description">أسامة الزيرو هو مهندس برمجيات ومدرب مصري له حضور قوي على YouTube. يشتهر بتقديم محتوى تعليمي عن لغات البرمجة والتقنيات المختلفة مثل Python وJava وC++ وتطوير الويب.</p>
+                </div>
+                <div class="content english-content" style="display: none;">
+                    <p class="description">Osama Elzero is an Egyptian software engineer and trainer with a strong presence on YouTube. He is known for his educational content on various programming languages and technologies, including Python, Java, C++, and web development.</p>
+                </div>
+                <div class="social-media">
+                    <div>
+                        <a href="https://www.facebook.com/OsElzero/" class="fa fa-facebook" target="_blank"></a>
+                        <a href="https://eg.linkedin.com/in/osamaelzero" class="fa fa-linkedin" target="_blank"></a>
+                        <a href="https://www.youtube.com/channel/UCSNkfKl4cU-55Nm-ovsvOHQ" class="fa fa-youtube" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Speaker Nadeem Barakat -->
+        <a class="more-info">
+            <div class="content card" data-name="Nadeem Barakat" data-title="Business">
+                <img class="thumb" src="images/nadeem.jpg" alt="Event Thumbnail">
+                <div class="card-info">
+                    <div class="english-content" style="display: none;">
+                        <div class="card-name">
+                            <p>Season <span class="highlight">1</span></p>
+                            <h3>Nadeem Barakat</h3>
+                            <h4 class="title">Business</h4>
+                        </div>
+                    </div>
+                    <div class="arabic-content">
+                        <div class="card-name">
+                            <p>الموسم <span class="highlight">1</span></p>
+                            <h3>نديم بركات</h3>
+                            <h4 class="title">ريادة أعمال</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="more-details">
+                <div class="content arabic-content">
+                    <p class="description">نديم بركات هو خبير تطوير أعمال ذو خبرة واسعة في بناء وإدارة الأعمال الناجحة. لديه سجل حافل في تحديد الفرص الجديدة، وتطوير شراكات استراتيجية، وتحقيق النمو.</p>
+                </div>
+                <div class="content english-content" style="display: none;">
+                    <p class="description">Nadeem Barakat is a seasoned business development professional with extensive experience in building and managing successful businesses. He has a proven track record of identifying and capitalizing on new opportunities, developing strategic partnerships, and driving growth.</p>
+                </div>
+                <div class="social-media">
+                    <div>
+                        <a href="https://www.facebook.com/NadeemBarakat7/" class="fa fa-facebook" target="_blank"></a>
+                        <a href="https://www.linkedin.com/in/nadeem-barakat" class="fa fa-linkedin" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Speaker Yousef Magdy -->
+        <a class="more-info">
+            <div class="content card" data-name="Yousef Magdy" data-title="Content Creator">
+                <img class="thumb" src="images/magdy.jpg" alt="Event Thumbnail">
+                <div class="card-info">
+                    <div class="english-content" style="display: none;">
+                        <div class="card-name">
+                            <p>Season <span class="highlight">1</span></p>
+                            <h3>Yousef Magdy</h3>
+                            <h4 class="title">Content Creator</h4>
+                        </div>
+                    </div>
+                    <div class="arabic-content">
+                        <div class="card-name">
+                            <p>الموسم <span class="highlight">1</span></p>
+                            <h3>يوسف مجدي</h3>
+                            <h4 class="title">صانع محتوى</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div class="more-details">
+                <div class="content arabic-content">
+                    <p class="description">يوسف مجدي هو صانع محتوى تعليمي مصري مشهور بمقاطع الفيديو التعليمية المبسطة والتي يسهل فهمها. لديه أكثر من 2.8 مليون متابع على YouTube ويحظى بشعبية كبيرة بسبب محتواه الجذاب والمفيد.</p>
+                </div>
+                <div class="content english-content" style="display: none;">
+                    <p class="description">Yousef Magdy is an Egyptian content creator known for his simplified and easy-to-understand educational videos. He has over 2.8 million followers on YouTube and is popular for his engaging and informative content.</p>
+                </div>
+                <div class="social-media">
+                    <div>
+                        <a href="https://www.facebook.com/zambaolakkedaa" class="fa fa-facebook" target="_blank"></a>
+                        <a href="https://www.instagram.com/youssefmagdii/" class="fa fa-instagram" target="_blank"></a>
+                        <a href="https://www.tiktok.com/@zambaolak_keda?lang=en" class="fab fa-tiktok" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    <!-- Speaker Ahmed Saudi -->
+<a class="more-info">
+    <div class="content card" data-name="Ahmed Saudi" data-title="Content Creator">
+        <img class="thumb" src="images/ahmed s.jpg" alt="Event Thumbnail">
+        <div class="card-info">
+            <div class="english-content" style="display: none;">
+                <div class="card-name">
+                    <p>Season <span class="highlight">2</span></p>
+                    <h3>Ahmed Saudi</h3>
+                    <h4 class="title">Content Creator</h4>
+                </div>
+            </div>
+            <div class="arabic-content">
+                <div class="card-name">
+                    <p>الموسم <span class="highlight">2</span></p>
+                    <h3>أحمد سعودي</h3>
+                    <h4 class="title">صانع محتوى</h4>
+                </div>
+            </div>
+        </div>
+    </a>
+    <div class="more-details">
+        <div class="content arabic-content">
+            <p class="description">أحمد سعودي هو صانع محتوى بارز معروف بإنتاج فيديوهات عالية الجودة وجذابة بصريًا. لديه قاعدة كبيرة من المتابعين عبر منصات التواصل الاجتماعي ويبلغ عدد متابعيه 1.6 مليون على تيك توك.</p>
+        </div>
+        <div class="content english-content" style="display: none;">
+            <p class="description">Ahmed Saudi is a prominent content creator who is known for producing high-quality, visually stunning videos and multimedia content. With a large following across social media platforms and 1.6 million followers on TikTok.</p>
+        </div>
+        <div class="social-media">
+            <div>
+                <a href="https://www.facebook.com/profile.php?id=100067808934274" class="fa fa-facebook" target="_blank"></a>
+                <a href="https://www.instagram.com/ahmed_saudi77/?hl=en" class="fa fa-instagram" target="_blank"></a>
+                <a href="https://www.tiktok.com/@ahmed_saudi7" class="fab fa-tiktok" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+ </div>
+
+    <!-- Speaker Geno -->
+    <a class="more-info">
+    <div class="content card" data-name="Geno" data-title="Content Creator">
+        <img class="thumb" src="images/geno.png" alt="Event Thumbnail">
+        <div class="card-info">
+            <div class="english-content" style="display: none;">
+                <div class="card-name">
+                    <p>Season <span class="highlight">1</span></p>
+                    <h3>Mohamed Ayman (Geno)</h3>
+                    <h4 class="title">Content Creator</h4>
+                </div>
+            </div>
+            <div class="arabic-content">
+                <div class="card-name">
+                    <p>الموسم <span class="highlight">1</span></p>
+                    <h3>محمد أيمن (جينو)</h3>
+                    <h4 class="title">صانع محتوى</h4>
+                </div>
+            </div>
+        </div>
+        </a>
+            <div class="more-details">
+            <div class="content arabic-content">
+            <p class="description">محمد أيمن جينو هو معلم لغة إنجليزية مشهور ولديه حضور قوي على وسائل التواصل الاجتماعي. لديه أكثر من 3 مليون متابع عبر منصات مختلفة، ويُعرف بأسلوبه التعليمي الجذاب والفعال.</p>
+            </div>
+            <div class="content english-content" style="display: none;">
+            <p class="description">Mohamed Ayman Geno is a renowned English language educator with a strong social media presence. He has over 3 million followers across various platforms and is known for his engaging and effective teaching style.</p>
+            </div>
+            <div class="social-media">
+                <div>
+                    <a href="https://www.facebook.com/Genotv2" class="fa fa-facebook" target="_blank"></a>
+                    <a href="https://www.tiktok.com/@genotv2" class="fab fa-tiktok" target="_blank"></a>
+                </div>
+            </div>
+        </div>    
+      </div>
+    </div>
+
+    <div class="margintop"></div>   
+    <div class="events-container">
+        <div class="content arabic-content">
+           <span>الشركاء</span>
+           <div class="EventsHeader">
+               <h1>والرعاة</h1>
+           </div>
+        </div>
+        <div class="content english-content" style="display: none;">
+        <span>Partners</span>
+           <div class="EventsHeader">
+               <h1>Sponsors</h1>
+           </div>
+       </div>
+    <div class=" events-container sponsors-container">
+        <span class="section-title arabic-content" style="display: none;">الشركاء والرعاة</span>
+        <span class="section-title english-content">Partners & Sponsors</span>
+                <div class="sponsor-logos">
+                    <a>
+                        <img class="content" src="images/Sponsors/1.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/2.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/3.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/4.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/5.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/6.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/7.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/8.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/9.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/10.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/11.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/12.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/13.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/14.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/15.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/16.jpg" alt="Sponsor Logo">
+                    </a>
+                    <a>
+                        <img class="content" src="images/Sponsors/17.jpg" alt="Sponsor Logo">
+                    </a>
+            </div>
+        </div> 
+
+        <div class="events-container" id="contactform">
+            <div class="content arabic-content">
+                <span class="content ">TEDxYouth@Tabary</span>
+                <div class="EventsHeader">
+                    <h1>جهات الاتصال</h1> 
+                </div>
+             </div>
+             <div class="content english-content" style="display: none;">
+                <span>TEDxYouth@Tabary</span>
+                <div class="EventsHeader">
+                <h1>Contacts</h1>
+            </div>
+        </div>
+    </div>
+    <div class="events-container">
+        <span class="section-title content arabic-content" style="display: none;">تواصل معنا</span>
+        <span class="section-title content english-content">Contact Us</span>
+        <div class="contact">
+            <form action="" method="POST" name="contactform">
+                <div class="form-row">
+                    <label for="name" class="content arabic-content" style="display: none;">الاسم:</label>
+                    <label for="name" class="content english-content">Name:</label>
+                    <input class="cont-input" type="text" id="name" name="name" required>
+                    <label for="email" class="content arabic-content" style="display: none;">البريد الإلكتروني:</label>
+                    <label for="email" class="content english-content">Email:</label>
+                    <input class="cont-input" type="email" id="email" name="email" required>
+                </div>
+                <div class="form-row">
+                    <label for="ask" class="content arabic-content" style="display: none;">السؤال:</label>
+                    <label for="ask" class="content english-content">Question:</label>
+                    <input class="cont-input" type="text" id="ask" name="ask" required>
+                </div>
+                <input class="btn1" type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+    <p class="send content arabic-content" style="display: none;">أو أرسل رسالة إلى صفحتنا على فيسبوك:</p>
+    <p class="send content english-content">Or Send A Message To Our Facebook Page:</p>
+    <a class="wrap" href="https://www.facebook.com/TEDxYouthTabaryElHegazHS">https://www.facebook.com/TEDxYouthTabaryElHegazHS
+    </a>
+    <footer>
+        <img class="footer-logo" src="images/logo2.png" alt="TEDx Logo">
+        <p class="copyright content arabic-content" style="display: none;">حقوق الطبع والنشر © TEDxTabaryElHegazHS. جميع الحقوق محفوظة 2025</p>
+        <p class="copyright content english-content">Copyright © TEDxTabaryElHegazHS. All Rights Reserved 2025</p>
+    </footer>
+            <script src="web javascript.js"></script>
+        </body>
+        </html>
+            
