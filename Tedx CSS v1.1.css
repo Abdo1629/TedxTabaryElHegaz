@@ -764,8 +764,8 @@ footer {
 
 .promo-section {
     position: relative;
-    width: 96vw;
-    height: 96vh;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     align-items: center;
 }
@@ -774,8 +774,8 @@ footer {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 96vw;
-    height: 96vh;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: -1;
