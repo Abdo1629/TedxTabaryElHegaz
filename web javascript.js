@@ -148,3 +148,15 @@ var countdown = setInterval(function() {
             screenshotField.required = true;
         }
     });
+
+const validPromoCodes = ["AhmedTEDxPromo100", "50%PromoPPM", "10%VPromo"];
+
+    const promoInput = document.getElementById('Promocode');
+    const promoError = document.getElementById('promo-error');
+    promoInput.addEventListener('input', function() {
+        if (!validPromoCodes.includes(promoInput.value)) {
+            promoError.style.display = 'inline'; 
+        } else {
+            promoError.style.display = 'none';
+        }
+    });
