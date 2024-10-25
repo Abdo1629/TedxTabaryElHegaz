@@ -79,7 +79,7 @@
         <div class="contact">
             <form action="" method="POST" name="registerform">
                 <div class="form-row">
-                    <label for="name" class="content arabic-content" style="display: none;">الاسم ثلاثيا: </label>
+                    <label for="name" class="content arabic-content" style="display: none;">الاسم ثلاثياً: </label>
                     <label for="name" class="content english-content">Name:</label>
                     <input class="cont-input" type="text" id="Name" name="Name" required>
                 </div>
@@ -99,18 +99,27 @@
                     <input class="cont-input" type="text" id="Address" name="Address" required>
                 </div>
                 <div class="form-row">
+                    <label class="content arabic-content" style="display: none;">نوع التذكرة :</label>
+                    <label class="content english-content">Ticket:</label>
+                    <select class="cont-input" name="Ticket" required>
+                        <option value="Classic">Classic - 200EGP</option>
+                        <option value="Engage">Engage - 350EGP</option>
+                    </select>
+                </div>
+                <div class="form-row">
                     <label class="content arabic-content" style="display: none;">وسيلة الدفع:</label>
                     <label class="content english-content">Payment Method:</label>
-                    <select class="cont-input" name="payment-method" required>
+                    <select class="cont-input" name="Payment-Method" required>
                         <option class="instapay" value="instapay">Instapay</option>
                         <option class="vodafone-cash" value="vodafone-cash">Vodafone Cash</option>
                         <option class="promocode" value="promocode">Promocode</option>
                     </select>
                 </div>
                 <div class="form-row">
-                    <label class="content arabic-content" style="display: none;"> صورة التحويل:</label>
-                    <label class="content english-content">Payment Screenshot:</label>
-                    <input class="cont-input" type="file" name="payment-screenshot" accept="image/*" required>
+                    <label for="Promocode" class="content arabic-content" style="display: none;">كود خصم: (الإجابة اختياري)</label>
+                    <label for="Promocode" class="content english-content">Promocode: (Optional)</label>
+                    <input class="cont-input" type="text" id="Promocode" name="Promocode">
+                    <span id="promo-error" style="color: red; display: none;">Invalid promo code!</span>
                 </div>
                 <div class="form-row">
                     <label for="ask" class="content arabic-content" style="display: none;">ما هي توقعاتك؟: (الإجابة اختياري)</label>
@@ -120,10 +129,14 @@
                 <div class="form-row">
                     <label for="anyQuestion" class="content arabic-content" style="display: none;">أي أسئلة؟ (الإجابة اختياري)</label>
                     <label for="anyQuestion" class="content english-content">Any Questions?: (Optional)</label>
-                    <input class="cont-input" type="massage" id="anyQuestion" name="anyQuestion">
+                    <input class="cont-input" type="massage" id="anyQuestion" name="Any Question">
                 </div>
-
-
+                <div class="form-row">
+                    <label for="name" class="content arabic-content" style="display: none;">الرجاء إرسال صورة التحويل على رقم واتساب التالي: +201014735800</label>
+                    <label for="name" class="content english-content">Please send the transfer receipt to the following WhatsApp number: +201014735800</label>
+                    <a href="https://wa.me/201014735800" target="_blank" class="content english-content">(Click to send via WhatsApp)</a>
+                    <a href="https://wa.me/201014735800" target="_blank" class="content arabic-content" style="display: none;">(اضغط للإرسال عبر واتساب)</a>
+                </div>
                 <input class="btn1" type="submit" value="Send">
             </form>
         </div>
