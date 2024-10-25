@@ -117,7 +117,8 @@ body {
     }
 
     .header-links a {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        text-wrap: nowrap;
     }
 
     .logo {
@@ -146,6 +147,7 @@ body {
     border: none;
     padding: 10px 15px;
    border-radius: 20px;
+   text-wrap: nowrap;
 }
 .btn:hover {
     background-color: rgb(255, 44, 44);
@@ -155,14 +157,12 @@ body {
 .arabic-content {
     direction: rtl; 
     text-align: right;
-}
-
-.english-content {
-font-family: "Alexandria", sans-serif;
+    font-family: "Alexandria", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    }
+
+}
 
 .landing-page {
     background-color: rgb(0, 0, 0);
@@ -385,15 +385,21 @@ box-shadow: 0 0 15px 5px rgba(14, 182, 92, 0.773);
         margin-top: 0;
         color:rgb(0, 0, 0);
     }
+
        .card-name h4.ended{
         font-size: 1.2em;
         margin-top: 0;
-        color:rgb(255, 44, 44);
+        color:rgb(255, 255, 255);
+        background-color: #b90000a8;
+        padding: 5px;
+        border-radius: 3px;
     }
     .card-name h4.soon {
         font-size: 1.2em;
         margin-top: 0;
-        color:rgb(20, 176, 0);
+        color:rgb(255, 255, 255);
+        background-color: #00a1088a;
+        padding: 5px;
     }
     .card-name h3{
         font-size: 1.3em;
@@ -512,7 +518,7 @@ box-shadow: 0 0 15px 5px rgba(14, 182, 92, 0.773);
     box-shadow: 0 0 10px 5px rgba(61, 125, 254, 0.554);
 }
 
-.fa {
+.more-details.fa {
     width: 30px;
     padding: 10px;
     font-size: 30px;
@@ -526,15 +532,16 @@ box-shadow: 0 0 15px 5px rgba(14, 182, 92, 0.773);
     transition: transform 0.3s ease;
     transition: box-shadow 0.3s ease-in-out;
   }
-  .fa-facebook {
+ .more-details .fa-facebook {
     padding: 5px 15px;
     background: #3B5998;
     color: white;
     border-radius: 20px;
     transition: transform 0.3s ease;
     transition: box-shadow 0.3s ease-in-out;
+    text-decoration: none;
   }
-  .fa-facebook:hover {
+ .more-details .fa-facebook:hover {
 cursor: pointer;
     background: #283cd4;
     transform: scale(1.06);
@@ -544,11 +551,15 @@ cursor: pointer;
     background: #007bb5;
     color: white;
     border-radius: 20px;
+    padding: 5px 15px;
+    text-decoration: none;
   }
   .fa-youtube {
     background: #bb0000;
     color: white;
     border-radius: 20px;
+    padding: 5px 15px;
+    text-decoration: none;
   }
   .fa-youtube:hover {
     background-color: #e62525;
@@ -556,7 +567,9 @@ cursor: pointer;
     transform: scale(1.06);
     box-shadow: 0 0 10px 5px rgba(186, 2, 2, 0.751);
   }
-  .fa-instagram {
+    .more-details .fa-instagram {
+        padding: 5px 15px;
+        text-decoration: none;
     background: #f09433; 
 background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
 background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
@@ -565,12 +578,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     color: white;
     border-radius: 20px;
   }
-  .fa-instagram:hover {
+  
+  .more-details .fa-instagram:hover {
     cursor: pointer;
     transform: scale(1.06);
     box-shadow: 0 0 10px 5px rgba(244, 172, 175, 0.8), 0 0 12px 0 rgba(230, 104, 60, 0.6), 0 0 14px 0 rgba(220, 39, 67, 0.4), 0 0 19px 0 rgba(203, 13, 89, 0.3), 0 0 24px 0 rgba(213, 0, 145, 0.716);
 }
-.fa-tiktok {
+.more-details .fa-tiktok {
     background-color: #000000;
     width: 35px;
     padding: 5px;
@@ -585,7 +599,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     border-radius: 15px;
 }
 
-.fa-tiktok:hover {
+.more-details.fa-tiktok:hover {
     background-color: #FD3E3E; /* لون خلفية جديد عند التحويم */
     color: #FFFFFF; /* لون النص الجديد عند التحويم */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* ظل أكثر وضوحًا عند التحويم */
@@ -711,6 +725,11 @@ form {
         margin-right: 0;
         margin-bottom: 10px;
     }
+    .card ,.card-soon , .card1{
+              max-width: 155px;
+              gap: 5px;
+
+    }
 }
 .wrap {
     font-size: 0.7em;
@@ -721,7 +740,6 @@ form {
 footer {
     margin-top: 50px;
     margin-bottom: 0%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #f8f9fa; /* لون فاتح يتوافق مع الهوية */
@@ -729,10 +747,22 @@ footer {
     position: relative;
     transition: background-color 0.3s ease;
 }
+.footer2 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    margin-bottom: 0%;
+}
 
 .footer-logo {
-    width: 10vw;
-    min-width: 60px;
+    width: 40%;
+    height: 40%;
+    min-width:  30px;
+    max-width: 10%;
 }
 
 .copyright {
@@ -767,8 +797,8 @@ footer {
 
 .promo-section {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 96vw;
+    height: 96vh;
     overflow: hidden;
     align-items: center;
 }
@@ -777,8 +807,8 @@ footer {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100vw;
-    height: 100vh;
+    width: 96vw;
+    height: 96vh;
     object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: -1;
@@ -834,6 +864,12 @@ footer {
         font-size: 10px;
         padding: 11px 8px;
       }
+      .footer-logo {
+        width: 40%;
+        height: 40%;
+        min-width:  35px;
+        max-width: 35%;
+    }
 }
 
 .margintop {
@@ -943,7 +979,7 @@ footer {
     }
 }
 .iframe {
-    width:98vw; 
+    width:100vw; 
     height: 50vh;
     border: 8; 
     border-color: rgba(255, 0, 0, 0.712); 
@@ -951,6 +987,54 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.event-info p {
+    padding: 0 10px;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    text-decoration: none;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #444;
+    color: white;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+footer .social-icon:hover {
+    background-color: #888;
+}
+
+footer .social-icon.facebook:hover {
+    background-color: #3b5998;
+}
+
+footer .social-icon.instagram:hover {
+    background-color: #e1306c;
+}
+
+footer .social-icon.whatsapp:hover {
+    background-color: #25d366;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+   footer .social-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
 .event-info p {
     padding: 0 10px;
 }
