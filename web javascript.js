@@ -96,6 +96,20 @@ document.addEventListener('DOMContentLoaded', function() {
                         });
                     });
                 });
+
+
+                const scriptURL2 = 'https://script.google.com/macros/s/AKfycbzuQOWcYNvfbqeGgBeeHio9u3_Q0aI5nidxipFug3bVkxK0Wmn5wPL-m66HdkYlNsPB/exec'
+
+const form2 = document.forms['registerform']
+
+
+form2.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
+  .then(response => alert("Thank You! Your Form Is Submitted Successfully And We Will Contact You Soon." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
                 const scriptURL = 'https://script.google.com/macros/s/AKfycby38gcV1O0cE2aSWwCrAtKcCsRAsVp9KZLqM9FTEx1U_L50GwZUUh6bQvvGP0qWTr6S/exec'
 
 
@@ -109,6 +123,8 @@ form.addEventListener('submit', e => {
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
+
+
 
 
 var eventDate = new Date("Feb 15, 2025 10:00:00").getTime();
@@ -149,7 +165,7 @@ var countdown = setInterval(function() {
         }
     });
 
-const validPromoCodes = ["AhmedTEDxPromo100", "50%PromoPPM", "10%VPromo"];
+        const validPromoCodes = ["AhmedTEDxPromo100", "50%PromoPPM", "10%VPromo"];
 
     const promoInput = document.getElementById('Promocode');
     const promoError = document.getElementById('promo-error');
