@@ -941,7 +941,7 @@ footer {
     }
 }
 .iframe {
-    width:100vw; 
+    width:98vw; 
     height: 50vh;
     border: 8; 
     border-color: rgba(255, 0, 0, 0.712); 
