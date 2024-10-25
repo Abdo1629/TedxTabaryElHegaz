@@ -585,13 +585,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     box-shadow: 0 0 10px 5px rgba(244, 172, 175, 0.8), 0 0 12px 0 rgba(230, 104, 60, 0.6), 0 0 14px 0 rgba(220, 39, 67, 0.4), 0 0 19px 0 rgba(203, 13, 89, 0.3), 0 0 24px 0 rgba(213, 0, 145, 0.716);
 }
 .more-details .fa-tiktok {
+    margin-top: 5px;
     background-color: #000000;
-    width: 35px;
+    width: 30px;
     padding: 5px;
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
     display: inline-block;
-    margin-bottom: 6px;
+    margin-bottom: 0;
     color: white;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; 
@@ -599,11 +600,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     border-radius: 15px;
 }
 
-.more-details.fa-tiktok:hover {
-    background-color: #FD3E3E; /* لون خلفية جديد عند التحويم */
-    color: #FFFFFF; /* لون النص الجديد عند التحويم */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* ظل أكثر وضوحًا عند التحويم */
-    transform: scale(1.1); /* تكبير الأيقونة عند التحويم */
+.more-details .fa-tiktok:hover {
+    background-color: #FD3E3E; 
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
 }
 
   .fa-snapchat-ghost {
@@ -1039,3 +1040,8 @@ footer .social-icon.whatsapp:hover {
         font-size: 18px;
     }
 }
+
+
+
+
+
