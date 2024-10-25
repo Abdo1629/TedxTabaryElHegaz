@@ -331,7 +331,7 @@ body {
 .card1 {
     position: relative;
     width: calc(90% - 2%);
-    min-width: 105px;
+    min-width: 95px;
     max-width: 190px;
     background-color: rgb(69, 69, 69);
     border-radius: 15px 15px 15px 0;
@@ -342,7 +342,7 @@ body {
 }
 
 .card1 .thumb {
-    width: 10vw;
+          width: 100%;
     border-radius: 20px;
 }
 
@@ -356,7 +356,7 @@ z-index: 1;
 .card-soon {
     position: relative;
     width: calc(90% - 2%);
-    min-width: 105px;
+    min-width: 95px;
     max-width: 190px;
     background-color: rgb(143, 143, 143);
     border-radius: 15px;
@@ -381,13 +381,13 @@ transform: scale(1.06);
 box-shadow: 0 0 15px 5px rgba(14, 182, 92, 0.773);
        }
        .card-name p{
-        font-size: 1.3em;
+        font-size: 1.2em;
         margin-top: 0;
         color:rgb(0, 0, 0);
     }
 
        .card-name h4.ended{
-        font-size: 1.2em;
+        font-size: 1em;
         margin-top: 0;
         color:rgb(255, 255, 255);
         background-color: #b90000a8;
@@ -395,15 +395,15 @@ box-shadow: 0 0 15px 5px rgba(14, 182, 92, 0.773);
         border-radius: 3px;
     }
     .card-name h4.soon {
-        font-size: 1.2em;
+        font-size: 1em;
         margin-top: 0;
         color:rgb(255, 255, 255);
         background-color: #00a1088a;
         padding: 5px;
     }
-    .card-name h3{
-        font-size: 1.3em;
-        margin-bottom: 0;
+    .card-name h4{
+        font-size: 1em;
+        margin-bottom: 2px;
     }
     .whit {
         color: white;
@@ -726,9 +726,14 @@ form {
         margin-bottom: 10px;
     }
     .card ,.card-soon , .card1{
-              max-width: 155px;
-              gap: 5px;
+              max-width: 145px;
+              gap: 2px;
 
+    }
+    .more-details {
+        width: 20vw;
+        min-width: 142px;
+        font-size: 12px;
     }
 }
 .wrap {
@@ -741,7 +746,6 @@ footer {
     margin-top: 50px;
     margin-bottom: 0%;
     justify-content: space-between;
-    align-items: center;
     background-color: #f8f9fa; /* لون فاتح يتوافق مع الهوية */
     padding: 20px;
     position: relative;
@@ -1034,7 +1038,4 @@ footer .social-icon.whatsapp:hover {
         height: 35px;
         font-size: 18px;
     }
-}
-.event-info p {
-    padding: 0 10px;
 }
