@@ -6,6 +6,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+    line-height: 1.6;
 }
 
 .content {
@@ -764,8 +765,8 @@ footer {
 
 .promo-section {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 96vw;
+    height: 96vh;
     overflow: hidden;
     align-items: center;
 }
@@ -774,8 +775,8 @@ footer {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100vw;
-    height: 100vh;
+    width: 96vw;
+    height: 96vh;
     object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: -1;
@@ -895,14 +896,59 @@ footer {
     transition: background-color 0.5s ease;
 }
 
-.instapay {
-    background-color: #9b59b6;
+.rules-container {
+    margin: 20px 0;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.vodafone-cash {
-    background-color: #e74c3c;
+.rules-container h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #E62B1E;
+    margin-bottom: 20px;
 }
 
-.vodafone-cash:hover {
-    background-color: #b91401;
+.rules-container ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.rules-container li {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333; 
+}
+
+.rules-container li strong {
+    color: #E62B1E;
+}
+
+@media (max-width: 600px) {
+    .rules-container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .rules-container h2 {
+        font-size: 24px;
+    }
+
+    .rules-container li {
+        font-size: 16px;
+    }
+}
+.iframe {
+    width:100vw; 
+    height: 50vh;
+    border: 8; 
+    border-color: rgba(255, 0, 0, 0.712); 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-info p {
+    padding: 0 10px;
 }
