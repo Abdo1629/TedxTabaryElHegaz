@@ -155,12 +155,14 @@ body {
 .arabic-content {
     direction: rtl; 
     text-align: right;
-    font-family: "Alexandria", sans-serif;
+}
+
+.english-content {
+font-family: "Alexandria", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-
-}
+    }
 
 .landing-page {
     background-color: rgb(0, 0, 0);
