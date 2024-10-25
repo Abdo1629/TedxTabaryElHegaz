@@ -50,6 +50,33 @@ document.addEventListener('DOMContentLoaded', function() {
             link.textContent = currentLanguage === 'AR' ? link.getAttribute('data-ar') : link.getAttribute('data-en');
         });
     });
+
+    var eventDate = new Date("Feb 15, 2025 10:00:00").getTime();
+var countdown = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = eventDate - now;
+  
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // إذا كان أكثر من 72 ساعة
+  if (distance > (72 * 60 * 60 * 1000)) {
+    document.getElementById("countdown").innerHTML = "باقي : " + days + " يوم و " + hours + " ساعة";
+  }
+  // إذا كانت أقل من 72 ساعة
+  else if (distance > 0) {
+    document.getElementById("countdown").innerHTML = "باقي " + hours + " ساعة و " + minutes + " دقيقة";
+  }
+
+  // عند انتهاء العد التنازلي
+  if (distance < 0) {
+    clearInterval(countdown);
+    document.getElementById("countdown").innerHTML = "الحدث بدأ!";
+  }
+}, 1000);
+
                     const images = [
                         'images/landing_photo2.jpg',
                         'images/landing_photo3.jpg'
@@ -106,7 +133,7 @@ const form2 = document.forms['registerform']
 form2.addEventListener('submit', e => {
   e.preventDefault()
   fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
-  .then(response => alert("Thank You! Your Form Is Submitted Successfully And We Will Contact You Soon." ))
+  .then(response => alert("Thank You! Your Form Is Submitted Successfully And We Will Contact You." ))
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
@@ -123,35 +150,6 @@ form.addEventListener('submit', e => {
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
-
-
-
-
-var eventDate = new Date("Feb 15, 2025 10:00:00").getTime();
-var countdown = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = eventDate - now;
-  
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // إذا كان أكثر من 72 ساعة
-  if (distance > (72 * 60 * 60 * 1000)) {
-    document.getElementById("countdown").innerHTML = "باقي : " + days + " يوم و " + hours + " ساعة";
-  }
-  // إذا كانت أقل من 72 ساعة
-  else if (distance > 0) {
-    document.getElementById("countdown").innerHTML = "باقي " + hours + " ساعة و " + minutes + " دقيقة";
-  }
-
-  // عند انتهاء العد التنازلي
-  if (distance < 0) {
-    clearInterval(countdown);
-    document.getElementById("countdown").innerHTML = "الحدث بدأ!";
-  }
-}, 1000);
 
     document.getElementById('payment-method').addEventListener('change', function() {
         var paymentMethod = this.value;
