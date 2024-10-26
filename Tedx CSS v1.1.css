@@ -148,6 +148,10 @@ body {
     padding: 10px 15px;
    border-radius: 20px;
    text-wrap: nowrap;
+   font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 .btn:hover {
     background-color: rgb(255, 44, 44);
@@ -155,7 +159,7 @@ body {
 
 
 .arabic-content {
-    direction: rtl; 
+    direction:rtl; 
     text-align: right;
     font-family: "Alexandria", sans-serif;
     font-optical-sizing: auto;
@@ -165,8 +169,6 @@ body {
 }
 
 .english-content {
-    direction: rtl; 
-    text-align: right;
     font-family: "Alexandria", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -850,7 +852,7 @@ footer {
     line-height: 1.5;
     padding: 1.8vw;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 1.7vw;
     z-index: 1;
 }
 
@@ -996,7 +998,10 @@ footer {
 .iframe {
     width:100vw; 
     height: 50vh;
-    border: 8; 
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 15; 
     border-color: rgba(255, 0, 0, 0.712); 
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -1050,6 +1055,9 @@ footer .social-icon.whatsapp:hover {
         font-size: 18px;
     }
 }
+
+
+
 
 
 
