@@ -1,3 +1,36 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const langToggleBtn = document.getElementById('language-toggle');
+    const englishContent = document.querySelectorAll('.english-content');
+    const arabicContent = document.querySelectorAll('.arabic-content');
+    const header = document.querySelector('.header');
+    
+    englishContent.forEach(content => content.style.display = 'none');
+    arabicContent.forEach(content => content.style.display = 'block');
+    englishContent.forEach(content => header.style.direction = 'ltr');
+    arabicContent.forEach(content => header.style.direction= 'rtl');
+    langToggleBtn.textContent = 'AR';
+
+    langToggleBtn.addEventListener('click', () => {
+        if (englishContent[0].style.display === 'none') {
+            englishContent.forEach(content => content.style.display = 'block');
+            arabicContent.forEach(content => content.style.display = 'none');
+            englishContent.forEach(content => header.style.direction = 'ltr');
+            langToggleBtn.textContent = 'ENG';
+            header.classList.remove('arabic'); // إزالة Class اللغة العربية
+        } else {
+            englishContent.forEach(content => content.style.display = 'none');
+            arabicContent.forEach(content => content.style.display = 'block');
+            arabicContent.forEach(content => header.style.direction= 'rtl');
+            langToggleBtn.textContent = 'AR';
+            header.classList.add('arabic'); // إضافة Class اللغة العربية
+        }
+
+        document.querySelectorAll('.link').forEach(link => {
+            const currentLanguage = langToggleBtn.textContent.trim();
+            link.textContent = currentLanguage === 'AR' ? link.getAttribute('data-ar') : link.getAttribute('data-en');
+        });
+    });
+
 const contents = document.querySelectorAll('.content');
 let hasScrolled = false; 
 
@@ -5,9 +38,8 @@ window.addEventListener('scroll', () => {
     if (hasScrolled) return;
 
     contents.forEach(content => {
-        const contentPosition = content.getBoundingClientRect().top; // موضع العنصر بالنسبة للشاشة
-        const screenPosition = window.innerHeight; // ارتفاع الشاشة
-
+        const contentPosition = content.getBoundingClientRect().top; 
+        const screenPosition = window.innerHeight;
         if (contentPosition < screenPosition) {
             content.classList.add('animate'); 
         }
@@ -22,34 +54,7 @@ links.forEach(link => {
         this.classList.add('active');
     });
 });
-document.addEventListener('DOMContentLoaded', function() {
-    const langToggleBtn = document.getElementById('language-toggle');
-    const englishContent = document.querySelectorAll('.english-content');
-    const arabicContent = document.querySelectorAll('.arabic-content');
-    const header = document.querySelector('.header');
-    
-    englishContent.forEach(content => content.style.display = 'none');
-    arabicContent.forEach(content => content.style.display = 'block');
-    langToggleBtn.textContent = 'AR';
 
-    langToggleBtn.addEventListener('click', () => {
-        if (englishContent[0].style.display === 'none') {
-            englishContent.forEach(content => content.style.display = 'block');
-            arabicContent.forEach(content => content.style.display = 'none');
-            langToggleBtn.textContent = 'ENG';
-            header.classList.remove('arabic'); // إزالة Class اللغة العربية
-        } else {
-            englishContent.forEach(content => content.style.display = 'none');
-            arabicContent.forEach(content => content.style.display = 'block');
-            langToggleBtn.textContent = 'AR';
-            header.classList.add('arabic'); // إضافة Class اللغة العربية
-        }
-
-        document.querySelectorAll('.link').forEach(link => {
-            const currentLanguage = langToggleBtn.textContent.trim();
-            link.textContent = currentLanguage === 'AR' ? link.getAttribute('data-ar') : link.getAttribute('data-en');
-        });
-    });
 
     var eventDate = new Date("Feb 15, 2025 10:00:00").getTime();
 var countdown = setInterval(function() {
@@ -124,6 +129,7 @@ var countdown = setInterval(function() {
                     });
                 });
 
+                
 
                 const scriptURL2 = 'https://script.google.com/macros/s/AKfycbzuQOWcYNvfbqeGgBeeHio9u3_Q0aI5nidxipFug3bVkxK0Wmn5wPL-m66HdkYlNsPB/exec'
 
@@ -133,7 +139,7 @@ const form2 = document.forms['registerform']
 form2.addEventListener('submit', e => {
   e.preventDefault()
   fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
-  .then(response => alert("Thank You! Your Form Is Submitted Successfully And We Will Contact You." ))
+  .then(response => alert("Thank You! Your Form Is Submitted Successfully And We Will Contact You Soon." ))
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
@@ -174,3 +180,7 @@ form.addEventListener('submit', e => {
             promoError.style.display = 'none';
         }
     });
+
+
+
+
