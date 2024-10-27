@@ -996,7 +996,7 @@ footer {
     }
 }
 .iframe {
-    width:100vw; 
+    width:82vw; 
     height: 50vh;
     border-top: 0;
     border-left: 0;
@@ -1088,6 +1088,16 @@ footer .social-icon.whatsapp:hover {
     text-decoration: none; 
     transition: color 0.3s ease;
  }
+
+
+
+
+
+
+
+
+
+
 
 
 
