@@ -1055,6 +1055,37 @@ footer .social-icon.whatsapp:hover {
         font-size: 18px;
     }
 }
+ .item {
+
+    min-width: 160px;
+    min-height: 110px;
+    width: 12vw;
+    height: 6vh;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+ }
+
+ .videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 0;
+ }
+
+ .vid-card h5{
+    background-color: rgba(255, 0, 0, 0.6);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    text-align: right;
+    margin-top: 0;
+    padding-right: 8px;
+ }
+
+
+
+
 
 
 
