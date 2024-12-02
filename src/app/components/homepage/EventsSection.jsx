@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// @tokhy -> retransfer the code to make it more cleaner (make an event component and use props.)
+
 const EventsSection = () => {
   return (
     <div>

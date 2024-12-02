@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // @tokhy -> don't forget to replace all `a` tags with Link component.
+// @tokhy -> retransfer the code to make it more cleaner (make a speaker component and use props.)
 
 const SpeakersSection = () => {
   return (

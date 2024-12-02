@@ -4,6 +4,7 @@ import EventsSection from "./components/homepage/EventsSection";
 import LandingPage from "./components/homepage/LandingPage";
 import PromoSection from "./components/homepage/PromoSection";
 import SpeakersSection from "./components/homepage/SpeakersSection";
+import VideosSection from "./components/homepage/VideosSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <PromoSection />
       <EventsSection />
       <SpeakersSection />
+      <VideosSection />
     </div>
   );
 }
