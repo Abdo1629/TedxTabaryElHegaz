@@ -1,6 +1,7 @@
 import { Alexandria, Noto_Sans_Arabic, Tajawal } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/homepage/Navbar";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 // Load fonts with specific subsets and weights
 const alexandria = Alexandria({
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
