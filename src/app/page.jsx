@@ -6,6 +6,7 @@ import LandingPage from "./components/homepage/LandingPage";
 import PromoSection from "./components/homepage/PromoSection";
 import SpeakersSection from "./components/homepage/SpeakersSection";
 import SponsorsSection from "./components/homepage/SponsorsSection";
+import StatsSection from "./components/homepage/StatesSection";
 import VideosSection from "./components/homepage/VideosSection";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <LandingPage />
       <DefineSection />
       <PromoSection />
+      <StatsSection />
       <EventsSection />
       <SpeakersSection />
       <VideosSection />
