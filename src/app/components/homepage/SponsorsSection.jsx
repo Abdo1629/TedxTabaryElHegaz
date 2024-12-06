@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import Image from "next/image";
 
 export default function SponsorsSection() {
@@ -21,21 +24,54 @@ export default function SponsorsSection() {
     "/images/Sponsors/17.jpg",
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.2 } // يبدأ الأنيميشن عند ظهور 20% من العنصر
+    );
+
+    const titleElements = document.querySelectorAll(".section-title, .fadeSponsor");
+    titleElements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect(); // تنظيف المراقب عند إزالة المكون
+  }, []);
+
   return (
-    <div>
-      <span>الشركاء والرعاة</span>
-      <div>
-        {sponsorLogos.map((logo, index) => (
-          <Image
-            key={index}
-            src={logo}
-            alt="Sponsor Logo"
-            loading="lazy"
-            width={200}
-            height={200}
-          />
-        ))}
+      <div className="events-container">
+        <div className="margintop"></div>
+        <span className="section-title arabic-content">
+          الشركاء والرعاة
+        </span>
+        <div className="sponsors-container">
+          {/* Section Title */}
+          <span
+              className="section-title english-content"
+              style={{ display: "none" }}
+          >
+          Partners & Sponsors
+        </span>
+
+          {/* Sponsor Logos */}
+          <div className="sponsor-logos">
+            {sponsorLogos.map((logo, index) => (
+                <a key={index} className={`fadeSponsor fadeSponsor${index + 1}`}>
+                  <Image
+                      src={logo}
+                      alt={`Sponsor Logo ${index + 1}`}
+                      loading="lazy"
+                      width={200}
+                      height={200}
+                  />
+                </a>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
   );
 }

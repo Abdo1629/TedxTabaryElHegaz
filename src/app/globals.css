@@ -3,14 +3,14 @@ body {
   padding: 0;
   font-family: "Alexandria", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.6;
 }
 
 .content {
-  opacity: 0;
-  transform: translateX(-100px);
+  opacity: 1;
+  transform: translateX(0);
   transition: opacity 1.5s ease-in-out, transform 2s;
 }
 
@@ -162,7 +162,7 @@ body {
   text-wrap: nowrap;
   font-family: "Alexandria", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 .btn:hover {
@@ -298,7 +298,7 @@ h2 {
   width: 100%;
   object-fit: cover;
   border-radius: 30px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -346,6 +346,29 @@ h2 {
 .definition a:hover {
   color: #005bb5;
 }
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.definition {
+  opacity: 0;
+  transform: translateX(-50px); /* يبدأ العنصر من الشمال */
+  transition: opacity 1s ease-out, transform 0.4s ease-out; /* تقليل الوقت إلى 0.4 ثانية */
+}
+
+.definition.visible {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInFromLeft 2s ease-out; /* تقليل الوقت هنا أيضا */
+}
+
 
 .events-container {
   padding: 1.8vw 1vw;
@@ -372,9 +395,11 @@ h2 {
   margin-top: 20px;
   border-radius: 10px;
   display: flex;
+  justify-content: center;
   gap: 0px;
   border: 20px solid #f9f9f9;
   flex-wrap: wrap;
+  direction: ltr;
   z-index: 5;
 }
 
@@ -393,14 +418,14 @@ h2 {
 
 .card1 {
   position: relative;
-  width: calc(90% - 2%);
+  width: 88%;
   min-width: 95px;
   max-width: 190px;
-  background-color: rgb(69, 69, 69);
+  background-color: #918484;
   border-radius: 15px 15px 15px 0;
   display: inline-block;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px #000;
+  transition: transform .3s;
   margin: 1%;
 }
 
@@ -429,21 +454,9 @@ h2 {
   margin: 1%;
 }
 
-.card:hover {
-  background-color: rgba(229, 46, 46, 0.3);
-  cursor: pointer;
-  transform: scale(1.06);
-  z-index: 1;
-}
 
-.card-soon:hover {
-  background-color: rgba(62, 182, 14, 0.3);
-  cursor: pointer;
-  transform: scale(1.06);
-  box-shadow: 0 0 15px 5px rgba(14, 182, 92, 0.773);
-}
 .card-name p {
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin-top: 0;
   color: rgb(0, 0, 0);
 }
@@ -486,6 +499,7 @@ h2 {
 .card-soon .thumb,
 .card1 .thumb {
   width: 100%;
+  height: auto;
   border-radius: 20px 20px 0 0;
 }
 
@@ -542,6 +556,88 @@ h2 {
 .close-button:focus {
   text-decoration: none;
   cursor: pointer;
+}
+@keyframes fadeUp1 {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp2 {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp3 {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeUp1, .fadeUp2, .fadeUp3 {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fadeUp1.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp1 0.8s ease-out;
+}
+
+.fadeUp2.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp2 0.8s ease-out;
+}
+
+.fadeUp3.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp3 0.8s ease-out;
+}
+
+.card:hover {
+  background-color: rgba(229, 46, 46, 0.3);
+  cursor: pointer;
+  transform: scale(1.06);
+  z-index: 1;
+  transition: all 0.3s ease-in-out; /* يجعل التغيرات سلسة */
+}
+
+.card-soon:hover {
+  background-color: rgba(62, 182, 14, 0.3);
+  cursor: pointer;
+  transform: scale(1.06);
+  box-shadow: 0 0 15px 5px rgba(14, 182, 92, 0.773);
+  transition: all 0.3s ease-in-out; /* يجعل التغيرات سلسة */
+}
+
+.card:hover .card-name h4 {
+  color: rgba(255, 0, 0, 0.9); /* تغيير لون النص */
+  transition: color 0.3s ease-in-out; /* تأثير سلس على النصوص */
+}
+
+.card-soon:hover .card-name h4 {
+  color: rgba(0, 128, 0, 0.9); /* تغيير لون النص */
+  transition: color 0.3s ease-in-out; /* تأثير سلس على النصوص */
 }
 
 .more-details {
@@ -635,28 +731,28 @@ h2 {
   text-decoration: none;
   background: #f09433;
   background: -moz-linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
   );
   background: -webkit-linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
   );
   background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
   color: white;
@@ -667,8 +763,8 @@ h2 {
   cursor: pointer;
   transform: scale(1.06);
   box-shadow: 0 0 10px 5px rgba(244, 172, 175, 0.8),
-    0 0 12px 0 rgba(230, 104, 60, 0.6), 0 0 14px 0 rgba(220, 39, 67, 0.4),
-    0 0 19px 0 rgba(203, 13, 89, 0.3), 0 0 24px 0 rgba(213, 0, 145, 0.716);
+  0 0 12px 0 rgba(230, 104, 60, 0.6), 0 0 14px 0 rgba(220, 39, 67, 0.4),
+  0 0 19px 0 rgba(203, 13, 89, 0.3), 0 0 24px 0 rgba(213, 0, 145, 0.716);
 }
 .more-details .fa-tiktok {
   margin-top: 5px;
@@ -716,8 +812,9 @@ h2 {
 .sponsors-container {
   background-color: #f9f9f9;
   padding: 50px 20px;
-  border-radius: 10px;
+  border-radius: 100px;
   margin: 20px 0;
+  direction: ltr;
 }
 
 .section-title {
@@ -728,6 +825,29 @@ h2 {
   display: block;
   text-align: center;
 }
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px); /* يبدأ من اليمين */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* يصل إلى موقعه الطبيعي */
+  }
+}
+
+.section-title {
+  opacity: 0;
+  transform: translateX(50px); /* الموقع الأولي */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-title.visible {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInFromRight 0.8s ease-out;
+}
+
 
 .sponsor-logos {
   display: flex;
@@ -750,6 +870,7 @@ h2 {
   max-width: 155px;
   max-height: 155px;
   object-fit: contain;
+  border-radius:100px;
 }
 
 .contact {
@@ -802,6 +923,65 @@ form {
 .btn1:hover {
   background-color: #0056b3;
 }
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* يبدأ من الأسفل */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* يصل إلى موقعه الطبيعي */
+  }
+}
+
+.content {
+  opacity: 0;
+  transform: translateY(30px); /* البداية من الأسفل */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.content.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp 0.8s ease-out; /* الأنيميشن الذي يجعل العنصر يظهر تدريجيًا */
+}
+
+.form-row {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.form-row.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp 0.8s ease-out;
+}
+
+.btn1 {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.btn1.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp 0.8s ease-out;
+}
+
+.send {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.send.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp 0.8s ease-out;
+}
+
 
 @media (max-width: 768px) {
   .form-row {
@@ -846,6 +1026,7 @@ footer {
   padding: 20px;
   position: relative;
   transition: background-color 0.3s ease;
+  direction: ltr;
 }
 .footer2 {
   margin-top: 10px;
@@ -856,6 +1037,7 @@ footer {
   position: relative;
   transition: background-color 0.3s ease;
   margin-bottom: 0%;
+
 }
 
 .footer-logo {
@@ -869,6 +1051,7 @@ footer {
   margin: 0;
   color: #333;
   font-size: 14px;
+  font-weight: 400 ;
 }
 
 .fade-in {
@@ -883,7 +1066,7 @@ footer {
 }
 
 .send {
-  padding-inline: 6px;
+  padding-inline: 20px;
 }
 
 .event-description,
@@ -967,11 +1150,11 @@ footer {
   width: 100%;
   height: 100%;
   background: repeating-linear-gradient(
-    45deg,
-    rgba(139, 0, 0, 0.2),
-    rgba(139, 0, 0, 0.2) 10px,
-    transparent 10px,
-    transparent 20px
+          45deg,
+          rgba(139, 0, 0, 0.2),
+          rgba(139, 0, 0, 0.2) 10px,
+          transparent 10px,
+          transparent 20px
   );
   z-index: -1;
   animation: diagonalMove 10s linear infinite;
@@ -1278,3 +1461,280 @@ footer .social-icon.linkedin:hover {
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
+
+/* Existing styles... */
+
+/* Speakers Section Styles */
+.speakers-section {
+  padding: 4rem 0;
+  background-color: #f9fafb;
+}
+
+.speakers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.speakers-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.speakers-subtitle {
+  color: #dc2626;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.speakers-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.speakers-button {
+  background-color: #b91c1c;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.speakers-button:hover {
+  background-color: #991b1b;
+}
+
+.speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .speakers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .speakers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .speakers-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.speaker-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s;
+}
+
+.speaker-card:hover {
+  transform: scale(1.05);
+}
+
+.speaker-image-container {
+  position: relative;
+}
+
+.speaker-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.speaker-season {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.5rem;
+}
+
+.speaker-season-text {
+  font-size: 0.75rem;
+}
+
+.speaker-info {
+  background-color: #374151;
+  padding: 1rem;
+  text-align: center;
+}
+
+.speaker-name {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.speaker-role {
+  color: #60a5fa;
+  font-size: 0.875rem;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideUp 0.8s ease-out;
+}
+
+.vid-card {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.vid-card.visible {
+  opacity: 1;
+  transform: scale(1);
+  animation: fadeIn 0.8s ease-out;
+}
+
+.vid-card h5 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #444;
+}
+
+.btn {
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+
+  transform: scale(1.05);
+}
+
+.events-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.videos {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.item {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+@keyframes fadeUpSponsor {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeSponsor {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fadeSponsor.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUpSponsor 0.8s ease-out;
+}
+
+/* تأخيرات مخصصة لكل شعار */
+.fadeSponsor1.visible {
+  animation-delay: 0s;
+}
+
+.fadeSponsor2.visible {
+  animation-delay: 0.2s;
+}
+
+.fadeSponsor3.visible {
+  animation-delay: 0.4s;
+}
+
+.fadeSponsor4.visible {
+  animation-delay: 0.6s;
+}
+
+.fadeSponsor5.visible {
+  animation-delay: 0.8s;
+}
+.fadeSponsor6.visible {
+  animation-delay: 1s;
+}
+
+.fadeSponsor7.visible {
+  animation-delay: 1.2s;
+}
+
+
+
+
+
