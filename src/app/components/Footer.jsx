@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin } from "lucide-react"; // استمر في استخدام lucide للأيقونات الأخرى
-import { FaWhatsapp } from "react-icons/fa";  // استيراد أيقونة واتساب من react-icons
+import { FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";  // استيراد أيقونة واتساب من react-icons
 
 export default function Footer() {
     return (
@@ -15,7 +14,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <Facebook size={24} />
+                    <FaFacebook size={24} />
                 </Link>
                 <Link
                     className="social-icon instagram"
@@ -23,7 +22,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <Instagram size={24} />
+                    <FaInstagram size={24} />
                 </Link>
                 <Link
                     className="social-icon linkedin"
@@ -31,7 +30,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <Linkedin size={24} />
+                    <FaLinkedin size={24} />
                 </Link>
                 <Link
                     className="social-icon whatsapp"

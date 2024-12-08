@@ -36,7 +36,7 @@ const DefineSection = () => {
           <h5>
             <span className="highlight">TED</span> (والتي تعني التكنولوجيا والترفيه
             والتصميم)
-            (<span className="highlight">T</span>echnology, <span className="highlight">E</span>ntertainment, <span className="highlight">D</span>esign))
+            (<span className="highlight">T</span>echnology, <span className="highlight">E</span>ntertainment, <span className="highlight">D</span>esign)
 
           </h5>
           <p>
@@ -50,10 +50,10 @@ const DefineSection = () => {
             دقيقة - تركز على تبسيط الموضوعات المعقدة وتحويلها إلى أفكار سهلة الفهم
             وجذابة. الحدث الرئيسي للمنظمة، وهو مؤتمر تيد السنوي، يجذب قادة عالميين ورواد
             أعمال ورؤى ومفكرين مؤثرين يقدمون محادثات تهدف إلى الإلهام والتوعية وإثارة
-            التفكير. يتم إتاحة هذه المحادثات مجانًا على{" "}
+            التفكير. يتم إتاحة هذه المحادثات مجانًا على
             <Link href="http://www.TED.com/" target="_blank">
               TED
-            </Link>{" "}
+            </Link>
             وغيرها من المنصات، مما يسهم في ديمقراطية الوصول إلى المعرفة ويسمح للأشخاص
             في جميع أنحاء العالم بالتعلم من بعض من أذكى العقول في مختلف المجالات.
           </p>
