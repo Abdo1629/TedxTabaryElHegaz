@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";  // استيراد أيقونة واتساب من react-icons
+import { FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
     return (
