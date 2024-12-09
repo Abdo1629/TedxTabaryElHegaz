@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <title>TEDxTabaryElHegaz</title>
+    <link rel="stylesheet" href="Tedx CSS v1.1.css"/>
+    <link rel="stylesheet" href="web javascript.js"/>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Noto+Sans+Arabic:wght@500&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--Header-->
+    <div class="fixed">
+        <div class="header">
+            <a href="index.html">
+                <img class="logo" src="images/tedx.png" alt="Logo">
+            </a>
+            <div class="header-links"> 
+                <a href="index.html" class="link" data-en="Home" data-ar="الرئيسية" >الرئيسية</a>
+                <a href="more-speakers.html" class="link" data-en="Speakers" data-ar="المتحدثون">المتحدثون</a>
+                <a href="event-3.html" class="link active" data-en="Events" data-ar="الفعاليات">الفعاليات</a>
+                <a href="index.html#contactform" class="link" data-en="Contacts" data-ar="اتصل بنا">اتصل بنا</a>
+                <button id="language-toggle" class="btn_lang">AR</button>
+            </div>
+        </div>
+</div>
+<div class="margintop"></div>
+<div class="events-container">
+    <div class="event-info">
+        <div class="arabic-content" style="display: none;">
+            <span>الموسم 3</span>
+            <div class="EventsHeader">
+                <h2>عودُ على بدء</h2>
+            </div>
+            <p id="event-date" class="event-date"><strong>التاريخ:</strong> 15 فبراير 2025</p>
+            <p id="event-time" class="event-time"><strong>الوقت:</strong> 10:00 صباحاً - 6:00 مساءً</p>
+            <p id="event-location" class="event-location"><strong>العنوان:</strong> القاهرة, مصر</p>
+            <p id="event-location" class="event-location"><strong>الوصف:</strong>
+                الحياةُ مسرحٌ مليءٌ بالتحديات يواجه المرء منها مصيره مستسلمًا بمعطيات يكمن بعضها في إرادته فتحدثه نفسه أن 
+                <strong class="highlight">"ليس سوى أن تريد"</strong>
+            </p>
+            <p>
+                كما يمكن حلُّها بيد خالقه يمنحه إياها لما يرى من عزمه
+                <strong class="highlight">"فعلى قدر أهل العزم تأتي العزائم"  </strong>            
+            </p>
+            <p>
+                وها نحن نعود لنبدأ فمن رجع عَوْدُخ على بدئخ لم ينقطع ذهابه حتى يصلَه برجوعه. نعود من حيث توقفنا فنهمس في أُذن الحياة صارخين بالتغيير 
+                <strong class="highlight">"فَعَوْدُ علىٰ بَدْء"</strong>
+            </p>
+        </div>
+        <div class="english-content">
+            <span>Season 3</span>
+            <div class="EventsHeader">
+                <h2>عودُ على بدء</h2>
+            </div> 
+            <p id="event-date" class="event-date"><strong>Date:</strong> 15 February 2025</p>
+            <p id="event-time" class="event-time"><strong>Time:</strong> 10:00 AM - 6:00 PM</p>
+            <p id="event-location" class="event-location"><strong>Location:</strong> Cairo, Egypt</p>
+            <p id="event-location" class="event-location"><strong>Description:</strong>     
+Life is a stage filled with challenges, where one faces their destiny, sometimes surrendering to factors within their control, as an inner voice whispers, 
+<strong class="highlight">"ليس سوى أن تريد"</strong>
+</p>
+<p>
+    Yet most of it remains in the hands of the Creator, who grants according to one’s resolve, for, 
+    <strong class="highlight">"فعلى قدر أهل العزم تأتي العزائم"  </strong>
+</p>
+<p>
+    And so, here we are, returning to begin once more. Whoever returns to the start does not halt their journey until they bridge the end with the beginning. We return to where we paused, whispering to life, shouting for change,
+    <strong class="highlight">"فَعَوْدُ علىٰ بَدْء"</strong>
+</p>
+        </div>
+        <div class="margintop"></div>
+        <div class="event-map">
+            <div class="sponsors-container">
+                <span class="section-title arabic-content" style="display: none;"> العنوان على الخريطة</span>
+        <span class="section-title english-content">Location On Map</span>
+                <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.755320208394!2d31.236322476087955!3d30.04572967047006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840b89be0d6b9%3A0x6354e1f57b65bf7!2sTabari%20Al-Hijaz%20School!5e0!3m2!1sen!2seg!4v1605462621356!5m2!1sen!2seg" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class=" events-container">
+            <div class="arabic-content" style="display: none;">
+                <span>الموسم 3</span>
+                <div class="EventsHeader">
+                    <h2>تسجيل الحدث</h2>
+                </div>
+            </div>
+            <div class="english-content">
+                <span>Season 3</span>
+                <div class="EventsHeader">
+                    <h2>Event Registeration</h2>
+                </div>
+            </div>
+    <div class="events-container">
+        <span class="section-title content arabic-content" style="display: none;">حجز تذكرة</span>
+        <span class="section-title content english-content">Book A Ticket</span>
+        <div class="contact">
+            <form action="" method="POST" name="registerform">
+                <div class="form-row">
+                    <label for="name" class="content arabic-content" style="display: none;">الاسم ثلاثياً: </label>
+                    <label for="name" class="content english-content">Name:</label>
+                    <input class="cont-input" type="text" id="Name" name="Name" required>
+                </div>
+                <div class="form-row">
+                    <label for="email" class="content arabic-content" style="display: none;">البريد الإلكتروني:</label>
+                    <label for="email" class="content english-content">Email:</label>
+                    <input class="cont-input" type="email" id="Email" name="Email" required>
+                </div>
+                <div class="form-row">
+                    <label for="phone" class="content arabic-content" style="display: none;">رقم الهاتف:</label>
+                    <label for="phone" class="content english-content">Phone Number:</label>
+                    <input class="cont-input" type="number" id="Phone" name="Phone" required>
+                </div>
+                <div class="form-row">
+                    <label for="address" class="content arabic-content" style="display: none;">العنوان:</label>
+                    <label for="address" class="content english-content">Address:</label>
+                    <input class="cont-input" type="text" id="Address" name="Address" required>
+                </div>
+                <div class="form-row">
+                    <label class="content arabic-content" style="display: none;">نوع التذكرة :</label>
+                    <label class="content english-content">Ticket:</label>
+                    <select class="cont-input" name="Ticket" required>
+                        <option value="Classic">Classic - 250EGP</option>
+                        <option value="Engage">Engage - 350EGP</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="content arabic-content" style="display: none;">وسيلة الدفع:</label>
+                    <label class="content english-content">Payment Method:</label>
+                    <select class="cont-input" name="Payment-Method" required>
+                        <option class="instapay" value="instapay">Instapay</option>
+                        <option class="vodafone-cash" value="vodafone-cash">Vodafone Cash</option>
+                        <option class="promocode" value="promocode">Promocode</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="Promocode" class="content arabic-content" style="display: none;">كود خصم: (الإجابة اختياري)</label>
+                    <label for="Promocode" class="content english-content">Promocode: (Optional)</label>
+                    <input class="cont-input" type="text" id="Promocode" name="Promocode">
+                    <span id="promo-error" style="color: red; display: none;">Invalid promo code!</span>
+                </div>
+                <div class="form-row">
+                    <label for="ask" class="content arabic-content" style="display: none;">ما هي توقعاتك؟: (الإجابة اختياري)</label>
+                    <label for="ask" class="content english-content">What Is Your Expectations?: (Optional)</label>
+                    <input class="cont-input" type="massage" id="Expectations" name="Expectations">
+                </div>
+                <div class="form-row">
+                    <label for="anyQuestion" class="content arabic-content" style="display: none;">أي أسئلة؟ (الإجابة اختياري)</label>
+                    <label for="anyQuestion" class="content english-content">Any Questions?: (Optional)</label>
+                    <input class="cont-input" type="massage" id="anyQuestion" name="Any Question">
+                </div>
+                <div class="form-row">
+                    <label for="name" class="content arabic-content" style="display: none;">الرجاء إرسال صورة التحويل على رقم واتساب التالي: +201014735800</label>
+                    <label for="name" class="content english-content">Please send the transfer receipt to the following WhatsApp number: +201014735800</label>
+                    <a href="https://wa.me/201014735800" target="_blank" class="content english-content">(Click to send via WhatsApp)</a>
+                    <a href="https://wa.me/201014735800" target="_blank" class="content arabic-content" style="display: none;">(اضغط للإرسال عبر واتساب)</a>
+                </div>
+                <input class="btn1" type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="content rules-container">
+    <!-- English Rules -->
+    <div class="english-content">
+        <h2>Rules for the TEDx Event</h2>
+        <ol>
+            <li class="content"><strong>Ticket and Identification:</strong> Each attendee must present a valid ticket upon entry. Ensure that you have your identification ready when requested by the event staff.</li>
+            <li class="content"><strong>Seating Arrangements:</strong> For the privacy and comfort of all attendees, seating will be separated. There will be designated sections for men and women. Attendees are kindly requested to respect these arrangements and sit in their assigned sections.</li>
+            <li class="content"><strong>Respect and Behavior:</strong> TEDx is committed to fostering an inclusive, respectful, and positive environment. Any disruptive or disrespectful behavior will not be tolerated. Attendees must refrain from offensive language, inappropriate gestures, or any form of harassment.</li>
+            <li class="content"><strong>Photography and Recording:</strong> Attendees are not permitted to record or take photographs of the event without prior permission from the organizers. Official photographers will be available during the event.</li>
+            <li class="content"><strong>Dress Code:</strong> Please dress modestly and appropriately for the event. TEDx encourages professional and comfortable attire in line with local cultural standards.</li>
+            <li class="content"><strong>Punctuality:</strong> Attendees are advised to arrive on time to avoid any disruption. Latecomers may not be allowed entry depending on the event’s schedule.</li>
+            <li class="content"><strong>Health and Safety:</strong> Adhere to any health protocols and safety measures put in place by the event organizers. If you feel unwell during the event, please notify a member of the staff immediately.</li>
+            <li class="content"><strong>Zero Tolerance Policy:</strong> TEDx maintains a strict zero-tolerance policy towards any form of discrimination, harassment, or violence. Anyone found violating these rules will be removed from the event immediately without refund.</li>
+        </ol>
+    </div>
+
+    <!-- Arabic Rules -->
+    <div class="arabic-content" style="display: none;">
+        <h2>قوانين الحدث</h2>
+        <ol lass="content">
+            <li lass="content"><strong>التذكرة وإثبات الهوية:</strong> يجب على كل مشارك إظهار تذكرة صالحة عند الدخول. تأكد من أن لديك إثبات هوية جاهز عند الطلب من قبل موظفي الحدث.</li>
+            <li lass="content"><strong>ترتيبات الجلوس:</strong> لضمان خصوصية وراحة جميع المشاركين، سيتم فصل أماكن الجلوس. سيكون هناك أقسام مخصصة للرجال وأخرى للنساء. يُطلب من جميع المشاركين احترام هذه الترتيبات والجلوس في الأماكن المخصصة لهم.</li>
+            <li lass="content"><strong>الاحترام والسلوك:</strong> يلتزم TEDx بخلق بيئة شاملة ومحترمة وإيجابية. لن يتم التسامح مع أي سلوك مزعج أو غير محترم. يجب على المشاركين الامتناع عن استخدام لغة مسيئة أو إيماءات غير لائقة أو أي شكل من أشكال التحرش.</li>
+            <li lass="content"><strong>التصوير والتسجيل:</strong> لا يُسمح للمشاركين بتسجيل أو التقاط صور للحدث دون إذن مسبق من المنظمين. سيكون هناك مصورون رسميون متاحون خلال الحدث.</li>
+            <li lass="content"><strong>قواعد اللباس:</strong> يرجى ارتداء الملابس المحتشمة والمناسبة للحدث. يشجع TEDx على ارتداء الملابس المهنية والمريحة بما يتماشى مع المعايير الثقافية المحلية.</li>
+            <li lass="content"><strong>الالتزام بالمواعيد:</strong> يُنصح المشاركون بالوصول في الوقت المحدد لتجنب أي انقطاع. قد لا يُسمح بدخول المتأخرين حسب جدول الحدث.</li>
+            <li lass="content"><strong>الصحة والسلامة:</strong> الالتزام بأي بروتوكولات صحية وإجراءات السلامة التي يضعها المنظمون. إذا شعرت بأي توعك أثناء الحدث، يرجى إبلاغ أحد أفراد الطاقم على الفور.</li>
+            <li lass="content"><strong>سياسة عدم التسامح:</strong> يلتزم TEDx بسياسة عدم التسامح مطلقًا تجاه أي شكل من أشكال التمييز أو التحرش أو العنف. سيتم طرد أي شخص ينتهك هذه القواعد على الفور دون استرداد.</li>
+        </ol>
+    </div>
+</div>
+    
+    <footer>
+        <div class="footer2">
+        <img class="footer-logo" src="images/logo2.png" alt="TEDx Logo">
+        <p class="copyright content arabic-content" style="display: none;">حقوق الطبع والنشر © TEDxTabaryElHegazHS. جميع الحقوق محفوظة 2025</p>
+        <p class="copyright content english-content">Copyright © TEDxTabaryElHegazHS. All Rights Reserved 2025</p>
+    </div>
+    </footer>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+    const langToggleBtn = document.getElementById('language-toggle');
+    const englishContent = document.querySelectorAll('.english-content');
+    const arabicContent = document.querySelectorAll('.arabic-content');
+    const header = document.querySelector('.header');
+    
+    englishContent.forEach(content => content.style.display = 'none');
+    arabicContent.forEach(content => content.style.display = 'block');
+    englishContent.forEach(content => header.style.direction = 'ltr');
+    arabicContent.forEach(content => header.style.direction= 'rtl');
+    langToggleBtn.textContent = 'AR';
+
+    langToggleBtn.addEventListener('click', () => {
+        if (englishContent[0].style.display === 'none') {
+            englishContent.forEach(content => content.style.display = 'block');
+            arabicContent.forEach(content => content.style.display = 'none');
+            englishContent.forEach(content => header.style.direction = 'ltr');
+            langToggleBtn.textContent = 'ENG';
+            header.classList.remove('arabic'); // إزالة Class اللغة العربية
+        } else {
+            englishContent.forEach(content => content.style.display = 'none');
+            arabicContent.forEach(content => content.style.display = 'block');
+            arabicContent.forEach(content => header.style.direction= 'rtl');
+            langToggleBtn.textContent = 'AR';
+            header.classList.add('arabic'); // إضافة Class اللغة العربية
+        }
+
+        document.querySelectorAll('.link').forEach(link => {
+            const currentLanguage = langToggleBtn.textContent.trim();
+            link.textContent = currentLanguage === 'AR' ? link.getAttribute('data-ar') : link.getAttribute('data-en');
+        });
+    });
+
+const contents = document.querySelectorAll('.content');
+let hasScrolled = false; 
+
+window.addEventListener('scroll', () => {
+    if (hasScrolled) return;
+
+    contents.forEach(content => {
+        const contentPosition = content.getBoundingClientRect().top; 
+        const screenPosition = window.innerHeight;
+        if (contentPosition < screenPosition) {
+            content.classList.add('animate'); 
+        }
+    });
+
+});
+
+const links = document.querySelectorAll('.header-links a');
+links.forEach(link => {
+    link.addEventListener('click', function() {
+        links.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+
+
+                    cards.forEach(card => {
+                        card.addEventListener('mouseenter', function() {
+                            const details = this.querySelector('.more-details');
+                            if (details) {
+                                details.classList.add('active');
+                            }
+                        });
+            
+                        card.addEventListener('mouseleave', function() {
+                            const details = this.querySelector('.more-details');
+                            if (details) {
+                                details.classList.remove('active');
+                            }
+                        });
+                    });
+                });
+
+                
+
+                const scriptURL2 = 'https://script.google.com/macros/s/AKfycbzuQOWcYNvfbqeGgBeeHio9u3_Q0aI5nidxipFug3bVkxK0Wmn5wPL-m66HdkYlNsPB/exec'
+
+const form2 = document.forms['registerform']
+
+
+form2.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
+  .then(response => alert("Thank You! Your Form Is Submitted Successfully And We Will Contact You Soon." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+                const scriptURL = 'https://script.google.com/macros/s/AKfycby38gcV1O0cE2aSWwCrAtKcCsRAsVp9KZLqM9FTEx1U_L50GwZUUh6bQvvGP0qWTr6S/exec';
+
+    document.getElementById('payment-method').addEventListener('change', function() {
+        var paymentMethod = this.value;
+        var screenshotField = document.getElementById('payment-screenshot');
+        var screenshotRow = document.getElementById('payment-screenshot-row');
+
+        if (paymentMethod === 'promocode') {
+            screenshotField.required = false;
+        } else {
+            screenshotField.required = true;
+        }
+    });
+
+        const validPromoCodes = ["AhmedTEDxPromo100", "50%PromoPPM", "10%VPromo"];
+
+    const promoInput = document.getElementById('Promocode');
+    const promoError = document.getElementById('promo-error');
+    promoInput.addEventListener('input', function() {
+        if (!validPromoCodes.includes(promoInput.value)) {
+            promoError.style.display = 'inline'; 
+        } else {
+            promoError.style.display = 'none';
+        }
+    });
+    
+            </script>
+</body>
+</html>
