@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTiktok,
+  FaYoutube,
+} from "react-icons/fa";
 
 const SpeakerCard = ({ speaker }) => {
   const { nameArabic, titleArabic, image, socialMedia, name } = speaker;
@@ -25,7 +31,7 @@ const SpeakerCard = ({ speaker }) => {
         </Link>
       </div>
 
-      {(socialMedia?.facebook || socialMedia?.linkedin) && (
+      {socialMedia && (
         <div>
           {socialMedia?.facebook && (
             <a
@@ -43,6 +49,33 @@ const SpeakerCard = ({ speaker }) => {
               rel="noopener noreferrer"
             >
               <FaLinkedin size={24} />
+            </a>
+          )}
+          {socialMedia?.instagram && (
+            <a
+              href={socialMedia.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram size={24} />
+            </a>
+          )}
+          {socialMedia?.youtube && (
+            <a
+              href={socialMedia.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaYoutube size={24} />
+            </a>
+          )}
+          {socialMedia?.tiktok && (
+            <a
+              href={socialMedia.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTiktok size={24} />
             </a>
           )}
         </div>

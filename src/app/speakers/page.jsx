@@ -17,6 +17,18 @@ const SpeakersPage = () => {
             })}
         </div>
       </div>
+      <div>
+        <h4>متحدثون الموسم الاول</h4>
+        <div>
+          {/* put code loop here */}
+        </div>
+      </div>
+      <div>
+        <h4>متحدثون الموسم الثاني</h4>
+        <div>
+          {/* put code loop here */}
+        </div>
+      </div>
     </div>
   );
 };
