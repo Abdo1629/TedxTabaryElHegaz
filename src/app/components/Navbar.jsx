@@ -32,9 +32,9 @@ export default function Navbar() {
             الرئيسية
           </Link>
           <Link
-              href="/more-speakers"
-              className={`link ${currentPath === "/more-speakers" ? "active" : ""}`}
-              onClick={() => handleLinkClick("/more-speakers")}
+              href="/speakers"
+              className={`link ${currentPath === "/speakers" ? "active" : ""}`}
+              onClick={() => handleLinkClick("/speakers")}
           >
             المتحدثون
           </Link>
