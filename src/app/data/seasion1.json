@@ -86,7 +86,6 @@
                 "tiktok": "https://www.tiktok.com/@faresetman"
             }
         },
-        [
             {
               "id": 10,
               "name": "Ahmed Adel",
@@ -197,5 +196,4 @@
               }
             }
           ]
-    ]
 }
