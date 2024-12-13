@@ -1,0 +1,63 @@
+{
+    "team": [
+        {
+            "id": 1,
+            "name": "Ahmed Mostafa",
+            "nameArabic": "أحمد مصطفى",
+            "title": "Founder & President",
+            "titleArabic": "المؤسس& الرئيس",
+            "image": "images/ahmed.jpg",
+            "description": {
+                "english": "Ahmed Mostafa is an aspiring entrepreneur, pursuing a Bachelor of Commerce degree at Cairo University, with a focus on business administration and management. He has a passion for innovation and leadership and has been actively seeking opportunities to learn and grow in the startup ecosystem. He has completed multiple online courses in digital marketing, entrepreneurship, and emotional intelligence.",
+                "arabic": "أحمد مصطفى هو رائد أعمال طموح ومؤسس TEDx طبري. يدرس للحصول على درجة البكالوريوس في التجارة من جامعة القاهرة، مع تخصص في إدارة الأعمال. يتمتع بشغف كبير بالابتكار والقيادة، ويبحث باستمرار عن فرص للتعلم والنمو في مجال ريادة الأعمال والمشاريع الناشئة. أكمل أحمد العديد من الدورات التدريبية عبر الإنترنت في مجالات التسويق الرقمي، ريادة الأعمال، والذكاء العاطفي، مما يعزز معرفته ومهاراته في بناء الشركات والمبادرات الريادية."
+            },
+            "socialMedia": {
+                "facebook": "https://www.facebook.com/ahmdabdrabou",
+                "linkedin": "https://www.linkedin.com/in/ahmdabdrabou/"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Mostafa Ahmed",
+            "nameArabic": "مصطفى أحمد",
+            "title": "Investor",
+            "titleArabic": "مستثمر",
+            "image": "images/Mostafa Ahmed.jpg",
+            "description": {
+                "english": "Mostafa Ahmed is the Director of Technical Equipment Management at EgyptAir and a graduate of the Faculty of Applied Arts. He also works as a freelance designer in the fields of design and printing, with over 20 years of experience. Mostafa is a strong supporter of young people and has made a significant donation to support the organization of the first event and ensure its success.",
+                "arabic": "مصطفى أحمد هو مدير إدارة التجهيزات الفنية  في شركة مصر للطيران، خريج كلية الفنون التطبيقية، ويعمل في مجال التصميمات والطباعة كعمل حر. يمتلك خبرة تزيد عن 20 سنة في هذا المجال. مصطفى أحمد داعم للشباب وتبرع بمبلغ كبير لدعم تنظيم الحدث الأول وتحقيق نجاحه"
+            },
+            "socialMedia": {
+                "facebook": "https://www.facebook.com/profile.php?id=100015008850148&mibextid=ZbWKwL"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Alaa Abdrabou",
+            "nameArabic": "علاء عبدربه",
+            "title": "Theme Curator",
+            "titleArabic": "مستشار السمات",
+            "image": "images/Alaa Abdrabou.jpg",
+            "description": {
+                "english": "Arabic language teacher and a graduate of the Faculty of Arabic Language at Al-Azhar University. He is responsible for selecting the themes for all TEDx events, adding a unique cultural and linguistic touch to each event.",
+                "arabic": "مدرس لغة عربية، خريج كلية اللغة العربية بجامعة الأزهر. يشغل منصب المسؤول عن اختيار السمات المستخدمة في جميع فعاليات تيداكس، مما يضفي طابعًا ثقافيًا ولغويًا فريدًا على كل حدث."
+            },
+            "socialMedia": {
+                "facebook": "https://www.facebook.com/profile.php?id=100001543608805&mibextid=ZbWKwL"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Bahaa Badrelden",
+            "nameArabic": "بهاء بدرالدين",
+            "title": "School Principal",
+            "titleArabic": "مدير المدرسة",
+            "image": "images/Bahaa Badr.jpg",
+            "description": {
+                "english": "Principal of Tabary Elhegaz High-School, who approved hosting the event under the school's name. He supports youth initiatives and education, helping to strengthen the ties between education and the community through this event.",
+                "arabic": "مدير مدرسة طبري الحجاز، الذي وافق على إقامة الحدث باسم المدرسة. يدعم المبادرات الشبابية والتعليمية، ويساهم في تعزيز الروابط بين التعليم والمجتمع من خلال هذه الفعالية."
+            },
+            "socialMedia": {}
+        }
+    ]
+}

@@ -18,7 +18,7 @@ body {
   opacity: 1;
   transform: translateX(0);
 }
-
+/* تصميم الهيدر */
 .header {
   background-color: black;
   display: flex;
@@ -34,11 +34,13 @@ body {
   border-radius: 0 0 10px 10px;
 }
 
+/* الشعار */
 .logo {
   width: 10vw;
   min-width: 40px;
 }
 
+/* روابط الهيدر */
 .header-links {
   display: flex;
   flex-wrap: nowrap;
@@ -55,6 +57,7 @@ body {
   position: relative;
 }
 
+/* تأثير تحته عند التمرير */
 .header-links a::after {
   content: "";
   position: absolute;
@@ -74,6 +77,7 @@ body {
   transform-origin: left;
 }
 
+/* زر اللغة */
 .btn_lang {
   background-color: #3152be;
   color: white;
@@ -92,20 +96,46 @@ body {
   box-shadow: 0 0 15px 5px rgba(33, 240, 255, 0.488);
 }
 
-@media (max-width: 767px) {
-  .header {
-    padding: 1rem 2%;
+/* استجابة على الشاشات الصغيرة */
+@media (max-width: 768px) {
+  /* تصغير الشعار في الجوال */
+  .logo {
+    width: 30vw;
+  }
+
+  /* تغيير تنسيق الروابط في الجوال */
+  .header-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
   }
 
   .header-links a {
-    font-size: 1rem;
-    text-align: center;
-    padding: 0.5rem;
+    padding: 1rem;
+    font-size: 4vw;
   }
 
-  .logo {
-    width: 10vw;
-    min-width: 15px;
+  /* زر اللغة */
+  .btn_lang {
+    font-size: 4vw;
+    padding: 1.5rem 2rem;
+  }
+
+  /* إضافة تنسيق خاص للقائمة في الجوال */
+  .header {
+    padding: 1rem 2%;
+  }
+}
+
+/* استجابة على الشاشات الصغيرة جدًا */
+@media (max-width: 480px) {
+  .header-links a {
+    font-size: 5vw;
+  }
+
+  .btn_lang {
+    font-size: 5vw;
+    padding: 2rem 2.5rem;
   }
 }
 
@@ -903,6 +933,7 @@ form {
 
 .cont-input {
   width: 100%;
+  margin: 12px auto;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -918,8 +949,18 @@ form {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
+  display: block;
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
 }
 
+.arabic-content .btn1 {
+  direction: rtl;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+}
 .btn1:hover {
   background-color: #0056b3;
 }
@@ -1733,6 +1774,91 @@ footer .social-icon.linkedin:hover {
 .fadeSponsor7.visible {
   animation-delay: 1.2s;
 }
+
+
+
+.stats-section {
+  width: 100%;
+  padding: 3rem 0;
+  background: #000;
+  border-radius: 0.5rem;
+}
+
+.stats-container {
+  display: grid;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.stat-card {
+  background-color: #000;
+  border: 1px solid #c92929;
+  border-radius: 0.75rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  aspect-ratio: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.stat-icon {
+  background-color: #cd1e1e;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-card.visible {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+
 
 
 
