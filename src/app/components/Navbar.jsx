@@ -4,15 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
-  // ده بيخزن المسار ال انا دوست عليه
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLinkClick = (path) => {
-    setCurrentPath(path); // ده بيحدث المسار لما ادوس عليه
+    setCurrentPath(path);
+    setMenuOpen(false);
   };
 
   return (
-      <div className="header">
+      <div className={`header ${menuOpen ? "menu-open" : ""}`}>
         <Link href="/" onClick={() => handleLinkClick("/")}>
           <Image
               className="logo"
@@ -23,7 +24,16 @@ export default function Navbar() {
               loading="lazy"
           />
         </Link>
-        <div className="header-links">
+        <button
+            className="hamburger-menu"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label="Toggle navigation menu"
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </button>
+        <div className={`header-links ${menuOpen ? "active" : ""}`}>
           <Link
               href="/"
               className={`link ${currentPath === "/" ? "active" : ""}`}

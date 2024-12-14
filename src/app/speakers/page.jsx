@@ -1,33 +1,44 @@
 import SpeakerCard from "../components/speakerspage/SpeakerCard";
 import teamData from "../data/teamData.json";
+import  seasionOne from "../data/seasionOne.json";
+import  seasionTwo from "../data/seasionTwo.json";
+import {satisfies} from "next/dist/lib/semver-noop";
 
 const SpeakersPage = () => {
   return (
-    <div>
-      <div>
+    <div className="margintop events-container">
+      <div className=" EventsHeader arabic-content">
         <h2>شخصيات هامة</h2>
-        <button>عودة</button>
+        <button className="btn">عودة</button>
       </div>
       <div>
-        <h4>شخصيات هامة</h4>
-        <div>
+        <span className="section-title arabic-content">شخصيات هامة</span>
+        <div className="events-cards">
           {teamData &&
             teamData.team.map((speaker) => {
               return <SpeakerCard key={speaker.name} speaker={speaker} />;
             })}
         </div>
       </div>
-      <div>
-        <h4>متحدثون الموسم الاول</h4>
-        <div>
-          {/* put code loop here */}
+      <div className="margintop" >
+        <span className="section-title arabic-content" >متحدثون الموسم الاول</span>
+        <div className="events-cards">
+            {seasionOne &&
+                seasionOne.seasionOne.map((speaker) => {
+                    return <SpeakerCard key={speaker.name} speaker={speaker} />;
+                })}
         </div>
       </div>
-      <div>
-        <h4>متحدثون الموسم الثاني</h4>
-        <div>
-          {/* put code loop here */}
-        </div>
+      <div className="margintop" >
+        <span className="section-title arabic-content">متحدثون الموسم الثاني</span>
+          <div>
+              <div className="events-cards">
+                  {seasionTwo &&
+                      seasionTwo.seasionTwo.map((speaker) => {
+                          return <SpeakerCard key={speaker.name} speaker={speaker}/>;
+                      })}
+              </div>
+          </div>
       </div>
     </div>
   );

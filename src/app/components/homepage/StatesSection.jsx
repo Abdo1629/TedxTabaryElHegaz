@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { Users, Gift, Layers } from "lucide-react";
+import { Eye, Users, HeartHandshake } from "lucide-react"; // استيراد أيقونات Eye و Users و HeartHandshake
 
 export default function StatsSection() {
     return (
@@ -10,20 +10,19 @@ export default function StatsSection() {
                 <div className="margintop"></div>
                 <div className="stats-container">
                     <Stat
-                        icon={<Layers />}
-                        value={5404}
-                        label="Community-made UI elements"
+                        icon={<Eye style={{ width: 51, height: 49 }} />}
+                        value={110988}
+                        label="عدد المشاهدات"
                     />
                     <Stat
-                        icon={<Gift />}
-                        value={100}
-                        suffix="%"
-                        label="Free for personal and commercial use"
+                        icon={<Users style={{ width: 43, height: 43 }} />}
+                        value={45}
+                        label="عدد المتحدثين المشاركين"
                     />
                     <Stat
-                        icon={<Users />}
-                        value={114977}
-                        label="Contributors to the community"
+                        icon={<HeartHandshake style={{ width: 43, height: 47 }} />}
+                        value={31}
+                        label="عدد الرعاة"
                     />
                 </div>
             </div>
