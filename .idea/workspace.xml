@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="40120ae0-544c-43c7-9be5-106ddd276be9" name="Changes" comment="Change Icon">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/homepage/StatesSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/homepage/StatesSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/data/seasion-1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/data/seasionOne.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/data/seasion-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/data/seasionTwo.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/speakers/[name]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/speakers/[name]/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/speakers/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/speakers/page.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +73,7 @@
       <workItem from="1733490856801" duration="1274000" />
       <workItem from="1733493097832" duration="283000" />
       <workItem from="1734106520739" duration="3411000" />
-      <workItem from="1734159762413" duration="10089000" />
+      <workItem from="1734159762413" duration="17112000" />
     </task>
     <servers />
   </component>

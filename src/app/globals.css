@@ -1881,7 +1881,104 @@ footer .social-icon.linkedin:hover {
   animation: fadeIn 0.5s ease-out forwards;
 }
 
+.speaker-layout-page {
+  padding: 20px;
+  background-color: #f7f7f7;
+}
 
+
+.speaker-layout-container {
+
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  position: relative;
+}
+
+
+.layout-return-button {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid ;
+  background-color: black;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.layout-return-button:hover {
+  background-color: #991a1a;
+  color: #fff;
+}
+
+.layout-content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+
+.layout-image-section {
+  flex: 1;
+}
+
+.layout-speaker-image {
+   height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* المعلومات */
+.layout-info-section {
+  flex: 2;
+}
+
+.layout-speaker-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.layout-speaker-title {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.layout-speaker-bio h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.layout-speaker-bio p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* وسائل التواصل */
+.layout-social-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-link-icon {
+  font-size: 1.8rem;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.social-link-icon:hover {
+  color: #0056b3;
+}
 
 
 
