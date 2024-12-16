@@ -3,7 +3,7 @@
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
 import teamData from "../../data/teamData.json";
 import seasionOne from "../../data/seasionOne.json";
 import seasionTwo from "../../data/seasionTwo.json";
@@ -27,10 +27,23 @@ const SpeakerPage = () => {
   const speakerImage =
       speaker?.image || speakerSeasionOne?.image || speakerSeasionTwo?.image || "default-image.jpg";
 
+  const socialLinks = {
+    facebook:
+        speaker?.socialMedia?.facebook || speakerSeasionOne?.socialMedia?.facebook || speakerSeasionTwo?.socialMedia?.facebook || "#",
+    linkedin:
+        speaker?.socialMedia?.linkedin || speakerSeasionOne?.socialMedia?.linkedin ||  speakerSeasionTwo?.socialMedia?.linkedin || "#",
+    instagram:
+        speaker?.socialMedia?.instagram || speakerSeasionOne?.socialMedia?.instagram ||  speakerSeasionTwo?.socialMedia?.instagram || "#",
+    youtube:
+        speaker?.socialMedia?.youtube || speakerSeasionOne?.socialMedia?.youtube ||  speakerSeasionTwo?.socialMedia?.youtube || "#",
+    tiktok:
+        speaker?.socialMedia?.tiktok || speakerSeasionOne?.socialMedia?.tiktok ||  speakerSeasionTwo?.socialMedia?.tiktok || "#",
+  };
+
   return (
       <div className="speaker-layout-page">
         <div className="speaker-layout-container">
-          <Link href="/" className="layout-return-button">
+          <Link href="/speakers" className="layout-return-button">
             <span>عودة</span>
           </Link>
           <div className="layout-content-wrapper">
@@ -59,26 +72,46 @@ const SpeakerPage = () => {
                   </div>
               )}
               <div className="layout-social-links">
-                {speaker?.socialMedia?.facebook && (
-                    <Link
-                        href={speaker.socialMedia.facebook}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="social-link-icon"
-                    >
-                      <FaFacebook />
-                    </Link>
-                )}
-                {speaker?.socialMedia?.linkedin && (
-                    <Link
-                        href={speaker.socialMedia.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="social-link-icon"
-                    >
-                      <FaLinkedin />
-                    </Link>
-                )}
+                <Link
+                    href={socialLinks.facebook}
+                    target={socialLinks.facebook === "#" ? "_self" : "_blank"}
+                    rel="noopener noreferrer"
+                    className={`social-link-icon ${socialLinks.facebook === "#" ? "disabled" : ""}`}
+                >
+                  <FaFacebook/>
+                </Link>
+                <Link
+                    href={socialLinks.linkedin}
+                    target={socialLinks.linkedin === "#" ? "_self" : "_blank"}
+                    rel="noopener noreferrer"
+                    className={`social-link-icon ${socialLinks.linkedin === "#" ? "disabled" : ""}`}
+                >
+                  <FaLinkedin/>
+                </Link>
+                <Link
+                    href={socialLinks.instagram}
+                    target={socialLinks.instagram === "#" ? "_self" : "_blank"}
+                    rel="noopener noreferrer"
+                    className={`social-link-icon ${socialLinks.instagram === "#" ? "disabled" : ""}`}
+                >
+                  <FaInstagram/>
+                </Link>
+                <Link
+                    href={socialLinks.youtube}
+                    target={socialLinks.youtube === "#" ? "_self" : "_blank"}
+                    rel="noopener noreferrer"
+                    className={`social-link-icon ${socialLinks.youtube === "#" ? "disabled" : ""}`}
+                >
+                  <FaYoutube/>
+                </Link>
+                <Link
+                    href={socialLinks.tiktok}
+                    target={socialLinks.tiktok === "#" ? "_self" : "_blank"}
+                    rel="noopener noreferrer"
+                    className={`social-link-icon ${socialLinks.tiktok === "#" ? "disabled" : ""}`}
+                >
+                  <FaTiktok/>
+                </Link>
               </div>
             </div>
           </div>

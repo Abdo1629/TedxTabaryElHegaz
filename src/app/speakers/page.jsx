@@ -3,13 +3,14 @@ import teamData from "../data/teamData.json";
 import  seasionOne from "../data/seasionOne.json";
 import  seasionTwo from "../data/seasionTwo.json";
 import {satisfies} from "next/dist/lib/semver-noop";
+import Link from "next/link";
 
 const SpeakersPage = () => {
   return (
     <div className="margintop events-container">
       <div className=" EventsHeader arabic-content">
         <h2>شخصيات هامة</h2>
-        <button className="btn">عودة</button>
+      <button className="btn">عودة</button>
       </div>
       <div>
         <span className="section-title arabic-content">شخصيات هامة</span>
