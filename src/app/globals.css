@@ -2630,7 +2630,7 @@ footer .social-icon.linkedin:hover {
   background-color: #CE1126;
 }
 
-.btn {
+.btn-pals {
   background-color: #007A3D;
   color: #FFFFFF;
   border: none;
@@ -2642,7 +2642,7 @@ footer .social-icon.linkedin:hover {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.btn:hover {
+.btn-pals:hover {
   background-color: #CE1126;
   transform: translateY(-2px);
 }
