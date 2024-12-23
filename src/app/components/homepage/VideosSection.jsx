@@ -23,8 +23,8 @@ export default function VideosSection() {
     }, []);
 
     return (
-        <div className="events-container">
-            <div className="content arabic-content fade-in">
+        <div className="margintop events-container">
+            <div className="content arabic-content ">
                 <span>شاهد الأن</span>
                 <div className="EventsHeader">
                     <h2>مقاطع الفيديو</h2>

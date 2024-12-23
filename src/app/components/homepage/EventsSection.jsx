@@ -26,8 +26,8 @@ const EventsSection = () => {
   }, []);
 
   return (
-      <div className="margintop">
-        <div className="events-container">
+      <div className="margintop events-container">
+        <div className="">
           <div
               className={
                 isArabic ? "fadeUp1 arabic-content" : "fadeUp1 english-content"

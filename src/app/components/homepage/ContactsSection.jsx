@@ -159,7 +159,7 @@ export default function ContactsSection() {
               </div>
 
               {/* Submit Button */}
-              <input className="btn1" type="submit" value="Send" />
+              <input className="btn1" type="submit" value="ارسال" />
             </form>
           </div>
         </div>

@@ -5,7 +5,7 @@ import { Eye, Users, HeartHandshake } from "lucide-react"; // استيراد أ�
 
 export default function StatsSection() {
     return (
-        <div className="events-container">
+        <div className="margintop events-container">
             <div className="stats-section">
                 <div className="margintop"></div>
                 <div className="stats-container">

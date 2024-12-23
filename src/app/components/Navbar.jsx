@@ -29,9 +29,9 @@ export default function Navbar() {
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-label="Toggle navigation menu"
         >
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+          <span className="bar short-right"></span>
+          <span className="bar tall"></span>
+          <span className="bar short-left"></span>
         </button>
         <div className={`header-links ${menuOpen ? "active" : ""}`}>
           <Link
@@ -62,9 +62,6 @@ export default function Navbar() {
           >
             اتصل بنا
           </Link>
-          <button id="language-toggle" className="btn_lang">
-            AR
-          </button>
         </div>
       </div>
   );

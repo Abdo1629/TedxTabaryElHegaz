@@ -43,8 +43,7 @@ export default function SponsorsSection() {
     }, []);
 
     return (
-        <div className="events-container">
-            <div className="margintop"></div>
+        <div className="margintop events-container">
                 <span className="section-title arabic-content">
           الشركاء والرعاة
         </span>

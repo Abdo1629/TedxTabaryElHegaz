@@ -21,7 +21,7 @@ const SpeakersPage = () => {
             })}
         </div>
       </div>
-      <div className="margintop" >
+      <div className="margin " >
         <span className="section-title arabic-content" >متحدثون الموسم الاول</span>
         <div className="events-cards">
             {seasionOne &&
@@ -30,7 +30,7 @@ const SpeakersPage = () => {
                 })}
         </div>
       </div>
-      <div className="margintop" >
+      <div className="margin " >
         <span className="section-title arabic-content">متحدثون الموسم الثاني</span>
           <div>
               <div className="events-cards">
