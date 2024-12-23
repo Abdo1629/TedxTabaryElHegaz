@@ -168,7 +168,7 @@ export default function Event3Page() {
                         الرجاء إرسال صورة التحويل على رقم واتساب التالي: 201014735800+
                     </p>
                     <div className="form-submit">
-                        <button type="submit" className="btn">
+                        <button type="submit" className="btn-pals">
                             إرسال
                         </button>
                     </div>
