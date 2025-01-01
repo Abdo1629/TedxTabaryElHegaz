@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { Eye, Users, HeartHandshake } from "lucide-react"; // استيراد أيقونات Eye و Users و HeartHandshake
+import { Eye, Users, HeartHandshake } from "lucide-react";
 
 export default function StatsSection() {
     return (
@@ -16,12 +16,12 @@ export default function StatsSection() {
                     />
                     <Stat
                         icon={<Users style={{ width: 43, height: 43 }} />}
-                        value={45}
-                        label="عدد المتحدثين المشاركين"
+                        value={185}
+                        label="عدد أعضاء الفريق"
                     />
                     <Stat
                         icon={<HeartHandshake style={{ width: 43, height: 47 }} />}
-                        value={31}
+                        value={52}
                         label="عدد الرعاة"
                     />
                 </div>
@@ -45,16 +45,18 @@ function Stat({ icon, value, label, suffix = "" }) {
             { threshold: 0.1 }
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        const currentRef = ref.current; // Copy ref.current to a variable
+
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (currentRef) {
+                observer.unobserve(currentRef); // Use the copied reference here
             }
         };
-    }, []);
+    }, []); // Empty dependency array so this effect runs once
 
     useEffect(() => {
         if (isVisible) {
@@ -77,7 +79,7 @@ function Stat({ icon, value, label, suffix = "" }) {
 
             return () => clearInterval(timer);
         }
-    }, [isVisible, value]);
+    }, [isVisible, value]); // Run when isVisible or value changes
 
     return (
         <div

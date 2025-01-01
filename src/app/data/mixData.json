@@ -1,0 +1,70 @@
+{
+    "mixData": [
+        {
+            "id": 1,
+            "name": "Ahmed Mostafa",
+            "nameArabic": "أحمد مصطفى",
+            "title": "Founder & President",
+            "titleArabic": "المؤسس& الرئيس",
+            "image": "images/ahmed.jpg",
+            "description": {
+                "english": "Ahmed Mostafa is an aspiring entrepreneur, pursuing a Bachelor of Commerce degree at Cairo University, with a focus on business administration and management. He has a passion for innovation and leadership and has been actively seeking opportunities to learn and grow in the startup ecosystem. He has completed multiple online courses in digital marketing, entrepreneurship, and emotional intelligence.",
+                "arabic": "أحمد مصطفى هو رائد أعمال طموح ومؤسس TEDx طبري. يدرس للحصول على درجة البكالوريوس في التجارة من جامعة القاهرة، مع تخصص في إدارة الأعمال. يتمتع بشغف كبير بالابتكار والقيادة، ويبحث باستمرار عن فرص للتعلم والنمو في مجال ريادة الأعمال والمشاريع الناشئة. أكمل أحمد العديد من الدورات التدريبية عبر الإنترنت في مجالات التسويق الرقمي، ريادة الأعمال، والذكاء العاطفي، مما يعزز معرفته ومهاراته في بناء الشركات والمبادرات الريادية."
+            },
+            "socialMedia": {
+                "facebook": "https://www.facebook.com/ahmdabdrabou",
+                "linkedin": "https://www.linkedin.com/in/ahmdabdrabou/"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Ahmed Saudi",
+            "nameArabic": "أحمد سعودي",
+            "title": "Content Creator",
+            "titleArabic": "صانع محتوى",
+            "image": "images/ahmed_s.jpg",
+            "description": {
+                "english": " Ahmed Saudi is a prominent content creator who is known for producing high-quality, visually stunning videos and multimedia content. With a large following across social media platforms and 1.6 million followers on TikTok.",
+                "arabic": " أحمد سعودي هو صانع محتوى بارز معروف بإنتاج فيديوهات عالية الجودة وجذابة بصريًا. لديه قاعدة كبيرة من المتابعين عبر منصات التواصل الاجتماعي ويبلغ عدد متابعيه 1.6 مليون على تيك توك."
+            },
+            "socialMedia": {
+                "facebook": "https://www.facebook.com/profile.php?id=100067808934274",
+                "instagram": "https://www.instagram.com/ahmed_saudi77/?hl=en",
+                "tiktok": "https://www.tiktok.com/@ahmed_saudi7"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Peso Freestyle",
+            "nameArabic": "بيسو فري ستايل",
+            "title": "Freestyling",
+            "titleArabic": "صانع محتوى",
+            "image": "images/beso.jpg",
+            "description": {
+                "english": "Peso is a renowned freestyle footballer. As the 2nd place winner in the 2022 Red Bull Street Style competition, his skills and creativity have been recognized on an international level. With a massive following on social media, including over 1.1 million fans on TikTok and more than 250,000 on Facebook.",
+                "arabic": "بيسو هو لاعب كرة قدم حر مشهور. حصل على المركز الثاني في مسابقة \"ريد بول ستريت ستايل\" لعام 2022، حيث تم الاعتراف بمهاراته وإبداعه على مستوى دولي. يمتلك بيسو قاعدة جماهيرية ضخمة على وسائل التواصل الاجتماعي، بما في ذلك أكثر من 1.1 مليون معجب على تيك توك وأكثر من 250,000 متابع على فيسبوك."
+            },
+            "socialMedia": {
+                "facebook": "https://www.facebook.com/profile.php?id=100067808934274",
+                "instagram": "https://www.instagram.com/pesofreestyle/",
+                "tiktok": "https://www.tiktok.com/@pesofreestyle"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Nadeem Barakat",
+            "nameArabic": "نديم بركات",
+            "title": "Business",
+            "titleArabic": "ريادة أعمال",
+            "image": "images/nadeem.jpg",
+            "description": {
+                "english": "Nadeem Barakat is a seasoned business development professional with extensive experience in building and managing successful businesses. He has a proven track record of identifying and capitalizing on new opportunities, developing strategic partnerships, and driving growth.",
+                "arabic": "نديم بركات هو خبير تطوير أعمال ذو خبرة واسعة في بناء وإدارة الأعمال الناجحة. لديه سجل حافل في تحديد الفرص الجديدة، وتطوير شراكات استراتيجية، وتحقيق النمو."
+            },
+            "socialMedia": {
+                "facebook": "https://www.facebook.com/NadeemBarakat7/",
+                "linkedin": "https://www.linkedin.com/in/nadeem-barakat"
+            }
+        }
+    ]
+}

@@ -22,7 +22,7 @@ const SpeakersPage = () => {
         </div>
       </div>
       <div className="margin " >
-        <span className="section-title arabic-content" >متحدثون الموسم الاول</span>
+        <span className="section-title arabic-content" >متحدثو الموسم الاول</span>
         <div className="events-cards">
             {seasionOne &&
                 seasionOne.seasionOne.map((speaker) => {
@@ -31,7 +31,7 @@ const SpeakersPage = () => {
         </div>
       </div>
       <div className="margin " >
-        <span className="section-title arabic-content">متحدثون الموسم الثاني</span>
+        <span className="section-title arabic-content">متحدثو الموسم الثاني</span>
           <div>
               <div className="events-cards">
                   {seasionTwo &&

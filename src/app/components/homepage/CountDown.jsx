@@ -48,7 +48,8 @@ export default function Countdown() {
             <h3>أسابيع</h3>
           </div>
           <div className="box">
-            <h3>{countdown.days}</h3>
+            {/* Under Development need to be updated! */}
+            <h3>54</h3> 
             <h3>أيام</h3>
           </div>
           <div className="box">

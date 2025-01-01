@@ -31,7 +31,6 @@ body {
 }
 
 .logo {
-  width: 13vw;
   min-width: 40px;
 }
 
@@ -161,10 +160,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .logo {
-    width: 30vw;
-  }
-
   .hamburger-menu {
     display: block;
   }
@@ -203,9 +198,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  .logo {
-    width: 40vw;
-  }
 
   .header-links a {
     font-size: 1rem;
@@ -274,9 +266,6 @@ body {
 
 
 @media (max-width: 768px) {
-  .logo {
-    width: 30vw;
-  }
 
   .hamburger-menu {
     display: flex;
@@ -312,10 +301,10 @@ body {
 
 
 @media (max-width: 480px) {
-  .logo {
-    width: 40vw;
+  .logo{
+    max-width: 100px;
+    height: 55px;
   }
-
   .header-links a {
     font-size: 1rem;
   }
@@ -339,7 +328,7 @@ body {
   left: 0 ;
   width: 100%;
   z-index: 10;
-  border-radius: 10px;
+  border-radius: 0px 0px 55px 10px ;
   direction: ltr;
 }
 
@@ -522,7 +511,8 @@ h2 {
   }
   .events-cards {
     justify-content: center;
-    display: inline;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -1245,6 +1235,16 @@ form {
 
 
 @media (max-width: 768px) {
+  .custom-card {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+  }
   .form-row {
     flex-direction: column;
   }
@@ -1388,7 +1388,8 @@ footer {
 }
 
 .margintop {
-  padding: 45px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 .box {

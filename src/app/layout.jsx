@@ -27,9 +27,13 @@ export const metadata = {
   keywords:
     "Tedx, TedxTabaryElHegazHS ,Events ,Ahmed Mostafa ,أول تيداكس في مدرسة حكومية ,Tedx In Public School",
   author: "Ahmed Mostafa",
-  viewport: "width=device-width, initial-scale=1.0",
   charset: "UTF-8",
   copyright: "Copyright © TedxTabaryElHegazHS. All Rights Reserved 2025",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
