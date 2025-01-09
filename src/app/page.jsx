@@ -17,7 +17,7 @@ export default function Home() {
       <DefineSection />
       <PromoSection />
       <StatsSection />
-      <EventsSection />
+      {/* <EventsSection /> */}
       <SpeakersSection />
       <VideosSection />
       <SponsorsSection />

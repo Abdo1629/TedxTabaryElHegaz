@@ -60,6 +60,13 @@ export default function Navbar() {
           الفعاليات
         </Link>
         <Link
+          href="/blogs"
+          className={`link ${currentPath === "/blogs" ? "active" : ""}`}
+          onClick={() => handleLinkClick("/blogs")}
+        >
+          المدونة
+        </Link>
+        <Link
           href="#contactform"
           className={`link ${
             currentPath === "#contactform" ? "active" : ""
@@ -72,3 +79,4 @@ export default function Navbar() {
     </div>
   );
 }
+

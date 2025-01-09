@@ -7,7 +7,6 @@ export default function StatsSection() {
     return (
         <div className="margintop events-container">
             <div className="stats-section">
-                <div className="margintop"></div>
                 <div className="stats-container">
                     <Stat
                         icon={<Eye style={{ width: 51, height: 49 }} />}
