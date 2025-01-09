@@ -48,6 +48,15 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
       </body>
+      <script type="application/ld+json">
+          {`
+            {
+              "@type": "Organization",
+              "url": "https://tedxtabaryelhegaz.com",
+              "logo": ""https://res.cloudinary.com/dbgdvnkev/image/upload/v1730659366/tedx_qogx0k.webp"
+            }
+          `}
+        </script>
     </html>
   );
 }
