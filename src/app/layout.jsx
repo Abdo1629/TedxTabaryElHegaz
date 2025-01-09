@@ -48,15 +48,27 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
       </body>
+      <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#000000" />
+        <meta charSet="UTF-8" />
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="author" content={metadata.author} />
+        <meta name="copyright" content={metadata.copyright} />
+        <title>{metadata.title}</title>
       <script type="application/ld+json">
           {`
             {
+            "@context": "https://schema.org"
               "@type": "Organization",
               "url": "https://tedxtabaryelhegaz.com",
               "logo": ""https://res.cloudinary.com/dbgdvnkev/image/upload/v1730659366/tedx_qogx0k.webp"
             }
           `}
         </script>
+      </head>
     </html>
   );
 }
