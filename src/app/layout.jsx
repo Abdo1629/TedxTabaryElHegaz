@@ -49,6 +49,7 @@ export default function RootLayout({ children }) {
         <Footer />
       </body>
       <head>
+        <link rel="shortcut icon" href="https://res.cloudinary.com/dbgdvnkev/image/upload/v1730659366/tedx_qogx0k.webp" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#000000" />
@@ -64,7 +65,7 @@ export default function RootLayout({ children }) {
             "@context": "https://schema.org"
               "@type": "Organization",
               "url": "https://tedxtabaryelhegaz.com",
-              "logo": ""https://res.cloudinary.com/dbgdvnkev/image/upload/v1730659366/tedx_qogx0k.webp"
+              "logo": "https://res.cloudinary.com/dbgdvnkev/image/upload/v1730659366/tedx_qogx0k.webp"
             }
           `}
         </script>
