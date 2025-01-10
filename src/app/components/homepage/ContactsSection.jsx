@@ -9,6 +9,8 @@ export default function ContactsSection() {
     email: "",
     ask: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,158 +22,158 @@ export default function ContactsSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    console.log(formData);
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    // Create a hidden form and submit it
+    const hiddenForm = document.createElement('form');
+    hiddenForm.method = 'POST';
+    hiddenForm.action = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec';
+    hiddenForm.target = '_blank'; // This prevents page reload
+
+    // Add form fields
+    Object.keys(formData).forEach(key => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = formData[key];
+      hiddenForm.appendChild(input);
+    });
+
+    // Add timestamp
+    const timestampInput = document.createElement('input');
+    timestampInput.type = 'hidden';
+    timestampInput.name = 'timestamp';
+    timestampInput.value = new Date().toISOString();
+    hiddenForm.appendChild(timestampInput);
+
+    // Append form to body
+    document.body.appendChild(hiddenForm);
+
+    // Submit the form
+    hiddenForm.submit();
+
+    // Remove the form
+    document.body.removeChild(hiddenForm);
+
+    // Show success message and reset form
+    setSubmitMessage("تم إرسال رسالتك بنجاح!");
+    setFormData({ name: "", email: "", ask: "" });
+    setIsSubmitting(false);
   };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        },
-        { threshold: 0.2 } // يبدأ الأنيميشن عند ظهور 20% من العنصر
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
     );
 
     const elements = document.querySelectorAll(".content, .form-row, .btn1, .send");
     elements.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect(); // تنظيف المراقب عند إزالة المكون
+    return () => observer.disconnect();
   }, []);
 
   return (
-      <div>
-        {/* Contact Header */}
-        <div className="events-container" id="contactform">
-          <div className="content arabic-content">
-            <div className="EventsHeader">
-              <h2>جهات الاتصال</h2>
-            </div>
-          </div>
-          <div className="content english-content" style={{ display: "none" }}>
-            <div className="EventsHeader">
-              <h2>Contacts</h2>
-            </div>
+    <div>
+      <div className="events-container" id="contactform">
+        <div className="content arabic-content">
+          <div className="EventsHeader">
+            <h2>جهات الاتصال</h2>
           </div>
         </div>
+      </div>
 
-        {/* Contact Form */}
-        <div className="events-container">
+      <div className="events-container">
         <span className="content section-title arabic-content">
           تواصل معنا
         </span>
-          <span className="content section-title english-content" style={{ display: "none" }}>
-          Contact Us
-        </span>
-          <div className="contact">
-            <form onSubmit={handleSubmit} name="contactform">
-              {/* Name and Email Fields */}
-              <div className="form-row">
-                <div className="arabic-content">
-                  <div>
-                    <label htmlFor="name">الاسم:</label>
-                  </div>
-                  <input
-                      className="cont-input"
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="من فضلك ادخل إسمك"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                  />
-                  <div>
-                    <label htmlFor="email">البريد الإلكتروني:</label>
-                  </div>
-                  <input
-                      className="cont-input"
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="من فضلك ادخل بريدك الإلكتروني"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                  />
+        <div className="contact">
+          <form onSubmit={handleSubmit}>
+            <div className="form-row">
+              <div className="arabic-content">
+                <div>
+                  <label htmlFor="name">الاسم:</label>
                 </div>
-                <div className="english-content" style={{ display: "none" }}>
-                  <div>
-                    <label htmlFor="name">Name:</label>
-                  </div>
-                  <input
-                      className="cont-input"
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Please Enter Your Name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                  />
-                  <div>
-                    <label htmlFor="email">Email:</label>
-                  </div>
-                  <input
-                      className="cont-input"
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="Please Enter A Valid Email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                  />
+                <input
+                  className="cont-input"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="من فضلك ادخل إسمك"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                <div>
+                  <label htmlFor="email">البريد الإلكتروني:</label>
                 </div>
+                <input
+                  className="cont-input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="من فضلك ادخل بريدك الإلكتروني"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                />
               </div>
+            </div>
 
-              {/* Question Field */}
-              <div className="form-row">
-                <div className="arabic-content">
-                  <label htmlFor="ask">السؤال:</label>
-                  <input
-                      className="cont-input"
-                      type="text"
-                      id="ask"
-                      name="ask"
-                      placeholder="من فضلك اخبرنا إستفسارك"
-                      required
-                      value={formData.ask}
-                      onChange={handleChange}
-                  />
-                </div>
-                <div className="english-content" style={{ display: "none" }}>
-                  <label htmlFor="ask">Question:</label>
-                  <input
-                      className="cont-input"
-                      type="text"
-                      id="ask"
-                      name="ask"
-                      placeholder="Please Enter Your Question"
-                      required
-                      value={formData.ask}
-                      onChange={handleChange}
-                  />
-                </div>
+            <div className="form-row">
+              <div className="arabic-content">
+                <label htmlFor="ask">السؤال:</label>
+                <input
+                  className="cont-input"
+                  type="text"
+                  id="ask"
+                  name="ask"
+                  placeholder="من فضلك اخبرنا إستفسارك"
+                  required
+                  value={formData.ask}
+                  onChange={handleChange}
+                />
               </div>
+            </div>
 
+<<<<<<< HEAD
               {/* Submit Button */}
               <input className="btn1" type="submit" value="إرسال" />
             </form>
           </div>
+=======
+            <button className="btn1" type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "جاري الإرسال..." : "إرسال"}
+            </button>
+          </form>
+          {submitMessage && (
+            <p className="submit-message" style={{ 
+              marginTop: '1rem', 
+              textAlign: 'center',
+              color: submitMessage.includes('نجاح') ? '#4CAF50' : '#f44336'
+            }}>
+              {submitMessage}
+            </p>
+          )}
+>>>>>>> 02ee828635284d3d21ae12ba9d1d452d8b084623
         </div>
-
-        {/* Footer Note */}
-        <p className="send content arabic-content">
-          أو أرسل رسالة إلى صفحتنا على{" "}
-          <Link href="https://www.facebook.com/TEDxYouthTabaryElHegazHS" className="liness">
-            فيسبوك
-          </Link>
-          .
-        </p>
       </div>
+
+      <p className="send content arabic-content">
+        أو أرسل رسالة إلى صفحتنا على{" "}
+        <Link href="https://www.facebook.com/TEDxYouthTabaryElHegazHS" className="liness">
+          فيسبوك
+        </Link>
+        .
+      </p>
+    </div>
   );
 }
+
