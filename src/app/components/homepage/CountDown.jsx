@@ -12,7 +12,7 @@ export default function Countdown() {
   });
 
   useEffect(() => {
-    const eventDate = new Date("Feb 15, 2025 10:00:00");
+    const eventDate = new Date("Feb 22, 2025 10:00:00");
     const interval = setInterval(() => {
       const now = new Date();
       const diff = eventDate - now;
@@ -21,9 +21,7 @@ export default function Countdown() {
         clearInterval(interval);
       } else {
         const weeks = Math.floor(diff / (1000 * 60 * 60 * 24 * 7));
-        const days = Math.floor(
-          (diff % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24)
-        );
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor(
           (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
         );
@@ -49,7 +47,7 @@ export default function Countdown() {
           </div>
           <div className="box">
             {/* Under Development need to be updated! */}
-            <h3>54</h3> 
+            <h3>{countdown.days}</h3> 
             <h3>أيام</h3>
           </div>
           <div className="box">

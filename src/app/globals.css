@@ -1067,6 +1067,7 @@ h2 {
   color: #333;
   margin-bottom: 10px;
   display: block;
+  align-items: center;
   text-align: center;
 }
 @keyframes slideInFromRight {
@@ -1591,7 +1592,8 @@ footer {
     font-size: 16px;
   }
 }
-.iframe {
+
+iframe {
   width: 100%;
   height: 75%;
   border-top: 0;
@@ -2201,7 +2203,7 @@ footer .social-icon.linkedin:hover {
 
 .custom-card__title {
   font-size: 14px;
-  color: #777;
+  color: #4496aa;
   margin-top: 5px;
 }
 
@@ -2687,9 +2689,8 @@ footer .social-icon.linkedin:hover {
 }
 
 .flag-stripe {
-  height: 10px;
+  height: 19px;
   width: 100%;
-  margin-bottom: 10px;
 }
 
 .flag-stripe-black {
@@ -2712,7 +2713,8 @@ footer .social-icon.linkedin:hover {
   border-color: transparent transparent #CE1126 transparent;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 28px;
+  transform: rotate(315deg);
 }
 
 .event-title {
@@ -2957,6 +2959,7 @@ footer .social-icon.linkedin:hover {
     align-items: flex-start;
   }
   
+  
   .layout-image-section {
     width: 40%;
     margin: 0;
@@ -3081,6 +3084,24 @@ footer .social-icon.linkedin:hover {
   .page-title {
     font-size: 2rem;
   }
+
+  
+.flag-stripe {
+  height: 19px;
+  width: 100%;
+}
+
+.flag-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 40px 40px;
+  border-color: transparent transparent #CE1126 transparent;
+  position: absolute;
+  left: -5px;
+  top: 25px;
+  transform: rotate(315deg);
+}
 
   .blog-grid {
     grid-template-columns: 1fr;

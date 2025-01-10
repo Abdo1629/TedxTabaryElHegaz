@@ -24,7 +24,7 @@ export default function Navbar() {
           src="https://res.cloudinary.com/dbgdvnkev/image/upload/v1730659366/tedx_qogx0k.webp"
           alt="الشعار"
           width={200}
-          height={100}
+          height={88}
           loading="lazy"
         />
       </Link>

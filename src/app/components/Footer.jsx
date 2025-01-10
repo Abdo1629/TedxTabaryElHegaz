@@ -26,7 +26,7 @@ export default function Footer() {
                 </Link>
                 <Link
                     className="social-icon linkedin"
-                    href="https://www.linkedin.com/tedxtabaryelhegaz/"
+                    href="https://www.linkedin.com/company/tedxtabaryelhegazhs"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
