@@ -328,7 +328,7 @@ body {
   left: 0 ;
   width: 100%;
   z-index: 10;
-  border-radius: 0px 0px 55px 10px ;
+  border-radius: 0px 0px 12px 12px ;
   direction: ltr;
 }
 
@@ -347,9 +347,8 @@ body {
   );
   z-index: -1;
   animation: diagonalMove 10s linear infinite;
-  border-radius: 10px;
   border-top-right-radius: 55px;
-  border-bottom-right-radius:150PX;
+  border-bottom-right-radius:12PX;
 }
 
 @keyframes diagonalMove {
@@ -2106,11 +2105,6 @@ footer .social-icon.linkedin:hover {
   gap: 20px;
 }
 
-
-.layout-image-section {
-  padding: 20px;
-}
-
 .layout-speaker-image {
   height: auto;
   border-radius: 8px;
@@ -2139,7 +2133,7 @@ footer .social-icon.linkedin:hover {
 .layout-speaker-bio h3 {
   font-size: 1.2rem;
   margin-bottom: 5px;
-  color: #333;
+  color: #ff3f3f;
 }
 
 .layout-speaker-bio p {
@@ -2735,7 +2729,7 @@ footer .social-icon.linkedin:hover {
 
 .event-info-item {
   padding: 0.5rem 1rem;
-  border-radius: 20px;
+  border-radius: 12px;
   font-weight: bold;
 }
 
@@ -2845,7 +2839,6 @@ footer .social-icon.linkedin:hover {
   max-width: 400px;
   margin: 0 auto;
 }
-
 .layout-speaker-image {
   width: 100%;
   height: auto;
@@ -2867,7 +2860,7 @@ footer .social-icon.linkedin:hover {
 
 .layout-speaker-title {
   font-size: 1.25rem;
-  color: #666;
+  color: rgb(145, 180, 212);
   margin-bottom: 1.5rem;
   text-align: right;
 }
@@ -2881,7 +2874,7 @@ footer .social-icon.linkedin:hover {
 .layout-speaker-bio h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #ff7070;
   text-align: right;
 }
 
@@ -3173,6 +3166,15 @@ footer .social-icon.linkedin:hover {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .event-info-item {
+    font-size: 13px;
+    padding: 0.125rem 0.25rem;
+    border-radius: 10px;
+    font-weight: bold;
+  }
 }
 
 @media (max-width: 768px) {

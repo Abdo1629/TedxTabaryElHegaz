@@ -51,16 +51,16 @@ export default function Event3Page() {
                 <div className="flag-stripe flag-stripe-green"></div>
                 <h1 className="event-title text-shadow">عودٌ على بَدْء</h1>
                 <div className="event-info">
-                    <div className="event-info-item" style={{backgroundColor: "#CE1126", color: "#FFFFFF"}}>الموسم 3</div>
-                    <div className="event-info-item" style={{backgroundColor: "#007A3D", color: "#FFFFFF"}}>22 فبراير 2025</div>
-                    <div className="event-info-item" style={{backgroundColor: "#000000", color: "#FFFFFF"}}>10:00 صباحاً - 8:00 مساءً</div>
-                    <div className="event-info-item" style={{backgroundColor: "#007A3D", color: "#FFFFFF"}}>87ش المقريزي، هليوبوليس، القاهرة، مصر</div>
+                    <div className="event-info-item" style={{backgroundColor: "#CE1126", color: "#FFFFFF"}}><p>الموسم 3</p></div>
+                    <div className="event-info-item" style={{backgroundColor: "#007A3D", color: "#FFFFFF"}}><p>22 فبراير 2025</p></div>
+                    <div className="event-info-item" style={{backgroundColor: "#000000", color: "#FFFFFF"}}><p>10:00 صباحاً - 8:00 مساءً</p></div>
+                    <div className="event-info-item" style={{backgroundColor: "#007A3D", color: "#FFFFFF"}}><p>87ش المقريزي، هليوبوليس، القاهرة، مصر</p></div>
                 </div>
 
                 <div className="event-description">
-                    <p>الحياة مسرحٌ مليء بالتحديات يواجه المرء منها صعوبة مستسلماً بمعطيات يكمن نصفها في إرادته متحدياً نفسه أن ليس سوى أن نريد</p>
-                    <p>كما يمكن خلق يدٍ خالقه يمنحنا إياها ما بين من عزمه فعلى قدر أهل العزم تأتي العزائم</p>
-                    <p>وها نحن نعود لنبدأ قصص رجعٍ عَوْدٌيٌ على بدءٍ لم يقطع ذهابه حتى يصله برجوعه نعود من حيث توقفنا فنمس في أذن الحياة صارخين بالتغيير فعود على بَدْء</p>
+                    <p> الحياةُ مسرحٌ مليءٌ بالتحدياتِ يواجهُ المرءُ فيها مصيرَهُ متسلحًا بمقوماتِهِ الراسخةِ والتي يكمن بعضها في إرادتِهِ، فتحدثه نفسه أن <strong style={{color: "#CE1126"}}>ليس سوى أنْ تُريدَ</strong></p>
+                    <p> كما يكمن جلها بيد خالقه .. يمنحه اياه لما يري عزمه  <strong style={{color: "#CE1126"}}>فعلى قدرِ أهلِ العزمِ تأتي العزائمُ</strong></p>
+                    <p>وها نحنُ ذا نعود لنبدأُ، فمن حيثُ توقفنا، نحاولُ أن نخلقَ تغييرًا في قصتِنا فمن رجع عوده على بدئه لم يقطع ذهابه حتى يصله برجوعه ،  ف . <strong style={{color: "#CE1126"}}>عودٌ على بدءٍ</strong></p>
                 </div>
 
                 <div className="event-location">
