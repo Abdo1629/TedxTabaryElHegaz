@@ -25,7 +25,7 @@ export default function ContactsSection() {
     setIsSubmitting(true);
     setSubmitMessage("");
 
-    // Create a hidden form and submit it
+    // Create a hidden form and Submit it
     const hiddenForm = document.createElement('form');
     hiddenForm.method = 'POST';
     hiddenForm.action = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec';
