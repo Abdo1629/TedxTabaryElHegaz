@@ -49,12 +49,12 @@ export default function Event3Page() {
                 <div className="flag-stripe flag-stripe-black"></div>
                 <div className="flag-stripe flag-stripe-white"></div>
                 <div className="flag-stripe flag-stripe-green"></div>
-                <h1 className="event-title text-shadow">عودٌ على بدء</h1>
+                <h1 className="event-title text-shadow">عودٌ على بَدْء</h1>
                 <div className="event-info">
                     <div className="event-info-item" style={{backgroundColor: "#CE1126", color: "#FFFFFF"}}>الموسم 3</div>
-                    <div className="event-info-item" style={{backgroundColor: "#007A3D", color: "#FFFFFF"}}>15 فبراير 2025</div>
-                    <div className="event-info-item" style={{backgroundColor: "#000000", color: "#FFFFFF"}}>10:00 صباحاً - 6:00 مساءً</div>
-                    <div className="event-info-item" style={{backgroundColor: "#007A3D", color: "#FFFFFF"}}>القاهرة، مصر</div>
+                    <div className="event-info-item" style={{backgroundColor: "#007A3D", color: "#FFFFFF"}}>22 فبراير 2025</div>
+                    <div className="event-info-item" style={{backgroundColor: "#000000", color: "#FFFFFF"}}>10:00 صباحاً - 8:00 مساءً</div>
+                    <div className="event-info-item" style={{backgroundColor: "#007A3D", color: "#FFFFFF"}}>87ش المقريزي، هليوبوليس، القاهرة، مصر</div>
                 </div>
 
                 <div className="event-description">
@@ -67,7 +67,7 @@ export default function Event3Page() {
                     <h2 className="section-title">العنوان على الخريطة</h2>
                     <div className="map-container">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.5761963015786!2d31.233367!3d30.044420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAyJzM5LjkiTiAzMcKwMTQnMDAuMSJF!5e0!3m2!1sen!2seg!4v1635959562548!5m2!1sen!2seg"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.0843398645843!2d31.310457500000002!3d30.091770800000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fd254f8f66f%3A0xf02f40b1a7cc3113!2sFaculty%20Of%20Education%20-%20Ain%20Shams%20University!5e0!3m2!1sen!2seg!4v1736476207223!5m2!1sen!2seg"
                             width="100%"
                             height="450"
                             allowFullScreen=""
