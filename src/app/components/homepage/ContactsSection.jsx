@@ -143,12 +143,6 @@ export default function ContactsSection() {
               </div>
             </div>
 
-<<<<<<< HEAD
-              {/* Submit Button */}
-              <input className="btn1" type="submit" value="إرسال" />
-            </form>
-          </div>
-=======
             <button className="btn1" type="submit" disabled={isSubmitting}>
               {isSubmitting ? "جاري الإرسال..." : "إرسال"}
             </button>
@@ -162,7 +156,6 @@ export default function ContactsSection() {
               {submitMessage}
             </p>
           )}
->>>>>>> 02ee828635284d3d21ae12ba9d1d452d8b084623
         </div>
       </div>
 
