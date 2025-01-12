@@ -25,7 +25,7 @@ export const metadata = {
   description:
     "TEDx طبري الحجاز هو حدث منظم بشكل مستقل بموجب ترخيص TED، يقام في مصر، تحديداً في منطقة الحجاز. يهدف الحدث إلى توفير منصة لمشاركة الأفكار المبتكرة والمبادرات الملهمة من مختلف المجالات، مع التركيز على تمكين المجتمع المحلي لمشاركة قصص وتجارب فريدة.",
   keywords:
-    "Tedx, TedxTabaryElHegazHS ,Events ,Ahmed Mostafa ,أول تيداكس في مدرسة حكومية ,Tedx In Public School",
+    "Tedx, TedxTabaryElHegazHS ,Events ,Ahmed Mostafa ,أول تيداكس في مدرسة حكومية ,Tedx In Public School ,أحمد مصطفى , طبري, طبري الحجاز, tabary, tabaryelhegaz, organization, student activites, ted, تيد ,منظمة, ted event",
   author: "Ahmed Mostafa",
   charset: "UTF-8",
   copyright: "Copyright © TedxTabaryElHegazHS. All Rights Reserved 2025",

@@ -1,9 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Alexandria", sans-serif;
+  font-family: "Alexandria", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   line-height: 1.6;
 }
@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 0.25rem 4%;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -48,33 +48,34 @@ body {
 }
 
 .hamburger-menu .bar {
+  border-radius: 1px;
   display: block;
   height: 3px;
-  background-color: #ef4444;
+  background-color: #ff3838;
   transition: all 0.3s ease-in-out;
   position: absolute;
 }
 
 .hamburger-menu .bar.short-right {
-  width: 16px;
-  right: 0;
+  width: 18px;
+  right: 5px;
   top: 0;
 }
 
 .hamburger-menu .bar.tall {
-  width: 30px;
+  width: 35px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .hamburger-menu .bar.short-left {
-  width: 16px;
-  left: 0;
+  width: 18px;
+  left: -10px;
   bottom: 0;
 }
 
 .header.menu-open .hamburger-menu .bar.short-right {
-  width: 30px;
+  width: 35px;
   transform: translateY(10.5px) rotate(45deg);
 }
 
@@ -83,16 +84,16 @@ body {
 }
 
 .header.menu-open .hamburger-menu .bar.short-left {
-  width: 30px;
+  width: 35px;
   transform: translateY(-10.5px) rotate(-45deg);
 }
 
 .hamburger-menu:hover .bar {
-  background-color: #ff6b6b;
+  background-color: #fd3e3e;
 }
 
 .hamburger-menu:active .bar {
-  background-color: #ff8787;
+  background-color: #ff3e3e;
 }
 
 @keyframes pulse {
@@ -142,23 +143,6 @@ body {
   transform-origin: left;
 }
 
-.btn_lang {
-  background-color: #3152be;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-.btn_lang:hover {
-  background-color: #003af7;
-  cursor: pointer;
-  transform: scale(1.05);
-  box-shadow: 0 0 15px 5px rgba(33, 240, 255, 0.488);
-}
-
 @media (max-width: 768px) {
   .hamburger-menu {
     display: block;
@@ -175,7 +159,7 @@ body {
     padding: 1rem;
     font-size: 1.5rem;
     text-align: center;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     opacity: 0;
     transform: translateX(50px);
     transition: all 0.5s ease-in-out;
@@ -190,11 +174,6 @@ body {
   .header-links a:nth-child(2) { transition-delay: 0.2s; }
   .header-links a:nth-child(3) { transition-delay: 0.3s; }
   .header-links a:nth-child(4) { transition-delay: 0.4s; }
-
-  .btn_lang {
-    font-size: 1.2rem;
-    padding: 1rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -203,10 +182,6 @@ body {
     font-size: 1rem;
   }
 
-  .btn_lang {
-    font-size: 1rem;
-    padding: 0.8rem;
-  }
 }
 
 .header-links {
@@ -246,25 +221,6 @@ body {
   transform-origin: left;
 }
 
-
-.btn_lang {
-  background-color: #3152be;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-.btn_lang:hover {
-  background-color: #003af7;
-  cursor: pointer;
-  transform: scale(1.05);
-  box-shadow: 0 0 15px 5px rgba(33, 240, 255, 0.488);
-}
-
-
 @media (max-width: 768px) {
 
   .hamburger-menu {
@@ -292,11 +248,6 @@ body {
     font-size: 1.2rem;
     text-align: center;
   }
-
-  .btn_lang {
-    font-size: 1.2rem;
-    padding: 1rem;
-  }
 }
 
 
@@ -308,11 +259,6 @@ body {
   .header-links a {
     font-size: 1rem;
   }
-
-  .btn_lang {
-    font-size: 1rem;
-    padding: 0.8rem;
-  }
 }
 
 
@@ -323,7 +269,7 @@ body {
   align-items: center;
   background-color: #ff3333;
   color: #fff;
-  padding: 8px 15px;
+  padding: 3px 15px;
   position: fixed;
   left: 0 ;
   width: 100%;
@@ -370,7 +316,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 
@@ -392,11 +338,12 @@ body {
 }
 
 .btn {
+  margin-left: 2px;
   background-color: rgb(171, 0, 0);
   color: white;
   border: none;
   padding: 10px 15px;
-  border-radius: 20px;
+  border-radius: 15px;
   text-wrap: nowrap;
   font-family: "Alexandria", sans-serif;
   font-optical-sizing: auto;
@@ -616,7 +563,7 @@ h2 {
   padding: 1.8vw 1vw;
 }
 .events-container span {
-  margin: 0;
+  margin: 20px;
   color: rgb(255, 44, 44);
   text-transform: uppercase;
   font-size: 1.2em;
@@ -1369,10 +1316,11 @@ footer {
 }
 
 .register-btn .btn {
-  font-size: 15px;
+  font-size: 16px;
   background-color: #4366db;
   color: white;
-  padding: 8px 36px;
+  margin-right: 10px;
+  padding: 18px 32px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
@@ -1382,7 +1330,7 @@ footer {
 @media (max-width: 767px) {
   .register-btn .btn {
     font-size: 10px;
-    padding: 10px 7px;
+    padding: 14px 7px;
   }
   .footer-logo {
     width: 40%;
@@ -1392,14 +1340,9 @@ footer {
   }
 }
 
-.margintop {
-  padding-top: 45px;
-  padding-bottom: 45px;
-}
-
 .box {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 5px;
   text-align: center;
   min-width: 60px;
@@ -1419,17 +1362,6 @@ footer {
 
 .register-btn {
   margin-right: 20px;
-}
-
-.register-btn .btn {
-  font-size: 15px;
-  background-color: #4366db;
-  color: white;
-  padding: 8px 36px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s;
 }
 
 .register-btn .btn:hover {

@@ -23,8 +23,8 @@ export default function Navbar() {
           className="logo"
           src="https://res.cloudinary.com/dbgdvnkev/image/upload/v1730659366/tedx_qogx0k.webp"
           alt="الشعار"
-          width={200}
-          height={88}
+          width={180}
+          height={79}
           loading="lazy"
         />
       </Link>
