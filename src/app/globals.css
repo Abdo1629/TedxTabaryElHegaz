@@ -2130,6 +2130,7 @@ footer .social-icon.linkedin:hover {
 
 .custom-card__title {
   font-size: 14px;
+  font-weight: 500;
   color: #4496aa;
   margin-top: 5px;
 }
