@@ -17,7 +17,7 @@ const EventPage = () => {
   return (
     <div className="event-layout-page">
       <div className="event-layout-container">
-        <Link href="/events" className="layout-return-button">
+        <Link href="" className="layout-return-button">
           <span>عودة</span>
         </Link>
         <div className="layout-content-wrapper">
