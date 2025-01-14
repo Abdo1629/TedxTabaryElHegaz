@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import fullBlogPostsData from '../../data/fullBlogPosts.json';
 
@@ -12,6 +13,9 @@ export default function BlogPost({ params }) {
 
   return (
     <div className="blog-post-container">
+      <div className='blog-logo'>
+      <Image src={post.logo} alt= {post.author} width={post.logoWidth} height={post.logoHeight}/>
+      </div>
       <Link href="/blogs" className="back-button">
         &larr; العودة إلى المدونة
       </Link>
@@ -27,6 +31,10 @@ export default function BlogPost({ params }) {
           ))}
         </div>
       </article>
+      <Link href={post.link} style={{ textDecoration: "none" , textAlign: "center"}}>
+      <button className="blog-link">المقال كامل</button>
+      </Link>
+      
     </div>
   );
 }

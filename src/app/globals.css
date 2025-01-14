@@ -580,6 +580,7 @@ h2 {
   margin-top: 0;
   font-size: 2em;
 }
+
 .events-cards {
   background-color: #f9f9f9;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -592,6 +593,7 @@ h2 {
   flex-wrap: wrap;
   direction: ltr;
   z-index: 5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 @keyframes fadeUp1 {
@@ -994,7 +996,7 @@ form {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-       transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #fff;
   }
   .form-row {
@@ -2170,7 +2172,7 @@ footer .social-icon.linkedin:hover {
 .event-description {
   margin: 2rem 0;
   line-height: 1.8;
-  color: #333;
+  color: #222222;
 }
 
 .event-description h3 {
@@ -2403,35 +2405,6 @@ footer .social-icon.linkedin:hover {
 .btn-pals:hover {
   background-color: #CE1126;
   transform: translateY(-2px);
-}
-
-.flag-stripe {
-  height: 19px;
-  width: 100%;
-}
-
-.flag-stripe-black {
-  background-color: #000000;
-}
-
-.flag-stripe-white {
-  background-color: #FFFFFF;
-}
-
-.flag-stripe-green {
-  background-color: #007A3D;
-}
-
-.flag-triangle {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 40px 40px;
-  border-color: transparent transparent #CE1126 transparent;
-  position: absolute;
-  left: 0;
-  top: 28px;
-  transform: rotate(315deg);
 }
 
 .event-title {
@@ -2762,6 +2735,12 @@ footer .social-icon.linkedin:hover {
   padding: 1.5rem;
 }
 
+.blog-logo {
+  direction: ltr;
+  display: block;
+  justify-content: center;
+}
+
 .blog-title {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
@@ -2783,6 +2762,28 @@ footer .social-icon.linkedin:hover {
 .blog-date {
   font-size: 0.9rem;
   color: #888;
+}
+
+.blog-link {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  font-family: "Alexandria", serif;
+  font-weight: 600;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.blog-link:hover {
+  background-color: #23a038;
 }
 
 .read-more {
@@ -2928,7 +2929,7 @@ footer .social-icon.linkedin:hover {
 }
 
 .event-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px);
   background-color: #f0f0f0;
 }
 
@@ -3026,4 +3027,112 @@ footer .social-icon.linkedin:hover {
     transform: translate(0, 200px) rotate(45deg); /* أسفل يسار */
     opacity: 0;
   }
+}
+
+.event-layout-page {
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.event-layout-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  position: relative;
+}
+
+.layout-return-button {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid;
+  background-color: black;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.layout-return-button:hover {
+  background-color: #991a1a;
+  color: #fff;
+}
+
+.layout-content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 4%;
+}
+
+.layout-image-section .layout-event-image {
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.layout-info-section {
+  flex: 1;
+}
+
+.layout-event-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222222;
+}
+
+.layout-event-season {
+  font-size: 1.3rem;
+  color: #4496AA;
+  margin-bottom: 20px;
+  margin-top: 2px;
+}
+
+.layout-event-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.event-date {
+  font-size: 1rem;
+}
+
+.event-status.soon {
+  color: #ff3f3f;
+  font-weight: bold;
+}
+
+.event-status.ended {
+  color: #666;
+}
+
+.layout-event-description h3,
+.layout-event-speakers h3,
+.layout-event-highlights h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.layout-event-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.layout-event-speakers ul,
+.layout-event-highlights ul {
+  padding-left: 20px;
+}
+
+.layout-event-speakers li,
+.layout-event-highlights li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
 }

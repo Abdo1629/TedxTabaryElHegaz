@@ -5,7 +5,7 @@
         "title": "ما هو TEDx وكيف يختلف عن TED؟",
         "excerpt": "تعرف على الفرق بين مؤتمرات TED وأحداث TEDx المنظمة بشكل مستقل...",
         "image": "/images/tedx-vs-ted.jpg",
-        "date": "2023-07-15" 
+        "date": "2023-07-15"
       },
       {
         "id": 2,
@@ -16,38 +16,38 @@
       },
       {
         "id": 3,
-        "title": "تأثير TEDx على المجتمعات المحلية",
-        "excerpt": "كيف تساهم أحداث TEDx في نشر الأفكار وتحفيز التغيير الإيجابي...",
-        "image": "/images/tedx-impact.jpg",
-        "date": "2023-08-20"
-      },
-      {
-        "id": 4,
         "title": "تيدكس في مدرسة حكومية",
         "excerpt": "تيدكس في مدرسة حكومية في ظل التحديات التي تواجه الشباب في الفترة الحالية، تنظم تيدكس حدث في مدرسة حكومية...",
         "image": "/images/landing_photo2.jpg",
         "date": "2022-06-08"
       },
       {
-        "id": 5,
+        "id": 4,
         "title": "Best Social Responsibility Activity",
         "excerpt": "Samsung Innovation Campus was recognized as the “Best Social Responsibility Activity for the Youth” award...",
         "image": "/images/imageView.jpg",
         "date": "2022/09/14"
       },
       {
-        "id": 6,
+        "id": 5,
         "title": "«أحمد» مؤسس منصة «تيدكس» لأول مرة في مصر",
         "excerpt": "شاب لم يتجاوز العشرين من عمره، تمرد على واقعه وتمنى أن يتخطى السقف العادي للنجاح...",
         "image": "/images/watan.webp",
         "date": "2022-06-08"
       },
       {
-        "id": 7,
+        "id": 6,
         "title": "تحت شعار ” على قدر أهل العزم”",
         "excerpt": "تفتتح منصه تيدكس طبري الحجاز في أغسطس القادم فاعليه  تحت شعار ” على قدر أهل العزم” وهو يعتبر ثاني فاعلية  لتديكس طبري الحجاز...",
         "image": "/images/royatwatan.jpg",
         "date": "2022-06-08"
+      },
+      {
+        "id": 7,
+        "title": "فيها حاجة حلوة",
+        "excerpt": "الأبطال ليسوا صنيعة الخيال نقابلهم فى القصص والنقاشات بل يعيشون بيننا يتسلحون بالعزيمة والصبر والطموح يجمعون بين العلم...",
+        "image":"/images/garida.png",
+        "date": "2021-8-20"
       }
     ]
   }

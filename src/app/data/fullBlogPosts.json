@@ -11,43 +11,67 @@
         "id": 2,
         "title": "كيف تحضر لإلقاء محاضرة TEDx مؤثرة",
         "content": "إلقاء محاضرة TEDx هي فرصة فريدة لمشاركة فكرتك مع العالم. إليك بعض النصائح لتحضير محاضرة TEDx مؤثرة:\n\n1. اختر فكرة واحدة قوية: ركز على فكرة واحدة مهمة تريد إيصالها للجمهور. يجب أن تكون هذه الفكرة جديدة أو تقدم منظوراً فريداً لموضوع معروف.\n\n2. اعرف جمهورك: فهم من سيستمع إلى محاضرتك سيساعدك في تكييف رسالتك بشكل أفضل.\n\n3. ابدأ بقوة: الدقائق الأولى حاسمة لجذب انتباه الجمهور. فكر في بداية مثيرة للاهتمام، سواء كانت قصة شخصية أو حقيقة مدهشة.\n\n4. استخدم القصص والأمثلة: الناس يتذكرون القصص أكثر من الحقائق المجردة. استخدم القصص والأمثلة لتوضيح نقاطك.\n\n5. تدرب، تدرب، تدرب: قم بإلقاء محاضرتك مراراً وتكراراً. سجل نفسك واطلب ملاحظات من الآخرين.\n\n6. كن أصيلاً: لا تحاول تقليد أسلوب شخص آخر. كن نفسك وتحدث بصدق وشغف.\n\n7. استخدم الوسائل البصرية بحكمة: إذا كنت ستستخدم شرائح أو وسائل بصرية أخرى، تأكد من أنها تعزز رسالتك ولا تشتت الانتباه عنها.\n\n8. التزم بالوقت: محاضرات TEDx عادة ما تكون قصيرة (حوالي 18 دقيقة). تأكد من أنك تستطيع إيصال فكرتك ضمن الوقت المحدد.\n\n9. اختتم بقوة: اترك جمهورك بفكرة قوية أو دعوة للعمل.\n\nتذكر، الهدف هو إلهام جمهورك وتركهم يفكرون بشكل مختلف حول موضوعك. بالتحضير الجيد والممارسة، يمكنك إلقاء محاضرة TEDx لا تُنسى.",
-        "author": "فريق TEDx طبري الحجاز",
-        "date": "2023-08-02"
+        "author": "TED Organization",
+        "date": "2023-08-02",
+        "link": "https://storage.ted.com/tedx/manuals/tedx_speaker_guide.pdf",
+        "logo": "/images/TED-Logo.png",
+        "logoWidth": "130",
+        "logoHeight": "80"
       },
       {
         "id": 3,
-        "title": "تأثير TEDx على المجتمعات المحلية",
-        "content": "تلعب فعاليات TEDx دوراً هاماً في تحفيز التغيير الإيجابي وتعزيز الإبداع في المجتمعات المحلية. فيما يلي بعض الطرق التي تؤثر بها TEDx على المجتمعات:\n\n1. نشر الأفكار المبتكرة: توفر TEDx منصة للمفكرين والمبدعين المحليين لمشاركة أفكارهم مع مجتمعهم، مما يساهم في نشر الابتكار والإبداع.\n\n2. بناء المجتمع: تجمع فعاليات TEDx الناس من خلفيات متنوعة، مما يعزز الترابط المجتمعي ويخلق فرصاً للتواصل والتعاون.\n\n3. تسليط الضوء على القضايا المحلية: تتيح TEDx الفرصة لمناقشة القضايا التي تهم المجتمع المحلي، مما يزيد الوعي ويحفز العمل نحو حلها.\n\n4. تمكين الشباب: غالباً ما تشجع فعاليات TEDx مشاركة الشباب، سواء كمتحدثين أو منظمين، مما يعزز مهاراتهم القيادية ويمنحهم صوتاً في مجتمعهم.\n\n5. جذب الاهتمام للمواهب المحلية: تساعد TEDx في اكتشاف وإبراز المواهب المحلية، مما قد يفتح لهم فرصاً جديدة على المستويين المحلي والعالمي.\n\n6. تحفيز التعلم المستمر: تغطي محاضرات TEDx مجموعة واسعة من المواضيع، مما يشجع على التعلم المستمر وتوسيع آفاق المعرفة.\n\n7. ربط المحلي بالعالمي: من خلال استخدام نموذج TED العالمي، تساعد TEDx في ربط الأفكار والقضايا المحلية بالسياق العالمي.\n\n8. تشجيع العمل والمبادرة: غالباً ما تلهم محاضرات TEDx الجمهور للعمل وإحداث تغيير إيجابي في مجتمعاتهم.\n\n9. تعزيز الثقة بالنفس: توفر TEDx فرصة للأفراد للتحدث أمام جمهور، مما يعزز ثقتهم بأنفسهم ومهاراتهم في التواصل.\n\n10. خلق فرص اقتصادية: قد تجذب فعاليات TEDx اهتماماً إلى المنطقة، مما قد يؤدي إلى فرص اقتصادية جديدة.\n\nفي TEDx طبري الحجاز، نحن ملتزمون بتحقيق هذه التأثيرات الإيجابية في مجتمعنا. نؤمن بأن كل فكرة يمكن أن تكون بذرة للتغيير، وأن كل محاضرة TEDx يمكن أن تكون شرارة لإلهام شخص ما لإحداث فرق في العالم.",
-        "author": "فريق TEDx طبري الحجاز",
-        "date": "2023-08-20"
-      },
-      {
-        "id": 4,
         "title": "تيدكس في مدرسة حكومية",
         "content": "تيدكس في مدرسة حكومية في ظل التحديات التي تواجه الشباب في الفترة الحالية، تنظم تيدكس حدث في مدرسة حكومية بمصر تيدكس طبري الحجاز في شهر “8” من العام الجاري، تحت شعار “ليس سوي أن تريد”. حيث تقوم فكرة تيدكس علي مساعدة اكبر قدر من شبابنا الذي سيكون معظمهم قادة العلم في المستقبل للوصول إلى شغفهم وأحلامهم، وتحقيق نتائج إيجابية ملموسة. وكان حضر مايقرب من 550 شخص من طلاب الكليات والمدارس الثانوية والوزراء بهدف نشر الافكار الملهمة وتمهيد الطريق لشبابنا في الاطلاع علي احدث طرق البحث والابتكار والتصميم والاطلاع علي كل ماهو جديد ومساعدتهم وتأهيلهم لسوق العمل ، ومايميز تيدكس طبري هو اهتمامهم باللغة العربيّة عن طريق تقديم المحتوى بهذه اللغة العظيمة التي أصبح المجتمع يتجاهلها و لا يستخدمها في الاحداث المهمة. ورغم التحديات والصعوبات شهد الحدث نجاحا كبير، وبعد هذا النجاح الكبير يتجدد لقاءنا مع تيدكس طبري الحجاز بتاريخ 2022-8-13 للمرة الثانية علي التوالي برئاسة احمد مصطفي، ومن المتوقع ان يشهد الحدث نجاحا اكبر .",
         "author": "هنا القاهرة",
-        "date": "2022-06-08"
+        "date": "2022-06-08",
+        "link": "https://honaalkaheera.com/%d8%aa%d9%8a%d8%af%d9%83%d8%b3-%d9%81%d9%8a-%d9%85%d8%af%d8%b1%d8%b3%d8%a9-%d8%ad%d9%83%d9%88%d9%85%d9%8a%d8%a9/",
+        "logo": "/images/HonaAlqahira.webp",
+        "logoWidth": "150",
+        "logoHeight": "85"
       },
       {
-        "id": 5,
+        "id": 4,
         "title": "Samsung Innovation Campus recognized as “Best Social Responsibility Activity” in Egypt",
         "content": "Samsung Innovation Campus was recognized as the “Best Social Responsibility Activity for the Youth” award for 2021 in Egypt. The award was granted by Tedx Tabary ElHegaz in its second edition, which was held on the 27th of August in Egypt's Society for Culture & Development, under the theme of “Determination, Will and Striving against Obstacles”. Samsung Innovation Campus was recognized for leading and effective role in providing quality content and advanced technologies for the youth in the field of Coding & Programming and artificial intelligence, which goes in line with the Egypt vision 2030. Additionally, Samsung Innovation Campus expanded its network with strategic partnership with the Egyptian government, represented through the Ministry of Communications and Information Technology, to provide the Egyptian market with advanced technical solutions and programs catering to different needs of students. Samsung Innovation campus also fulfills the youth’s aspirations by equipping them to deal with the 4th industrial revolution and provide smart digital services and diversified technological solutions for the society, as well as providing adequate knowledge to be able to manage communication networks. Ahmed Ali Gaafar, Head of Marketing at Samsung Electronics Egypt, said that he is thrilled with the achievements Samsung Innovation Campus was able to accomplish since its launch in 2019. He added that the program plans to graduate 1,000 students by the end of 2022, which goes in line with Samsung's vision in enhancing youths’ skills to utilize advanced technology and equip them for the labor market. Gaafar stressed that Samsung is constantly striving to improve the content of the program where “Samsung Mentorship Program” was added recently. “Samsung Innovation Campus” has garnered multiple awards, for its active role in social responsibility, most notably, “Best practices in responsible businesses” award from the American University in Cairo, during the closing ceremony of Business Forward 2021, in honor of its efforts in supporting and empowering Egyptian youth to enter the labor market, and unemployment elimination. Moreover, Samsung has won BT100 award in 2020 for “Corporate Social Responsibility active Role in Scientific Research” through Samsung Innovation Campus. Egypt is one of the four countries in the Middle East and North Africa, in addition to thirteen countries worldwide to implement Samsung Innovation Campus program.",
         "author": "Samsung Innovation Campus",
-        "date": "2022/09/14"
+        "date": "2022/09/14",
+        "link": "https://csr.samsung.com/en/newsView.do?contentsId=336",
+        "logo": "/images/samsung.webp",
+        "logoWidth": "150",
+        "logoHeight": "85"
       },
       {
-        "id": 6,
+        "id": 5,
         "title": "«أحمد» مؤسس منصة «تيدكس» لأول مرة في مصر: هدفي الخروج عن المألوف",
         "content": " شاب لم يتجاوز العشرين من عمره، تمرد على واقعه وتمنى أن يتخطى السقف العادي للنجاح، أراد التميز والخروج عن المألوف والروتين، وذلك تحت شعار «أفكار تستحق الانتشار»، وهي منصة عالمية تقام لأول مرة في مصر بشكل تطوعي باسم «تيدكس يوث طبري الحجاز»، تقدم فعاليات لشباب الثانوية بالمدارس الحكومية، تهدف إلي تحديد رؤية ناجحة لمستقبلهم. لا يحب كليات القمة أحمد مصطفي طالب بالصف الثاني الثانوي بمدرسة طبري الحجاز، تمرد على تحديد المجتمع لهويته سواء كان بالنجاح أو الفشل، وضغط الأهل على أولادهم بالالتحاق بكليات القمة فقط، «أنا واحد مش حابب طب أو هندسة ونفسي أدرس بيزنس أو سياسة واقتصاد» حسب ما رواه لـ«الوطن»، ليواجه حالة من التنمر على طموحاته وأحلامه، ولأنه يحب مجال التطوع كانت البذرة التي نمت في عقله.",
         "author": "الوطن",
-        "date": "2022-06-08"
+        "date": "2022-06-08",
+        "link": "https://csr.samsung.com/en/newsView.do?contentsId=336",
+        "logo": "/images/samsung.webp",
+        "logoWidth": "150",
+        "logoHeight": "85"
       },
       {
-        "id": 7,
+        "id": 6,
         "title": "تحت شعار ” على قدر أهل العزم”",
         "content": "تفتتح منصه تيدكس طبري الحجاز في أغسطس القادم فاعليه  تحت شعار ” على قدر أهل العزم” وهو يعتبر ثاني فاعلية  لتديكس طبري الحجاز تحت رئاسة أحمد مصطفى، حيث إن الفاعلية الماضي كان تحت شعار ” ليس سوى أن تريد” والذي أقيم في شهر أكتوبر من العام الماضي بجامعة عين شمس، وذلك بحضور رموز عالمية مؤثرة بأفكارهم وكلامهم تيدكس طبري الحجاز هو أول تيدكس مدرسة حكومية تقام في مصر وهو تابع لمنصة تيد العالمية و يضيف أحمد مصطفي فكرة الفاعلية تقوم على مساعدة جيل مختلف من الشباب المتواجد حاليا وفرض سيطرته الكاملة على المجتمع، وهم قادة اليوم و المستقبل، وشغفهم و أحلامهم هو طريقنا الدائم للسعي نحو النجاح ونحن نستهدف في أي حدث يقام طلاب الكليات و المدارس الثانوي و الوزراء بهدف نشر الأفكار الملهمة و تمهيد الطريق لشبابنا في الاطلاع على أحدث طرق البحث و الابتكار و التصميم وعلى كل ماهو جديد لتأهيلهم لسوق العمل وأهم ما يميز تيدكس طبري الحجاز هو اهتمامها باللغة العربية عن طريق تقديم المحتوى بهذه اللغة العظيمة التي أصبح المجتمع يتجاهلها عن طريق مشاركة الشباب المتحدث عن إنجازاته و تحدياته و كيفيه ازاله المعوقات و بث روح الأمل والتفاؤل في نفوس الشباب الصاعد",
         "author": "رؤية وطن",
-        "date": "2022-06-08"
+        "date": "2022-06-08",
+        "link": "https://csr.samsung.com/en/newsView.do?contentsId=336",
+        "logo": "/images/samsung.webp",
+        "logoWidth": "150",
+        "logoHeight": "85"
+      },
+      {
+        "id": 7,
+        "title": "فيها حاجة حلوة",
+        "content": "الأبطال ليسوا صنيعة الخيال نقابلهم فى القصص والنقاشات بل يعيشون بيننا يتسلحون بالعزيمة والصبر والطموح يجمعون بين العلم والأخلاق ويحققون المستحيل ليثبتوا للعالم أن مصر أم الدنيا سباقة للخير ودائما سيظل فيها حاجة حلوة نحكى لكم عنها وتنتظركم أبطالا لحكايات حقيقية. \n\n أحمد مصطفى.. التطوع مفتاح التأهيل للعمل بطل حكاية اليوم طالب بالصف الأول الثانوى اقتحم التطوع مبكرا وبدأ يحصد النجاح - أحمد مصطفى أحمد ١٦ سنة، أتقن البرمجة وبدأ يصمم تطبيقات للشركات والانشطة الطلابية بخدمات عالية وأسعار رخيصة كما سعى لتدريب أصحابه في ثانوى المتطلبات سوق العمل من معرفة ومهارات بدلا من حصرهم في التفكير فى المذاكرة والمجموع الذي قد يقودهم الكلية لا ير غيون فيها وتكون رغبة الأهل أو قرار مكتب التنسيق  سمع أحمد ... عن منصة ( تيد) الرعاية مؤتمرات عن الأفكار والتجارب الناجحة في التقنية والتصميم والترقيه وبدأت في أمريكا وانتشرت عبر العالم في فعاليات تيدكس التي دخلت الجامعات وعندما سعى للانضمام للمنصة ومشاركة تجاريه قوبل بالرفض فقام بالتواصل مع سمراء بيدكس في جامعات مختلفة ومن أمريكا وكندا وكانت صدمته شرط السن سنة ١٨. على الأقل لكنه أثار اهتمامهم بحماسته ورغبته أن تستضيف مدرسته الطبري فعالية للشباب ليكون أول نشاط من نوعه في المدارس الحكومية وبترخيص من المنصة الشهيرة الرسمية فى ٢٠ أغسطس القادم ويستعد له حاليا بالبحث عن نماذج إيجابية وقصص نجاح يشاركها اصحابها الأول مرة مع طلاب ثانوى الطموحين",
+        "author": "جريدة الجمهورية",
+        "date": "2021-8-20",
+        "link": "https://www.facebook.com/100064359265485/posts/1662309560627018/",
+        "logo": "/images/Jomhoria.jpg",
+        "logoWidth": "120",
+        "logoHeight": "120"
       }
     ]
   }

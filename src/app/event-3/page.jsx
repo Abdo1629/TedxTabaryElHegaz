@@ -45,10 +45,6 @@ export default function Event3Page() {
     return (
         <div className="palestinian-flag-background">
             <div className="content-wrapper fade-in">
-                <div className="flag-triangle"></div>
-                <div className="flag-stripe flag-stripe-black"></div>
-                <div className="flag-stripe flag-stripe-white"></div>
-                <div className="flag-stripe flag-stripe-green"></div>
                 <h1 className="event-title text-shadow">عودٌ على بَدْء</h1>
                 <div className="event-info">
                     <div className="event-info-item" style={{backgroundColor: "#CE1126", color: "#FFFFFF"}}><p>الموسم 3</p></div>

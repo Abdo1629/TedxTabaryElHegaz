@@ -4,6 +4,16 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import eventsData from "../../data/eventsData.json";
+import SpeakerCard from "../../components/speakerspage/SpeakerCard.jsx";
+import  seasionOne from "../../data/seasionOne.json";
+import  seasionTwo from "../../data/seasionTwo.json";
+
+const speakersData =
+        seasionOne.seasonOne === "Seasion 1"
+      ? seasionOne.seasionOne
+      : seasionTwo.seasionTwo === "Seasion 2"
+      ? seasionTwo.seasionTwo
+      : [];
 
 const EventPage = () => {
   const params = useParams();
@@ -44,12 +54,16 @@ const EventPage = () => {
               <p>{event.description}</p>
             </div>
             <div className="layout-event-speakers">
+            </div>
+            </div>
+            </div>
               <h3>المتحدثون</h3>
-              <ul>
-                {event.speakers.map((speaker, index) => (
-                  <li key={index}>{speaker}</li>
-                ))}
-              </ul>
+              <div className="events-cards">
+            {seasionOne &&
+                seasionOne.seasionOne.map((speaker) => {
+                    return <SpeakerCard key={speaker.name} speaker={speaker} />;
+                })}
+        </div>
             </div>
             <div className="layout-event-highlights">
               <h3>أبرز النقاط</h3>
@@ -58,9 +72,6 @@ const EventPage = () => {
                   <li key={index}>{highlight}</li>
                 ))}
               </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
