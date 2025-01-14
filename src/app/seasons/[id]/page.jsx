@@ -3,14 +3,14 @@
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import seasonsData from "../../data/seasonsData.json";
+import seasonsData from "../../data/eventsData.json";
 
 export default function SeasonPage() {
   const params = useParams();
   const seasonId = params.id;
-  const season = seasonsData.seasons[`season${seasonId}`];
+  const event = seasonsData.events[`events${seasonId}`];
 
-  if (!season) {
+  if (!event) {
     return <div className="content-error-container">الموسم غير موجود</div>;
   }
 
@@ -22,32 +22,32 @@ export default function SeasonPage() {
         </Link>
         
         <div className="season-content">
-          <h1 className="season-title">{season.name}</h1>
+          <h1 className="season-title">{event.name}</h1>
           
           <div className="season-meta">
             <div className="meta-item">
               <span className="meta-label">التاريخ:</span>
-              <span className="meta-value">{season.date}</span>
+              <span className="meta-value">{event.date}</span>
             </div>
             <div className="meta-item">
               <span className="meta-label">المكان:</span>
-              <span className="meta-value">{season.venue}</span>
+              <span className="meta-value">{event.venue}</span>
             </div>
             <div className="meta-item">
               <span className="meta-label">عدد الحضور:</span>
-              <span className="meta-value">{season.attendees}</span>
+              <span className="meta-value">{event.attendees}</span>
             </div>
           </div>
 
           <div className="season-description">
             <h2>عن الموسم</h2>
-            <p>{season.description}</p>
+            <p>{event.description}</p>
           </div>
 
           <div className="season-highlights">
             <h2>أبرز النقاط</h2>
             <ul>
-              {season.highlights.map((highlight, index) => (
+              {event.highlights.map((highlight, index) => (
                 <li key={index}>{highlight}</li>
               ))}
             </ul>
@@ -56,7 +56,7 @@ export default function SeasonPage() {
           <div className="season-speakers">
             <h2>المتحدثون</h2>
             <div className="speakers-grid">
-              {season.speakers.map((speaker, index) => (
+              {event.speakers.map((speaker, index) => (
                 <div key={index} className="speaker-card">
                   <Image
                     src={speaker.image}
@@ -72,11 +72,11 @@ export default function SeasonPage() {
             </div>
           </div>
 
-          {season.gallery.length > 0 && (
+          {event.gallery.length > 0 && (
             <div className="season-gallery">
               <h2>معرض الصور</h2>
               <div className="gallery-grid">
-                {season.gallery.map((image, index) => (
+                {event.gallery.map((image, index) => (
                   <Image
                     key={index}
                     src={image}
