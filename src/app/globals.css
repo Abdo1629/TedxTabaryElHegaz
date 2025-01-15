@@ -2841,11 +2841,27 @@ footer .social-icon.linkedin:hover {
   .blog-excerpt {
     font-size: 0.9rem;
   }
+
+  .layout-event-image {
+    width: 100%;
+    margin: 0;
+  }
+
+  .layout-image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .blog-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .layout-event-image {
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -2853,6 +2869,11 @@ footer .social-icon.linkedin:hover {
   .blog-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .layout-event-image {
+    width: 100%;
+    margin: 0;
+  }
+  
 }
 .blog-post-container {
   max-width: 800px;
