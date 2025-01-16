@@ -27,7 +27,7 @@ const EventsSection = () => {
   const { events } = eventCardsData;
 
   return (
-    <div className="events-container">
+    <div className="events-container" id="events-section">
       <div className="events-card">
         <div className="content arabic-content">
           <span>مستمرون</span>

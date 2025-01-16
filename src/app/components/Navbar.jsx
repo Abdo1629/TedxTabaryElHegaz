@@ -67,7 +67,7 @@ export default function Navbar() {
           المدونة
         </Link>
         <Link
-          href="#contactform"
+          href="//#contactform"
           className={`link ${
             currentPath === "#contactform" ? "active" : ""
           }`}

@@ -143,13 +143,17 @@ export default function ContactsSection() {
               </div>
             </div>
 
-            <button className="btn1" type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "جاري الإرسال..." : "إرسال"}
-            </button>
+            <div className="form-row">
+              <div className="arabic-content">
+                <button className="btn1" type="submit" disabled={isSubmitting}>
+                  {isSubmitting ? "جاري الإرسال..." : "إرسال"}
+                </button>
+              </div>
+            </div>
           </form>
           {submitMessage && (
-            <p className="submit-message" style={{ 
-              marginTop: '1rem', 
+            <p className="submit-message" style={{
+              marginTop: '1rem',
               textAlign: 'center',
               color: submitMessage.includes('نجاح') ? '#4CAF50' : '#f44336'
             }}>

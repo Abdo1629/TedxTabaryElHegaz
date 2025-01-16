@@ -8,13 +8,13 @@ import SpeakerCard from "../speakerspage/SpeakerCard";
 
 const SpeakersSection = () => {
   return (
-    <div className="margintop events-container">
+    <div className="margintop events-container" id="speakers-section">
       <div className="">
         <div className="content arabic-content">
           <span>نرحل ويبقى الأثر</span>
           <div className="EventsHeader">
             <h2>شخصيات هامة</h2>
-            <Link href="/more-speakers">
+            <Link href="/speakers">
               <button className="btn">عرض المزيد</button>
             </Link>
           </div>

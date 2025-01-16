@@ -27,7 +27,7 @@ const EventPage = () => {
   return (
     <div className="event-layout-page">
       <div className="event-layout-container">
-        <Link href="" className="layout-return-button">
+        <Link href="//#events-section" className="layout-return-button">
           <span>عودة</span>
         </Link>
         <div className="layout-content-wrapper">
@@ -99,28 +99,10 @@ const EventPage = () => {
               className="event-media"
               key={media}
               src={media}
-              width={120}
-              height={120}
+              width={180}
+              height={180}
               alt="صور الحدث"
             />
-          ))}
-        </div>
-        <div className="events-container" style={{marginTop:"30px"}}>
-              <span className="section-title arabic-content">
-           فيديوهات الحدث
-        </span>
-        </div>
-        <div className="events-cards">
-          {event.videos.map((videos) => (
-            <video
-              className="event-media"
-              key={videos}
-              src={videos}
-              width={200}
-              height={200}
-              controls
-              muted
-            ></video>
           ))}
         </div>
       </div>

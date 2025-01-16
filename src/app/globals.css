@@ -880,7 +880,7 @@ form {
 }
 
 .form-row {
-  justify-content: space-between;
+  justify-content: space-betweeen;
   margin-bottom: 15px;
   margin-inline: 10px;
 }

@@ -10,9 +10,9 @@ const SpeakersPage = () => {
     <div className="margintop events-container">
       <div className=" EventsHeader arabic-content">
         <h2>شخصيات هامة</h2>
-        <a href="www.tedxtabaryelhegaz.com">
+        <Link href="//#speakers-section">
            <button className="btn">عودة</button>
-        </a>
+        </Link>
       
       </div>
       <div>

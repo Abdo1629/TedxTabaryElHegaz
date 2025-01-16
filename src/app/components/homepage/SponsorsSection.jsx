@@ -64,7 +64,7 @@ export default function SponsorsSection() {
                 {/* Sponsor Logos */}
                 <div className="sponsor-logos">
                     {sponsorLogos.map((logo, index) => (
-                        <a key={index} className={`fadeSponsor fadeSponsor${index + 1}`}>
+                        <div key={index} className={`fadeSponsor fadeSponsor${index + 1}`}>
                             <Image
                                 src={logo}
                                 alt={`Sponsor Logo ${index + 1}`}
@@ -72,7 +72,7 @@ export default function SponsorsSection() {
                                 width={200}
                                 height={200}
                             />
-                        </a>
+                        </div>
                     ))}
                 </div>
             </div>
