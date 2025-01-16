@@ -20,46 +20,36 @@ export default function ContactsSection() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitMessage("");
 
-    // Create a hidden form and submit it
-    const hiddenForm = document.createElement('form');
-    hiddenForm.method = 'POST';
-    hiddenForm.action = 'https://script.google.com/macros/s/AKfycbyVopcUJ2hTAg_0uQlI-YESgXGwka3p9XUzJJym2GklKtFVHo-1fXakzG7CBKGeC28r/exec';
-    hiddenForm.target = '_blank'; // This prevents page reload
+    const form = e.target;
+    const formData = new FormData(form);
 
-    // Add form fields
-    Object.keys(formData).forEach(key => {
-      const input = document.createElement('input');
-      input.type = 'hidden';
-      input.name = key;
-      input.value = formData[key];
-      hiddenForm.appendChild(input);
-    });
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      });
 
-    // Add timestamp
-    const timestampInput = document.createElement('input');
-    timestampInput.type = 'hidden';
-    timestampInput.name = 'timestamp';
-    timestampInput.value = new Date().toISOString();
-    hiddenForm.appendChild(timestampInput);
+      // Since we're using 'no-cors', we can't check response.ok
+      // We'll assume it's successful if there's no error
+      setSubmitMessage("تم إرسال رسالتك بنجاح!");
+      setFormData({ name: "", email: "", ask: "" });
+    } catch (error) {
+      console.error('Submission error:', error);
+      setSubmitMessage("حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.");
+    } finally {
+      setIsSubmitting(false);
 
-    // Append form to body
-    document.body.appendChild(hiddenForm);
-
-    // Submit the form
-    hiddenForm.submit();
-
-    // Remove the form
-    document.body.removeChild(hiddenForm);
-
-    // Show success message and reset form
-    setSubmitMessage("تم إرسال رسالتك بنجاح!");
-    setFormData({ name: "", email: "", ask: "" });
-    setIsSubmitting(false);
+      // Hide success message after 4 seconds
+      setTimeout(() => {
+        setSubmitMessage("");
+      }, 4000);
+    }
   };
 
   useEffect(() => {
@@ -95,7 +85,7 @@ export default function ContactsSection() {
           تواصل معنا
         </span>
         <div className="contact">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} action="https://script.google.com/macros/s/AKfycbwI5IyQ3sKLSuMcjL4jKTrU5_tld0n0HKd74bbwRRaBn_T_BPiSLjwHlRyFWwO6Yf-Q/exec" method="POST">
             <div className="form-row">
               <div className="arabic-content">
                 <div>
@@ -142,7 +132,7 @@ export default function ContactsSection() {
                 />
               </div>
             </div>
-
+            <input type="hidden" name="timestamp" value={new Date().toISOString()} />
             <button className="btn1" type="submit" disabled={isSubmitting}>
               {isSubmitting ? "جاري الإرسال..." : "إرسال"}
             </button>
