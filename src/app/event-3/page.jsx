@@ -1,17 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
+import FireEffect from "../components/FireEffect"; 
 
 export default function Event3Page() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        ticketType: "Classic - 250EGP",
-        paymentMethod: "Instapay",
-        referralCode: "",
-        expectations: "",
-        questions: ""
-    });
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -27,24 +18,10 @@ export default function Event3Page() {
         return () => observer.disconnect();
     }, []);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(formData);
-        // Here you would typically send the form data to your server
-        alert("تم إرسال طلبك بنجاح!");
-    };
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-
     return (
         <div className="palestinian-flag-background">
             <div className="content-wrapper fade-in">
+            <FireEffect />
                 <h1 className="event-title text-shadow">عودٌ على بَدْء</h1>
                 <div className="event-info">
                     <div className="event-info-item" style={{backgroundColor: "#CE1126", color: "#FFFFFF"}}><p>الموسم 3</p></div>
