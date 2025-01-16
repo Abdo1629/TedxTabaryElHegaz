@@ -564,7 +564,7 @@ h2 {
   padding: 1.8vw 1vw;
 }
 .events-container span {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: rgb(255, 44, 44);
   text-transform: uppercase;
   font-size: 1.2em;
@@ -831,14 +831,13 @@ h2 {
 }
 
 .section-title {
+  left: 40px;
   opacity: 1;
-  transform: translateX(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .section-title.visible {
   opacity: 1;
-  transform: translateX(0);
   animation: slideInFromRight 0.8s ease-out;
 }
 
@@ -1636,7 +1635,6 @@ footer .social-icon.linkedin:hover {
 }
 
 .events-container {
-  margin-top: 50px;
   text-align: center;
 }
 
@@ -1886,8 +1884,8 @@ footer .social-icon.linkedin:hover {
 .custom-card {
   position: relative;
   width: 100%;
-  max-width: 300px;
-  margin: 20px;
+  max-width: 280px;
+  margin: 20px 0;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -2370,7 +2368,7 @@ footer .social-icon.linkedin:hover {
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-right: 80px;
   font-weight: 700;
   color: #007A3D;
@@ -2930,6 +2928,7 @@ footer .social-icon.linkedin:hover {
     font-size: 1rem;
   }
 }
+
 .event-card {
   margin-bottom: 5%;
   text-decoration: none !important;
@@ -3051,7 +3050,7 @@ footer .social-icon.linkedin:hover {
 }
 
 .event-layout-page {
-  padding: 20px;
+  padding: 5px;
   background-color: #f7f7f7;
 }
 
@@ -3099,14 +3098,14 @@ footer .social-icon.linkedin:hover {
 }
 
 .layout-event-name {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 10px;
   color: #222222;
 }
 
 .layout-event-season {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #4496AA;
   margin-bottom: 50px;
   margin-top: 2px;
@@ -3123,10 +3122,6 @@ footer .social-icon.linkedin:hover {
   color: #ff3f3f;
   font-size: 1rem;
   font-weight: 600;
-}
-
-.event-status.ended {
-  color: #666;
 }
 
 .layout-event-description h3,

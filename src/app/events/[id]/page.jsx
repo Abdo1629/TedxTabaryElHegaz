@@ -44,7 +44,7 @@ const EventPage = () => {
             <h1 className="layout-event-name">{event.name}</h1>
             <h2
               className="layout-event-season"
-              style={{ display: "inline", paddingLeft: "150px" }}
+              style={{ display: "inline", paddingLeft: "95px" }}
             >
               {event.season}
             </h2>
@@ -58,31 +58,40 @@ const EventPage = () => {
               <span className="event-date">{event.date}</span>
             </div>
             <div className="layout-event-description">
-              <h3>وصف الحدث</h3>
+              <div className="events-container">
+              <span className="section-title arabic-content">
+           وصف الحدث
+        </span>
+        </div>
               <p>{event.description}</p>
             </div>
-            <div className="layout-event-speakers"></div>
           </div>
         </div>
-        <div className="layout-event-highlights">
-          <h3>المتحدثون</h3>
-        </div>
+        <div className="events-container">
+              <span className="section-title arabic-content">
+            المتحدثون
+        </span>
         <div className="events-cards">
           {speakers &&
             speakers.map((speaker) => (
               <SpeakerCard key={speaker.name} speaker={speaker} />
             ))}
+        </div> 
         </div>
-        <div className="layout-event-highlights">
-          <h3>أبرز النقاط</h3>
+        <div className="events-container">
+              <span className="section-title arabic-content">
+            أبرز النقاط
+        </span>
           <ul>
             {event.highlights.map((highlight, index) => (
               <li key={index}>{highlight}</li>
             ))}
           </ul>
         </div>
-        <div className="layout-event-highlights">
-          <h3>صور الحدث</h3>
+        <div className="events-container">
+              <span className="section-title arabic-content">
+            صور الحدث
+        </span>
         </div>
         <div className="events-cards">
           {event.media.map((media) => (
@@ -90,14 +99,16 @@ const EventPage = () => {
               className="event-media"
               key={media}
               src={media}
-              width={200}
-              height={200}
+              width={120}
+              height={120}
               alt="صور الحدث"
             />
           ))}
         </div>
-        <div className="layout-event-highlights">
-          <h3>فيديوهات الحدث</h3>
+        <div className="events-container" style={{marginTop:"30px"}}>
+              <span className="section-title arabic-content">
+           فيديوهات الحدث
+        </span>
         </div>
         <div className="events-cards">
           {event.videos.map((videos) => (
@@ -105,8 +116,8 @@ const EventPage = () => {
               className="event-media"
               key={videos}
               src={videos}
-              width={300}
-              height={300}
+              width={200}
+              height={200}
               controls
               muted
             ></video>

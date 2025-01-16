@@ -54,9 +54,9 @@ export default function Event3Page() {
                 </div>
 
                 <div className="event-description">
-                    <p> الحياةُ مسرحٌ مليءٌ بالتحدياتِ يواجهُ المرءُ فيها مصيرَهُ متسلحًا بمقوماتِهِ الراسخةِ والتي يكمن بعضها في إرادتِهِ، فتحدثه نفسه أن <strong style={{color: "#CE1126"}}>ليس سوى أنْ تُريدَ</strong></p>
-                    <p> كما يكمن جلها بيد خالقه .. يمنحه اياه لما يري عزمه  <strong style={{color: "#CE1126"}}>فعلى قدرِ أهلِ العزمِ تأتي العزائمُ</strong></p>
-                    <p>وها نحنُ ذا نعود لنبدأُ، فمن حيثُ توقفنا، نحاولُ أن نخلقَ تغييرًا في قصتِنا فمن رجع عوده على بدئه لم يقطع ذهابه حتى يصله برجوعه ،  ف . <strong style={{color: "#CE1126"}}>عودٌ على بدءٍ</strong></p>
+                    <p> الحياةُ مسرحٌ مليءٌ بالتحدياتِ يواجهُ المرءُ فيها مصيرَهُ متسلحًا بمقوماتِهِ الراسخةِ والتي يكمن بعضها في إرادتِهِ، فتحدثه نفسه أن <strong style={{color: "#CE1126"}}>"ليس سوى أنْ تُريدَ"</strong>.</p>
+                    <p> كما يكمن جلها بيد خالقه .. يمنحه اياه لما يري عزمه  <strong style={{color: "#CE1126"}}>"فعلى قدرِ أهلِ العزمِ تأتي العزائمُ"</strong>.</p>
+                    <p>وها نحنُ ذا نعود لنبدأُ، فمن حيثُ توقفنا، نحاولُ أن نخلقَ تغييرًا في قصتِنا فمن رجع عوده على بدئه لم يقطع ذهابه حتى يصله برجوعه ف<strong style={{color: "#CE1126"}}>"عودٌ على بدءٍ"</strong>.</p>
                 </div>
 
                 <div className="event-location">
@@ -71,101 +71,10 @@ export default function Event3Page() {
                         ></iframe>
                     </div>
                 </div>
-
-                <form onSubmit={handleSubmit} className="event-registration">
-                    <h2 className="section-title">حجز تذكرة</h2>
-                    <div className="form-group">
-                        <label htmlFor="name">الاسم ثلاثي</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email">البريد الإلكتروني</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="phone">رقم الهاتف</label>
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="ticketType">نوع التذكرة</label>
-                        <select
-                            id="ticketType"
-                            name="ticketType"
-                            value={formData.ticketType}
-                            onChange={handleChange}
-                        >
-                            <option value="Classic - 250EGP">Classic - 250EGP</option>
-                        </select>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="paymentMethod">وسيلة الدفع</label>
-                        <select
-                            id="paymentMethod"
-                            name="paymentMethod"
-                            value={formData.paymentMethod}
-                            onChange={handleChange}
-                        >
-                            <option value="Instapay">Instapay</option>
-                        </select>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="referralCode">كود خصم (اختياري)</label>
-                        <input
-                            type="text"
-                            id="referralCode"
-                            name="referralCode"
-                            value={formData.referralCode}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="expectations">ما هي توقعاتك؟</label>
-                        <textarea
-                            id="expectations"
-                            name="expectations"
-                            value={formData.expectations}
-                            onChange={handleChange}
-                            rows={4}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="questions">أي أسئلة؟</label>
-                        <textarea
-                            id="questions"
-                            name="questions"
-                            value={formData.questions}
-                            onChange={handleChange}
-                            rows={4}
-                        />
-                    </div>
-                    <div className="form-submit">
-                        <button type="submit" className="btn-pals">
-                            إرسال
+                <h2 className="section-title">حجز تذكرة</h2>
+                        <button type="submit" className="blog-link">
+                            احجز تذكرتك الآن
                         </button>
-                    </div>
-                </form>
-
                 <div className="event-rules">
                     <h2 className="section-title">قوانين الحدث</h2>
                     <ol>
