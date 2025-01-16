@@ -25,10 +25,10 @@ export default function ContactsSection() {
     setIsSubmitting(true);
     setSubmitMessage("");
 
-    // Create a hidden form and Submit it
+    // Create a hidden form and submit it
     const hiddenForm = document.createElement('form');
     hiddenForm.method = 'POST';
-    hiddenForm.action = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec';
+    hiddenForm.action = 'https://script.google.com/macros/s/AKfycbyVopcUJ2hTAg_0uQlI-YESgXGwka3p9XUzJJym2GklKtFVHo-1fXakzG7CBKGeC28r/exec';
     hiddenForm.target = '_blank'; // This prevents page reload
 
     // Add form fields
@@ -143,17 +143,13 @@ export default function ContactsSection() {
               </div>
             </div>
 
-            <div className="form-row">
-              <div className="arabic-content">
-                <button className="btn1" type="submit" disabled={isSubmitting}>
-                  {isSubmitting ? "جاري الإرسال..." : "إرسال"}
-                </button>
-              </div>
-            </div>
+            <button className="btn1" type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "جاري الإرسال..." : "إرسال"}
+            </button>
           </form>
           {submitMessage && (
-            <p className="submit-message" style={{
-              marginTop: '1rem',
+            <p className="submit-message" style={{ 
+              marginTop: '1rem', 
               textAlign: 'center',
               color: submitMessage.includes('نجاح') ? '#4CAF50' : '#f44336'
             }}>
