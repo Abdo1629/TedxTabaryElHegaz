@@ -12,7 +12,7 @@ export default function Countdown() {
   });
 
   useEffect(() => {
-    const eventDate = new Date("Feb 22, 2025 10:00:00");
+    const eventDate = new Date("Aug 16, 2025 10:00:00");
     const interval = setInterval(() => {
       const now = new Date();
       const diff = eventDate - now;
@@ -32,7 +32,7 @@ export default function Countdown() {
       }
     }, 1000);
 
-    return () => clearInterval(interval); // Cleanup on component unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (

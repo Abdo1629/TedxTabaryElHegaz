@@ -25,7 +25,7 @@ export default function Event3Page() {
                 <h1 className="event-title text-shadow">عودٌ على بَدْء</h1>
                 <div className="event-info">
                     <div className="event-info-item" style={{backgroundColor: "#CE1126", color: "#FFFFFF"}}><p>الموسم 3</p></div>
-                    <div className="event-info-item" style={{backgroundColor: "#007A3D", color: "#FFFFFF"}}><p>22 فبراير 2025</p></div>
+                    <div className="event-info-item" style={{backgroundColor: "#007A3D", color: "#FFFFFF"}}><p>16 أغسطس 2025</p></div>
                     <div className="event-info-item" style={{backgroundColor: "#000000", color: "#FFFFFF"}}><p>10:00 صباحاً - 8:00 مساءً</p></div>
                     <div className="event-info-item" style={{backgroundColor: "#007A3D", color: "#FFFFFF"}}><p>87ش المقريزي، هليوبوليس، القاهرة، مصر</p></div>
                 </div>
