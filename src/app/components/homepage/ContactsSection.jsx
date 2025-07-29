@@ -29,10 +29,10 @@ export default function ContactsSection() {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch(form.action, {
-        method: 'POST',
+      await fetch(form.action, {
+        method: "POST",
         body: formData,
-        mode: 'no-cors'
+        mode: "no-cors",
       });
 
       // Since we're using 'no-cors', we can't check response.ok
@@ -40,7 +40,7 @@ export default function ContactsSection() {
       setSubmitMessage("تم إرسال رسالتك بنجاح!");
       setFormData({ name: "", email: "", ask: "" });
     } catch (error) {
-      console.error('Submission error:', error);
+      console.error("Submission error:", error);
       setSubmitMessage("حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.");
     } finally {
       setIsSubmitting(false);
@@ -64,7 +64,9 @@ export default function ContactsSection() {
       { threshold: 0.2 }
     );
 
-    const elements = document.querySelectorAll(".content, .form-row, .btn1, .send");
+    const elements = document.querySelectorAll(
+      ".content, .form-row, .btn1, .send"
+    );
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -81,11 +83,13 @@ export default function ContactsSection() {
       </div>
 
       <div className="events-container">
-        <span className="content section-title arabic-content">
-          تواصل معنا
-        </span>
+        <span className="content section-title arabic-content">تواصل معنا</span>
         <div className="contact">
-          <form onSubmit={handleSubmit} action="https://script.google.com/macros/s/AKfycbwI5IyQ3sKLSuMcjL4jKTrU5_tld0n0HKd74bbwRRaBn_T_BPiSLjwHlRyFWwO6Yf-Q/exec" method="POST">
+          <form
+            onSubmit={handleSubmit}
+            action="https://script.google.com/macros/s/AKfycbwI5IyQ3sKLSuMcjL4jKTrU5_tld0n0HKd74bbwRRaBn_T_BPiSLjwHlRyFWwO6Yf-Q/exec"
+            method="POST"
+          >
             <div className="form-row">
               <div className="arabic-content">
                 <div>
@@ -132,17 +136,25 @@ export default function ContactsSection() {
                 />
               </div>
             </div>
-            <input type="hidden" name="timestamp" value={new Date().toISOString()} />
+            <input
+              type="hidden"
+              name="timestamp"
+              value={new Date().toISOString()}
+            />
+
             <button className="btn1" type="submit" disabled={isSubmitting}>
               {isSubmitting ? "جاري الإرسال..." : "إرسال"}
             </button>
           </form>
           {submitMessage && (
-            <p className="submit-message" style={{ 
-              marginTop: '1rem', 
-              textAlign: 'center',
-              color: submitMessage.includes('نجاح') ? '#4CAF50' : '#f44336'
-            }}>
+            <p
+              className="submit-message"
+              style={{
+                marginTop: "1rem",
+                textAlign: "center",
+                color: submitMessage.includes("نجاح") ? "#4CAF50" : "#f44336",
+              }}
+            >
               {submitMessage}
             </p>
           )}
@@ -151,7 +163,10 @@ export default function ContactsSection() {
 
       <p className="send content arabic-content">
         أو أرسل رسالة إلى صفحتنا على{" "}
-        <Link href="https://www.facebook.com/TEDxYouthTabaryElHegazHS" className="liness">
+        <Link
+          href="https://www.facebook.com/TEDxYouthTabaryElHegazHS"
+          className="liness"
+        >
           فيسبوك
         </Link>
         .
@@ -159,4 +174,3 @@ export default function ContactsSection() {
     </div>
   );
 }
-

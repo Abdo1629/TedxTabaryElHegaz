@@ -8,12 +8,10 @@ import SpeakersSection from "./components/homepage/SpeakersSection";
 import SponsorsSection from "./components/homepage/SponsorsSection";
 import StatsSection from "./components/homepage/StatesSection";
 import VideosSection from "./components/homepage/VideosSection";
-import { Analytics } from "@vercel/analytics/next";
 
 export default function Home() {
   return (
     <>
-      <Analytics/>
       <Countdown />
       <LandingPage />
       <DefineSection />

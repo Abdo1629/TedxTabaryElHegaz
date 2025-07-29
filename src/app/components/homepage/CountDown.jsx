@@ -12,7 +12,7 @@ export default function Countdown() {
   });
 
   useEffect(() => {
-    const eventDate = new Date("Aug 16, 2025 10:00:00");
+    const eventDate = new Date("Sep 6, 2025 9:00:00");
     const interval = setInterval(() => {
       const now = new Date();
       const diff = eventDate - now;
@@ -66,7 +66,7 @@ export default function Countdown() {
       </div>
       <div className="register-btn">
         <Link href="/event-3" className="btn">
-          سجل الأن
+          سجل الاّن
         </Link>
       </div>
     </div>
