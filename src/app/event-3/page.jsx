@@ -45,7 +45,7 @@ export default function Event3Page() {
             className="event-info-item"
             style={{ backgroundColor: "#007A3D", color: "#FFFFFF" }}
           >
-            <p>14 شارع أسماء فهمي مدينة نصر</p>
+            <p>14 شارع أسماء فهمي - هليوبوليس </p>
           </div>
         </div>
 
