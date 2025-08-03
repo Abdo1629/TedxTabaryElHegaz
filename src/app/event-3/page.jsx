@@ -90,15 +90,12 @@ export default function Event3Page() {
           </div>
         </div>
         <h2 className="section-title">حجز تذكرة</h2>
-        <button type="submit" className="blog-link">
-  <a
-    href="https://events.xpay.app/event-details/168"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-full h-full block"
-  >
+        <button
+type="button"
+onClick={() =>
+window.open("https://events.xpay.app/event-details/168")
+} className="blog-link">
     احجز تذكرتك الآن
-  </a>
 </button>
         <div className="event-rules">
           <h2 className="section-title">قوانين الحدث</h2>
