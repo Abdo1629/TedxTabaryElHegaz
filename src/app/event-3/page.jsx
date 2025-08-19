@@ -45,7 +45,7 @@ export default function Event3Page() {
             className="event-info-item"
             style={{ backgroundColor: "#007A3D", color: "#FFFFFF" }}
           >
-            <p>14 شارع أسماء فهمي - هليوبوليس </p>
+            <p>العباسية - مسرح برج التطبيقيين</p>
           </div>
         </div>
 
@@ -81,7 +81,7 @@ export default function Event3Page() {
           <h2 className="section-title">العنوان على الخريطة</h2>
           <div className="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.4565117224747!2d31.32895640000001!3d30.081109500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e17809a44f1%3A0xec99bb4b7ae932db!2sFaculty%20of%20Women%2C%20Ain%20Shams%20University!5e0!3m2!1sen!2seg!4v1753821511707!5m2!1sen!2seg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.8149360792286!2d31.28270277623766!3d30.070838774910257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583f983f4da8e5%3A0xa0cfc4e4c622871c!2sSyndicate%20Of%20Applicators!5e0!3m2!1sen!2seg!4v1755176430731!5m2!1sen!2seg"
               width="100%"
               height="450"
               allowFullScreen=""
