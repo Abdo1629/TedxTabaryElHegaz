@@ -27,13 +27,13 @@ export default function SponsorsSection() {
         "/images/Sponsors/20.jpg",
         "/images/Sponsors/21.jpg",
         "/images/Sponsors/22.jpg",
-        "/images/Spon1.jpg",
-        "/images/Spon2.jpg",
-        "/images/Spon3.jpg",
-        "/images/Spon4.jpg",
-        "/images/Spon5.jpg",
-        "/images/Spon6.jpg",
-        "/images/Spon7.jpg"
+        "/images/spon1.jpg",
+        "/images/spon2.jpg",
+        "/images/spon3.jpg",
+        "/images/spon4.jpg",
+        "/images/spon5.jpg",
+        "/images/spon6.jpg",
+        "/images/spon7.jpg"
     ];
 
     useEffect(() => {
