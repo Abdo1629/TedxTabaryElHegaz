@@ -93,7 +93,7 @@ export default function Event3Page() {
         <button
 type="button"
 onClick={() =>
-window.open("https://events.xpay.app/event-details/168")
+window.open("https://app.fawaterk.com/events/448/عود%20على%20بدء", "_blank")
 } className="blog-link">
     احجز تذكرتك الآن
 </button>

@@ -26,7 +26,14 @@ export default function SponsorsSection() {
         "/images/Sponsors/19.jpg",
         "/images/Sponsors/20.jpg",
         "/images/Sponsors/21.jpg",
-        "/images/Sponsors/22.jpg"
+        "/images/Sponsors/22.jpg",
+        "/images/Spon1.jpg",
+        "/images/Spon2.jpg",
+        "/images/Spon3.jpg",
+        "/images/Spon4.jpg",
+        "/images/Spon5.jpg",
+        "/images/Spon6.jpg",
+        "/images/Spon7.jpg"
     ];
 
     useEffect(() => {
