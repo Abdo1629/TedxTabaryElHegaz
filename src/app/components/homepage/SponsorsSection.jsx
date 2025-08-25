@@ -28,7 +28,7 @@ export default function SponsorsSection() {
         "/images/Sponsors/21.jpg",
         "/images/Sponsors/22.jpg",
         "/images/spon1.jpg",
-        "/images/spon2.jpg",
+        "/images/spon2.jpeg",
         "/images/spon3.jpg",
         "/images/spon4.jpg",
         "/images/spon5.jpg",
