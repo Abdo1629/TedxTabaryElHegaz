@@ -4,43 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-// Custom SVG Icons for better control
-const FacebookIcon = ({ size = 28 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-  </svg>
-);
-
-const InstagramIcon = ({ size = 28 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-  </svg>
-);
-
-const LinkedinIcon = ({ size = 28 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-  </svg>
-);
-
-const WhatsappIcon = ({ size = 28 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.437 3.488"/>
-  </svg>
-);
-
-const YoutubeIcon = ({ size = 28 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-  </svg>
-);
-
-const GlobeIcon = ({ size = 28 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-  </svg>
-);
-
 // بيانات الرعاة (يمكن نقلها لاحقاً إلى ملف JSON مستقل)
 const sponsors = [
   // الترتيب المطلوب أولاً
@@ -180,49 +143,32 @@ export default function SponsorsPage() {
                   />
                 </div>
                 <div className="link-row">
-                  {/* Social icons row with perfect styling */}
+                  {/* Simple buttons instead of complex icons */}
                   {sponsor.social && (
-                    <div className="social-icons" role="list" aria-label="روابط التواصل الاجتماعي">
-                      {sponsor.social.facebook && (
-                        <Link className="social-icon facebook" href={sponsor.social.facebook} target="_blank" rel="noopener noreferrer" aria-label={`فيسبوك ${sponsor.name}`} title={`فيسبوك ${sponsor.name}`} style={{ '--social-index': 0 }}>
-                          <FacebookIcon size={28} />
-                        </Link>
-                      )}
-                      {sponsor.social.instagram && (
-                        <Link className="social-icon instagram" href={sponsor.social.instagram} target="_blank" rel="noopener noreferrer" aria-label={`إنستجرام ${sponsor.name}`} title={`إنستجرام ${sponsor.name}`} style={{ '--social-index': 1 }}>
-                          <InstagramIcon size={28} />
-                        </Link>
-                      )}
-                      {sponsor.social.linkedin && (
-                        <Link className="social-icon linkedin" href={sponsor.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`لينكدإن ${sponsor.name}`} title={`لينكدإن ${sponsor.name}`} style={{ '--social-index': 2 }}>
-                          <LinkedinIcon size={28} />
-                        </Link>
-                      )}
-                      {sponsor.social.youtube && (
-                        <Link className="social-icon youtube" href={sponsor.social.youtube} target="_blank" rel="noopener noreferrer" aria-label={`يوتيوب ${sponsor.name}`} title={`يوتيوب ${sponsor.name}`} style={{ '--social-index': 3 }}>
-                          <YoutubeIcon size={28} />
-                        </Link>
-                      )}
-                      {sponsor.social.whatsapp && (
-                        <Link className="social-icon whatsapp" href={sponsor.social.whatsapp} target="_blank" rel="noopener noreferrer" aria-label={`واتساب ${sponsor.name}`} title={`واتساب ${sponsor.name}`} style={{ '--social-index': 4 }}>
-                          <WhatsappIcon size={28} />
-                        </Link>
-                      )}
+                    <div className="social-buttons">
                       {(sponsor.social.website || sponsor.url) && (
-                        <Link className="social-icon website" href={sponsor.social.website || sponsor.url} target="_blank" rel="noopener noreferrer" aria-label={`موقع ${sponsor.name}`} title={`موقع ${sponsor.name}`} style={{ '--social-index': 5 }}>
-                          <GlobeIcon size={28} />
-                        </Link>
+                        <a 
+                          href={sponsor.social.website || sponsor.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="social-btn website-btn"
+                          aria-label={`موقع ${sponsor.name}`}
+                        >
+                          الموقع
+                        </a>
+                      )}
+                      {sponsor.social.facebook && (
+                        <a 
+                          href={sponsor.social.facebook} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="social-btn facebook-btn"
+                          aria-label={`فيسبوك ${sponsor.name}`}
+                        >
+                          فيسبوك
+                        </a>
                       )}
                     </div>
-                  )}
-                  {sponsor.url && (
-                    <Link href={sponsor.url} target="_blank" rel="noopener noreferrer" className="sponsor-link">
-                      الموقع الرسمي
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M7 17 17 7" />
-                        <path d="M7 7h10v10" />
-                      </svg>
-                    </Link>
                   )}
                 </div>
                 <div className="desc-row sponsor-desc arabic-content">
@@ -313,317 +259,59 @@ export default function SponsorsPage() {
   .num-frag:after {content:""; position:absolute; inset:auto 0 -2px 0; height:3px; background:linear-gradient(90deg,#ff2d2d,#ff5e5e); border-radius:2px; opacity:.55;}
   .link-row {grid-area:link; display:flex; align-items:center; gap:18px; flex-wrap:wrap; position:relative; padding-top:16px; margin-top:4px;}
   .link-row:before {content:""; position:absolute; top:0; right:0; left:0; height:2px; background:linear-gradient(90deg, rgba(255,45,45,0), rgba(255,45,45,0.15), rgba(255,45,45,0)); border-radius:1px;}
-  /* Social icons - TEDx Brand Identity with Stunning Design */
-  .sponsors-page-wrapper .social-icons { 
-    display: flex !important; 
-    gap: 20px !important; 
-    align-items: center !important; 
-    padding: 15px 0 !important;
-    justify-content: flex-start !important;
-    flex-wrap: wrap !important;
-    margin-top: 5px !important;
-  }
-  .sponsors-page-wrapper .social-icon { 
-    width: 64px !important; 
-    height: 64px !important; 
-    border-radius: 50% !important; 
-    background: linear-gradient(145deg, #ff1a1a 0%, #ff3333 30%, #ff4d4d 60%, #ff1a1a 100%) !important;
-    color: #ffffff !important; 
-    display: inline-flex !important; 
-    align-items: center !important; 
-    justify-content: center !important; 
-    box-shadow: 0 15px 40px -10px rgba(255, 26, 26, 0.7), 
-                0 10px 30px -8px rgba(0, 0, 0, 0.3),
-                inset 0 3px 6px rgba(255, 255, 255, 0.3) !important; 
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.6) !important; 
-    text-decoration: none !important; 
-    font-size: 28px !important;
-    border: 5px solid rgba(255, 255, 255, 0.4) !important;
-    position: relative !important;
-    overflow: hidden !important;
-    cursor: pointer !important;
-    transform-style: preserve-3d !important;
-    animation: socialIconEntry 1s ease-out forwards !important;
-    animation-delay: calc(var(--social-index, 0) * 0.2s) !important;
-    opacity: 0 !important;
+  
+  /* Simple Social Buttons */
+  .social-buttons {
+    display: flex !important;
+    gap: 12px !important;
+    align-items: center !important;
+    margin-top: 10px !important;
   }
   
-  /* Glowing effect before element */
-  .sponsors-page-wrapper .social-icon::before {
-    content: "" !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: linear-gradient(45deg, 
-      rgba(255, 255, 255, 0.1) 0%, 
-      rgba(255, 255, 255, 0.2) 50%, 
-      rgba(255, 255, 255, 0.1) 100%) !important;
-    border-radius: 50% !important;
-    opacity: 0 !important;
-    transition: opacity 0.3s ease !important;
-  }
-  
-  /* Link states */
-  .sponsors-page-wrapper .social-icon:link, 
-  .sponsors-page-wrapper .social-icon:visited { 
-    color: #ffffff !important; 
-    text-decoration: none !important; 
-    background: linear-gradient(145deg, #ff2d2d 0%, #ff4747 30%, #ff5e5e 60%, #ff2d2d 100%) !important;
-  }
-  
-  /* Hover effect */
-  .sponsors-page-wrapper .social-icon:hover { 
-    transform: translateY(-12px) scale(1.2) rotateZ(-8deg) !important;
-    box-shadow: 0 30px 60px -15px rgba(255, 26, 26, 0.8), 
-                0 25px 50px -12px rgba(0, 0, 0, 0.4),
-                inset 0 4px 8px rgba(255, 255, 255, 0.5) !important;
-    border-color: rgba(255, 255, 255, 0.8) !important;
-    filter: brightness(1.15) !important;
-    background: linear-gradient(145deg, #ff0000 0%, #ff2222 30%, #ff3333 60%, #ff0000 100%) !important;
-  }
-  
-  .sponsors-page-wrapper .social-icon:hover::before {
-    opacity: 1 !important;
-  }
-  
-  .sponsors-page-wrapper .social-icon:active { 
-    transform: translateY(-4px) scale(1.05) !important; 
-    transition: all 0.15s ease !important;
-  }
-  
-  .sponsors-page-wrapper .social-icon:focus-visible { 
-    outline: 4px solid rgba(255, 255, 255, 0.8) !important; 
-    outline-offset: 4px !important; 
-  }
-  
-  /* Brand specific hover effects */
-  .sponsors-page-wrapper .social-icon.facebook:hover { 
-    background: linear-gradient(145deg, #1877F2 0%, #42a5f5 50%, #1565C0 100%) !important;
-    box-shadow: 0 20px 40px -8px rgba(24, 119, 242, 0.6), 
-                0 15px 30px -5px rgba(0, 0, 0, 0.3) !important;
-  }
-  
-  .sponsors-page-wrapper .social-icon.instagram:hover { 
-    background: linear-gradient(145deg, #E4405F 0%, #F56040 25%, #FFDC80 50%, #C13584 75%, #833AB4 100%) !important;
-    box-shadow: 0 20px 40px -8px rgba(228, 64, 95, 0.6), 
-                0 15px 30px -5px rgba(0, 0, 0, 0.3) !important;
-  }
-  
-  .sponsors-page-wrapper .social-icon.linkedin:hover { 
-    background: linear-gradient(145deg, #0A66C2 0%, #378fe6 50%, #004182 100%) !important;
-    box-shadow: 0 20px 40px -8px rgba(10, 102, 194, 0.6), 
-                0 15px 30px -5px rgba(0, 0, 0, 0.3) !important;
-  }
-  
-  .sponsors-page-wrapper .social-icon.whatsapp:hover { 
-    background: linear-gradient(145deg, #25D366 0%, #4fce5d 50%, #1ea652 100%) !important;
-    box-shadow: 0 20px 40px -8px rgba(37, 211, 102, 0.6), 
-                0 15px 30px -5px rgba(0, 0, 0, 0.3) !important;
-  }
-  
-  .sponsors-page-wrapper .social-icon.youtube:hover { 
-    background: linear-gradient(145deg, #FF0000 0%, #ff4444 50%, #cc0000 100%) !important;
-    box-shadow: 0 20px 40px -8px rgba(255, 0, 0, 0.6), 
-                0 15px 30px -5px rgba(0, 0, 0, 0.3) !important;
-  }
-  
-  .sponsors-page-wrapper .social-icon.website:hover { 
-    background: linear-gradient(145deg, #2c2c2c 0%, #4a4a4a 50%, #1a1a1a 100%) !important;
-    box-shadow: 0 20px 40px -8px rgba(44, 44, 44, 0.6), 
-                0 15px 30px -5px rgba(0, 0, 0, 0.3) !important;
-  }
-  
-  /* Icon styling */
-  .sponsors-page-wrapper .social-icon svg {
-    width: 32px !important;
-    height: 32px !important;
-    color: inherit !important;
-    fill: currentColor !important;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5)) !important;
-    transition: transform 0.5s ease !important;
-    z-index: 2 !important;
-    position: relative !important;
-  }
-  
-  .sponsors-page-wrapper .social-icon:hover svg {
-    transform: scale(1.3) rotate(15deg) !important;
-    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.6)) brightness(1.2) !important;
-  }  /* Sponsor link styling matching social icons */
-  .sponsors-page-wrapper .sponsor-link {
-    display: inline-flex !important; 
-    gap: 12px !important; 
-    align-items: center !important; 
-    background: linear-gradient(145deg, #ff2d2d 0%, #ff4747 30%, #ff5e5e 60%, #ff2d2d 100%) !important; 
-    color: #ffffff !important; 
-    text-decoration: none !important; 
-    font-size: 16px !important; 
+  .social-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
     font-weight: 600 !important;
-    padding: 16px 28px !important; 
-    border-radius: 50px !important; 
-    box-shadow: 0 10px 30px -5px rgba(255, 45, 45, 0.5), 
-                0 6px 20px -3px rgba(0, 0, 0, 0.2),
-                inset 0 1px 2px rgba(255, 255, 255, 0.2) !important; 
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-    border: 3px solid rgba(255, 255, 255, 0.2) !important;
-    position: relative !important;
-    overflow: hidden !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    cursor: pointer !important;
   }
   
-  .sponsors-page-wrapper .sponsor-link::before {
-    content: "" !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: linear-gradient(45deg, 
-      rgba(255, 255, 255, 0.1) 0%, 
-      rgba(255, 255, 255, 0.2) 50%, 
-      rgba(255, 255, 255, 0.1) 100%) !important;
-    border-radius: 50px !important;
-    opacity: 0 !important;
-    transition: opacity 0.3s ease !important;
+  .website-btn {
+    background-color: #dc2626 !important;
+    color: white !important;
   }
   
-  .sponsors-page-wrapper .sponsor-link:link, 
-  .sponsors-page-wrapper .sponsor-link:visited { 
-    color: #ffffff !important; 
-    text-decoration: none !important; 
-    background: linear-gradient(145deg, #ff2d2d 0%, #ff4747 30%, #ff5e5e 60%, #ff2d2d 100%) !important;
+  .website-btn:hover {
+    background-color: #b91c1c !important;
+    transform: translateY(-2px) !important;
   }
   
-  .sponsors-page-wrapper .sponsor-link:hover { 
-    background: linear-gradient(145deg, #ff4747 0%, #ff6b6b 30%, #ff5555 60%, #ff4747 100%) !important; 
-    transform: translateY(-6px) scale(1.05) !important; 
-    box-shadow: 0 20px 40px -8px rgba(255, 55, 55, 0.6), 
-                0 15px 30px -5px rgba(0, 0, 0, 0.3),
-                inset 0 2px 4px rgba(255, 255, 255, 0.3) !important;
-    border-color: rgba(255, 255, 255, 0.4) !important;
+  .facebook-btn {
+    background-color: #1877f2 !important;
+    color: white !important;
   }
   
-  .sponsors-page-wrapper .sponsor-link:hover::before {
-    opacity: 1 !important;
-  }
-  
-  .sponsors-page-wrapper .sponsor-link svg { 
-    color: inherit !important; 
-    transition: transform 0.3s ease !important;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) !important;
-    width: 20px !important;
-    height: 20px !important;
-  }
-  
-  .sponsors-page-wrapper .sponsor-link:hover svg { 
-    transform: translateX(4px) scale(1.1) !important;
+  .facebook-btn:hover {
+    background-color: #166fe5 !important;
+    transform: translateY(-2px) !important;
   }
   
   /* Mobile responsiveness */
   @media (max-width:560px){ 
-    .sponsors-page-wrapper .social-icon{ 
-      width: 60px !important; 
-      height: 60px !important; 
-      font-size: 26px !important;
-    } 
-    .sponsors-page-wrapper .social-icon svg {
-      width: 30px !important;
-      height: 30px !important;
+    .social-buttons {
+      gap: 10px !important;
     }
-    .sponsors-page-wrapper .social-icons {
-      gap: 20px !important;
-      justify-content: center !important;
-    }
-    .sponsors-page-wrapper .sponsor-link {
-      font-size: 15px !important;
-      padding: 14px 24px !important;
+    .social-btn {
+      padding: 8px 16px !important;
+      font-size: 13px !important;
     }
   }
-  /* Enhanced icon styling */
-  .sponsors-page-wrapper .social-icon svg {
-    width:22px !important;
-    height:22px !important;
-    color:inherit !important;
-    fill:currentColor !important;
-    pointer-events:none !important;
-    filter:drop-shadow(0 1px 2px rgba(0,0,0,0.2)) !important;
-    z-index:2 !important;
-    position:relative !important;
-  }
-  .sponsors-page-wrapper .sponsor-link {
-    display:inline-flex !important; 
-    gap:10px !important; 
-    align-items:center !important; 
-    background:linear-gradient(135deg, #ff2d2d 0%, #ff5e5e 50%, #ff4747 100%) !important; 
-    color:#fff !important; 
-    text-decoration:none !important; 
-    font-size:15px !important; 
-    padding:14px 26px !important; 
-    border-radius:50px !important; 
-    font-weight:600 !important; 
-    box-shadow:0 8px 25px -8px rgba(255,45,45,0.4), 0 2px 8px -2px rgba(0,0,0,0.15) !important; 
-    transition:all .35s cubic-bezier(.34,.8,.65,1) !important;
-    border:2px solid rgba(255,255,255,0.15) !important;
-    position:relative !important;
-    overflow:hidden !important;
-  }
-  .sponsors-page-wrapper .sponsor-link:before {
-    content:"" !important;
-    position:absolute !important;
-    top:0 !important;
-    left:0 !important;
-    right:0 !important;
-    bottom:0 !important;
-    background:linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)) !important;
-    border-radius:50px !important;
-    pointer-events:none !important;
-  }
-  .sponsors-page-wrapper .sponsor-link:link, 
-  .sponsors-page-wrapper .sponsor-link:visited, 
-  .sponsors-page-wrapper .sponsor-link:any-link { 
-    color:#fff !important; 
-    text-decoration:none !important; 
-    background:linear-gradient(135deg, #ff2d2d 0%, #ff5e5e 50%, #ff4747 100%) !important;
-  }
-  .sponsors-page-wrapper .sponsor-link:hover { 
-    background:linear-gradient(135deg, #ff4747 0%, #ff6b6b 50%, #ff5555 100%) !important; 
-    transform:translateY(-3px) scale(1.02) !important; 
-    box-shadow:0 15px 35px -10px rgba(255,55,55,0.6), 0 8px 20px -5px rgba(0,0,0,0.25) !important; 
-  }
-  .sponsors-page-wrapper .sponsor-link svg { 
-    color:inherit !important; 
-    transition:transform .35s ease !important;
-    filter:drop-shadow(0 1px 2px rgba(0,0,0,0.2)) !important;
-  }
-  .sponsors-page-wrapper .sponsor-link:hover svg { 
-    transform:translateX(2px) !important;
-  }
-  @media (max-width:560px){ 
-    .sponsors-page-wrapper .social-icon{ 
-      width:44px !important; 
-      height:44px !important; 
-      font-size:20px !important;
-      gap:14px !important;
-    } 
-    .sponsors-page-wrapper .social-icon:link, 
-    .sponsors-page-wrapper .social-icon:visited { 
-      background:linear-gradient(135deg, #ff2d2d 0%, #ff5e5e 50%, #ff4747 100%) !important;
-      color:#fff !important; 
-    }
-    .sponsors-page-wrapper .social-icon svg {
-      width:20px !important;
-      height:20px !important;
-    }
-    .sponsors-page-wrapper .social-icons {
-      gap:14px !important;
-    }
-    .sponsors-page-wrapper .sponsor-link {
-      font-size:14px !important;
-      padding:12px 22px !important;
-    }
-  }
-  .sponsor-link:link, .sponsor-link:visited { color:#fff; text-decoration:none; }
-  .sponsor-link:hover {background:#ff4747; transform:translateY(-4px); box-shadow:0 14px 32px -10px rgba(255,55,55,0.55);}
         .thanks {margin-top:70px; text-align:center; color:#666; font-size:13px;}
   @media (max-width:1250px){.sponsor-card {padding:50px 56px; column-gap:52px;} }
   @media (max-width:1100px){.sponsor-card {padding:48px 50px; column-gap:48px;} }
