@@ -2,22 +2,20 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 // بيانات الرعاة (يمكن نقلها لاحقاً إلى ملف JSON مستقل)
 const sponsors = [
   // الترتيب المطلوب أولاً
-  { name: "QR Tag", tier: "استراتيجي", logo: "/images/Real-Sponsors/QR%20Tag.jpg", description: `شركة متخصصة في تقديم حلول QR وNFC مبتكرة لمشاركة المعلومات والروابط والملفات بسهولة فائقة، بدون الحاجة إلى تطبيقات معقدة أو بطاقات ورقية. رؤيتهم أن يكونوا الخيار الأول للأفراد والشركات في الشرق الأوسط للتواصل الرقمي بطرق عصرية وصديقة للبيئة. منتجاتهم تشمل KeyTag NFC، كروت أعمال ذكية، وحلول مخصصة للشركات.`, url: "https://www.qrtagapp.com", social: { website: "https://www.qrtagapp.com", facebook: "https://www.facebook.com/share/1BAXVmK4rs/?mibextid=wwXIfr" } },
-  { name: "Qudraat", tier: "ذهبي", logo: "/images/Real-Sponsors/Qudraat.jpg", description: `قدرات ليست مجرد شركة بل منصة تبدأ من سؤال "من أنا؟" وتساعد الشباب على استكشاف إمكانياتهم وتنمية مهاراتهم في مجالات متعددة. رؤيتنا: أن يكون الشباب قادرًا على مواكبة سوق العمل بمهارات حقيقية. نرى في الشباب بذرة تحتاج الثقة والعلم والفرص.`, url: "https://qudraat.com", social: { website: "https://qudraat.com", facebook: "https://www.facebook.com/share/1EL9kryogf/?mibextid=wwXIfr" } },
-  { name: "LinkOut", tier: "ذهبي", logo: "/images/Real-Sponsors/LinkOut.jpg", description: `شركة ناشئة مصرية متخصصة في تقديم حلول ذكية وسريعة لمشاركة المعلومات عبر QR وNFC. بتركز على ربط الأفراد والشركات مع بعض بشكل عصري وسهل.`, url: "https://linkout.odoo.com", social: { website: "https://linkout.odoo.com", facebook: "https://www.facebook.com/LinkOut20" } },
-  { name: "English Capsules", tier: "ذهبي", logo: "/images/Real-Sponsors/English%20Capsules.jpg", description: `المؤسسة التعليمية الرائدة منذ 2015، ساهمت في تمكين أكثر من 100,000 طالب من تطوير مهاراتهم اللغوية والمهنية.`, url: "http://englishcapsules.com", social: { website: "http://englishcapsules.com", facebook: "https://www.facebook.com/English.Capsules" } },
-  { name: "Special Courses Academy", tier: "داعم", logo: "/images/Real-Sponsors/Special%20Courses%20Academy.jpg", description: `أكاديمية تقدم كورسات لغات ومهنية بأسلوب عملي يوصل الطلبة والخريجين لسوق العمل (لغات – جرافيك – برمجة – موارد بشرية – مهارات شخصية).`, url: "https://specialcourse.io", social: { website: "https://specialcourse.io", facebook: "https://www.facebook.com/share/1BFAzfznZe/", instagram: "https://www.instagram.com/specialcourse_?igsh=bjRuZmNwY2tyMGE0", youtube: "https://youtube.com/@special-course?si=mqhtSy6qX59dfcT1", whatsapp: "https://wa.me/201556289284" } },
-  { name: "Apple Mechanic", tier: "فضي", logo: "/images/Real-Sponsors/Apple%20Mechanic.jpg", description: `Apple Mechanic هو مركز رائد ومتخصص في صيانة أجهزة أبل وأندرويد، تأسس عام 2010 لخدمة من يبحث عن الثقة والإتقان. خدمنا أكثر من 15,000 عميل ودرّبنا أكثر من 1,000 طالب. رؤيتنا أن نصبح المرجع الأول في مصر والشرق الأوسط لصيانة أجهزة أبل وتدريب الفنيين المحترفين. مهمتنا تقديم صيانة موثوقة وبرامج تدريب متخصصة. قيمنا: الثقة – الإتقان – الأمانة – المعرفة قوة – الابتكار.`, url: "https://www.facebook.com/AppleMechanic.eg", social: { facebook: "https://www.facebook.com/AppleMechanic.eg" } },
+  { name: "Special Courses Academy", tier: "ذهبي", logo: "/images/Real-Sponsors/Special%20Courses%20Academy.jpg", description: `أكاديمية تقدم كورسات لغات ومهنية بأسلوب عملي يوصل الطلبة والخريجين لسوق العمل (لغات – جرافيك – برمجة – موارد بشرية – مهارات شخصية).`, url: "https://specialcourse.io", social: { website: "https://specialcourse.io", facebook: "https://www.facebook.com/share/1BFAzfznZe/", instagram: "https://www.instagram.com/specialcourse_?igsh=bjRuZmNwY2tyMGE0", youtube: "https://youtube.com/@special-course?si=mqhtSy6qX59dfcT1", whatsapp: "https://wa.me/201556289284" } },
+  { name: "Qudraat", tier: "استراتيجي", logo: "/images/Real-Sponsors/Qudraat.jpg", description: `قدرات ليست مجرد شركة بل منصة تبدأ من سؤال "من أنا؟" وتساعد الشباب على استكشاف إمكانياتهم وتنمية مهاراتهم في مجالات متعددة. رؤيتنا: أن يكون الشباب قادرًا على مواكبة سوق العمل بمهارات حقيقية. نرى في الشباب بذرة تحتاج الثقة والعلم والفرص.`, url: "https://qudraat.com", social: { website: "https://qudraat.com", facebook: "https://www.facebook.com/share/1EL9kryogf/?mibextid=wwXIfr" } },
+  { name: "QR Tag", tier: "ذهبي", logo: "/images/Real-Sponsors/QR%20Tag.jpg", description: `شركة متخصصة في تقديم حلول QR وNFC مبتكرة لمشاركة المعلومات والروابط والملفات بسهولة فائقة، بدون الحاجة إلى تطبيقات معقدة أو بطاقات ورقية. رؤيتهم أن يكونوا الخيار الأول للأفراد والشركات في الشرق الأوسط للتواصل الرقمي بطرق عصرية وصديقة للبيئة. منتجاتهم تشمل KeyTag NFC، كروت أعمال ذكية، وحلول مخصصة للشركات.`, url: "https://www.qrtagapp.com", social: { website: "https://www.qrtagapp.com", facebook: "https://www.facebook.com/share/1BAXVmK4rs/?mibextid=wwXIfr" } },
+  { name: "Tseppas", tier: "داعم", logo: "/images/tseppas.png", description: `اسم عريق في عالم الحلويات الشرقية والغربية، يجمع بين الجودة والطعم المميز.`, social: {website: "https://tseppas.com", facebook: "https://www.facebook.com/TseppasMGEgypt/"} },
+  { name: "LinkOut", tier: "داعم", logo: "/images/Real-Sponsors/LinkOut.jpg", description: `شركة ناشئة مصرية متخصصة في تقديم حلول ذكية وسريعة لمشاركة المعلومات عبر QR وNFC. بتركز على ربط الأفراد والشركات مع بعض بشكل عصري وسهل.`, url: "https://linkout.odoo.com", social: { website: "https://linkout.odoo.com", facebook: "https://www.facebook.com/LinkOut20" } },
+  { name: "English Capsules", tier: "داعم", logo: "/images/Real-Sponsors/English%20Capsules.jpg", description: `المؤسسة التعليمية الرائدة منذ 2015، ساهمت في تمكين أكثر من 100,000 طالب من تطوير مهاراتهم اللغوية والمهنية.`, url: "http://englishcapsules.com", social: { website: "http://englishcapsules.com", facebook: "https://www.facebook.com/English.Capsules" } },
+  { name: "Apple Mechanic", tier: "داعم", logo: "/images/Real-Sponsors/Apple%20Mechanic.jpg", description: `Apple Mechanic هو مركز رائد ومتخصص في صيانة أجهزة أبل وأندرويد، تأسس عام 2010 لخدمة من يبحث عن الثقة والإتقان. خدمنا أكثر من 15,000 عميل ودرّبنا أكثر من 1,000 طالب. رؤيتنا أن نصبح المرجع الأول في مصر والشرق الأوسط لصيانة أجهزة أبل وتدريب الفنيين المحترفين. مهمتنا تقديم صيانة موثوقة وبرامج تدريب متخصصة. قيمنا: الثقة – الإتقان – الأمانة – المعرفة قوة – الابتكار.`, url: "https://www.facebook.com/AppleMechanic.eg", social: { facebook: "https://www.facebook.com/AppleMechanic.eg" } },
   // باقي الرعاة
-  { name: "Elavate Holding", tier: "استراتيجي", logo: "/sponsors/elavate.png", description: `إيلافيت هولدنغ هي شركة متخصصة في تقديم حلول إدارة المشاريع، وتقديم نتائج بامتياز، بالإضافة إلى كونها مركز اتصال رئيسي متخصص في خدمة العملاء، التسويق عبر الهاتف والاستشارات التجارية. نحن ملتزمون بتزويد عملائنا بخدمات استثنائية من خلال توظيف أفضل الكفاءات وتبني أحدث الأساليب.`, url: "https://example.com" },
-  { name: "Rehla Travel", tier: "داعم", logo: "/sponsors/rehla.png", description: `شركة سياحة تقدم تجارب سفر مميزة للشباب والعائلات، بخطط منظمة وأسعار مناسبة.`, url: "https://example.com" },
-  { name: "Covix Care", tier: "فضي", logo: "/sponsors/covix-care.png", description: `علامة سعودية مبتكرة في العناية الشخصية والصحية، بمنتجات فعّالة وآمنة تركز على النظافة والعناية بالبشرة.`, url: "https://example.com" },
-  { name: "Tseppas", tier: "داعم", logo: "/sponsors/tseppas.png", description: `اسم عريق في عالم الحلويات الشرقية والغربية، يجمع بين الجودة والطعم المميز.`, url: "https://example.com" },
+  { name: "Elavate Holding", tier: "ذهبي", logo: "/sponsors/elavate.png", description: `إيلافيت هولدنغ هي شركة متخصصة في تقديم حلول إدارة المشاريع، وتقديم نتائج بامتياز، بالإضافة إلى كونها مركز اتصال رئيسي متخصص في خدمة العملاء، التسويق عبر الهاتف والاستشارات التجارية. نحن ملتزمون بتزويد عملائنا بخدمات استثنائية من خلال توظيف أفضل الكفاءات وتبني أحدث الأساليب.`, url: "https://elavate.com", social: { linkedin: "https://www.linkedin.com/company/elevateholding" } },
+  { name: "Covix Care", tier: "ذهبي", logo: "/images/CovixCare.png", description: `علامة سعودية مبتكرة في العناية الشخصية والصحية، بمنتجات فعّالة وآمنة تركز على النظافة والعناية بالبشرة.`, social: { website: "http://englishcapsules.com", facebook: "https://www.facebook.com/English.Capsules" }},
 ];
 
 const tierMeta = {
@@ -166,6 +164,28 @@ export default function SponsorsPage() {
                           aria-label={`فيسبوك ${sponsor.name}`}
                         >
                           فيسبوك
+                        </a>
+                      )}
+                      {(sponsor.social.youtube || sponsor.url) && (
+                        <a 
+                          href={sponsor.social.youtube} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="social-btn website-btn"
+                          aria-label={`موقع ${sponsor.name}`}
+                        >
+                          اليوتيوب
+                        </a>
+                      )}
+                      {(sponsor.social.whatsapp) && (
+                        <a 
+                          href={sponsor.social.whatsapp} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="social-btn website-btn"
+                          aria-label={`موقع ${sponsor.name}`}
+                        >
+                          الواتساب
                         </a>
                       )}
                     </div>
