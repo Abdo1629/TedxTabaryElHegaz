@@ -166,15 +166,15 @@ export default function SponsorsPage() {
                           فيسبوك
                         </a>
                       )}
-                      {(sponsor.social.youtube || sponsor.url) && (
+                      {(sponsor.social.youtube) && (
                         <a 
                           href={sponsor.social.youtube} 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          className="social-btn website-btn"
-                          aria-label={`موقع ${sponsor.name}`}
+                          className="social-btn youtube-btn"
+                          aria-label={`يوتيوب ${sponsor.name}`}
                         >
-                          اليوتيوب
+                          يوتيوب
                         </a>
                       )}
                       {(sponsor.social.whatsapp) && (
@@ -182,10 +182,32 @@ export default function SponsorsPage() {
                           href={sponsor.social.whatsapp} 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          className="social-btn website-btn"
-                          aria-label={`موقع ${sponsor.name}`}
+                          className="social-btn whatsapp-btn"
+                          aria-label={`واتساب ${sponsor.name}`}
                         >
-                          الواتساب
+                          واتساب
+                        </a>
+                      )}
+                      {(sponsor.social.instagram) && (
+                        <a 
+                          href={sponsor.social.instagram} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="social-btn instagram-btn"
+                          aria-label={`إنستجرام ${sponsor.name}`}
+                        >
+                          إنستجرام
+                        </a>
+                      )}
+                      {(sponsor.social.linkedin) && (
+                        <a 
+                          href={sponsor.social.linkedin} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="social-btn linkedin-btn"
+                          aria-label={`لينكد إن ${sponsor.name}`}
+                        >
+                          لينكد إن
                         </a>
                       )}
                     </div>
@@ -303,13 +325,16 @@ export default function SponsorsPage() {
   }
   
   .website-btn {
-    background-color: #dc2626 !important;
-    color: white !important;
+    background: linear-gradient(135deg, #c0c0c0 0%, #e5e5e5 50%, #d1d5db 100%) !important;
+    color: #374151 !important;
+    border: 1px solid #9ca3af !important;
   }
   
   .website-btn:hover {
-    background-color: #b91c1c !important;
+    background: linear-gradient(135deg, #a8a8a8 0%, #d1d5db 50%, #b5b9c4 100%) !important;
+    color: #1f2937 !important;
     transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
   }
   
   .facebook-btn {
@@ -319,6 +344,46 @@ export default function SponsorsPage() {
   
   .facebook-btn:hover {
     background-color: #166fe5 !important;
+    transform: translateY(-2px) !important;
+  }
+  
+  .youtube-btn {
+    background-color: #ff0000 !important;
+    color: white !important;
+  }
+  
+  .youtube-btn:hover {
+    background-color: #dc2626 !important;
+    transform: translateY(-2px) !important;
+  }
+  
+  .whatsapp-btn {
+    background-color: #25d366 !important;
+    color: white !important;
+  }
+  
+  .whatsapp-btn:hover {
+    background-color: #1fb854 !important;
+    transform: translateY(-2px) !important;
+  }
+  
+  .instagram-btn {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+    color: white !important;
+  }
+  
+  .instagram-btn:hover {
+    background: linear-gradient(45deg, #e8842b 0%, #de5930 25%, #d41f37 50%, #c41b5a 75%, #b4127e 100%) !important;
+    transform: translateY(-2px) !important;
+  }
+  
+  .linkedin-btn {
+    background-color: #0077b5 !important;
+    color: white !important;
+  }
+  
+  .linkedin-btn:hover {
+    background-color: #005885 !important;
     transform: translateY(-2px) !important;
   }
   
@@ -337,9 +402,181 @@ export default function SponsorsPage() {
   @media (max-width:1100px){.sponsor-card {padding:48px 50px; column-gap:48px;} }
   @media (max-width:1000px){.sponsor-card {padding:46px 46px; column-gap:42px;} .sponsor-name{font-size:2rem;} }
   @media (max-width:900px){.sponsor-card {padding:44px 42px; column-gap:38px;} }
-  @media (max-width:860px){.sponsor-card {grid-template-columns:1fr; grid-template-areas:"header" "image" "link" "desc"; padding:42px 36px; row-gap:28px; text-align:center; transform:translate3d(0,60px,0) rotateX(10deg);} .logo-box{margin:0 auto;} .header-row{justify-content:center;} .sponsor-name:after {right:50%; transform:translateX(50%);} .link-row{justify-content:center;} .desc-row{align-items:center;} }
-  @media (max-width:600px){.controls-bar {flex-direction:column; align-items:stretch;} .search-wrap{justify-content:stretch;} .search-input{width:100%;} }
-  @media (max-width:560px){.sponsor-card {padding:34px 26px; row-gap:24px;} .logo-box{width:170px; height:170px;} .logo-img{padding:24px;} .sponsor-name{font-size:1.85rem;} .sponsor-name:after {width:100px; bottom:-10px; height:5px;} .sponsor-desc {font-size:14px;} }
+  @media (max-width:860px){
+    .sponsor-card {
+      grid-template-columns:1fr; 
+      grid-template-areas:"header" "image" "link" "desc"; 
+      padding:42px 36px; 
+      row-gap:28px; 
+      text-align:center; 
+      transform:translate3d(0,60px,0) rotateX(10deg);
+    } 
+    .logo-box{margin:0 auto;} 
+    .header-row{justify-content:center;} 
+    .sponsor-name:after {right:50%; transform:translateX(50%);} 
+    .link-row{justify-content:center;} 
+    .desc-row{align-items:center;} 
+  }
+  @media (max-width:768px){
+    .inner {padding:0 1rem;}
+    .page-head {padding:28px 24px 36px; border-radius:20px;}
+    .main-title {font-size:2.2rem !important;}
+    .main-title:after {width:160px; height:6px;}
+    .intro-text {font-size:13px;}
+    .controls-bar {
+      flex-direction:column; 
+      align-items:stretch; 
+      padding:18px 22px; 
+      gap:16px;
+    }
+    .filters {
+      justify-content:center;
+    }
+    .filter-pill {
+      padding:8px 16px;
+      font-size:13px;
+    }
+    .search-wrap{
+      justify-content:stretch;
+    } 
+    .search-input{
+      width:100%;
+      padding:10px 14px;
+    } 
+    .stat {
+      text-align:center;
+      font-size:12px;
+    }
+    .sponsors-grid {
+      gap:36px;
+      margin-top:32px;
+    }
+  }
+  @media (max-width:600px){
+    .sponsor-card {
+      padding:32px 22px; 
+      row-gap:22px;
+    } 
+    .logo-box{
+      width:160px; 
+      height:160px;
+    } 
+    .logo-img{
+      padding:22px;
+    } 
+    .sponsor-name{
+      font-size:1.7rem;
+    } 
+    .sponsor-name:after {
+      width:90px; 
+      bottom:-8px; 
+      height:4px;
+    } 
+    .sponsor-desc {
+      font-size:14px;
+      line-height:1.7;
+    }
+    .badge.tier {
+      font-size:11.5px;
+      padding:7px 14px;
+    }
+    .badge.order-badge {
+      font-size:10.5px;
+      padding:5px 10px;
+    }
+    .social-btn {
+      padding: 8px 14px !important;
+      font-size: 12px !important;
+    }
+  }
+  @media (max-width:480px){
+    .inner {padding:0 0.75rem;}
+    .page-head {padding:24px 20px 30px; border-radius:16px;}
+    .main-title {font-size:1.9rem !important;}
+    .main-title:after {width:140px; height:5px;}
+    .intro-text {font-size:12px;}
+    .controls-bar {padding:16px 18px;}
+    .filter-pill {
+      padding:7px 14px;
+      font-size:12px;
+    }
+    .search-input {
+      padding:9px 12px;
+      font-size:13px;
+    }
+    .sponsor-card {
+      padding:26px 18px;
+      row-gap:20px;
+      border-radius:24px;
+    }
+    .logo-box {
+      width:140px;
+      height:140px;
+      border-radius:24px;
+    }
+    .logo-img {
+      padding:20px;
+    }
+    .sponsor-name {
+      font-size:1.5rem;
+    }
+    .sponsor-name:after {
+      width:80px;
+      bottom:-6px;
+      height:3px;
+    }
+    .sponsor-desc {
+      font-size:13px;
+      line-height:1.65;
+    }
+    .badge.tier {
+      font-size:10.5px;
+      padding:6px 12px;
+    }
+    .badge.order-badge {
+      font-size:9.5px;
+      padding:4px 8px;
+    }
+    .social-buttons {
+      gap: 8px !important;
+      flex-wrap: wrap !important;
+    }
+    .social-btn {
+      padding: 7px 12px !important;
+      font-size: 11px !important;
+    }
+    .thanks {
+      margin-top:50px;
+      font-size:12px;
+      padding:0 10px;
+    }
+  }
+  @media (max-width:360px){
+    .sponsor-card {
+      padding:22px 16px;
+      row-gap:18px;
+    }
+    .logo-box {
+      width:120px;
+      height:120px;
+    }
+    .logo-img {
+      padding:18px;
+    }
+    .sponsor-name {
+      font-size:1.35rem;
+    }
+    .sponsor-name:after {
+      width:70px;
+    }
+    .sponsor-desc {
+      font-size:12px;
+    }
+    .social-btn {
+      padding: 6px 10px !important;
+      font-size: 10px !important;
+    }
+  }
       `}</style>
     </main>
   );
