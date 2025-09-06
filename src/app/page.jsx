@@ -2,6 +2,7 @@ import ContactsSection from "./components/homepage/ContactsSection";
 import Countdown from "./components/homepage/CountDown";
 import DefineSection from "./components/homepage/DefineSection";
 import EventsSection from "./components/homepage/EventsSection";
+import FAQSection from "./components/homepage/FAQSection";
 import LandingPage from "./components/homepage/LandingPage";
 import PromoSection from "./components/homepage/PromoSection";
 import SpeakersSection from "./components/homepage/SpeakersSection";
@@ -21,6 +22,7 @@ export default function Home() {
       <SpeakersSection />
       <VideosSection />
       <SponsorsSection />
+      <FAQSection />
       <ContactsSection />
     </>
   );
