@@ -65,8 +65,8 @@ export default function Countdown() {
         </div>
       </div>
       <div className="register-btn">
-        <Link href="/event-3" className="btn">
-          سجل الاّن
+        <Link href="/agenda" className="btn">
+          الاجندة
         </Link>
       </div>
     </div>

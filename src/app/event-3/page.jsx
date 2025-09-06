@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import FireEffect from "../components/FireEffect";
+import Link from "next/link";
 
 export default function Event3Page() {
   useEffect(() => {
@@ -90,13 +91,10 @@ export default function Event3Page() {
           </div>
         </div>
         <h2 className="section-title">حجز تذكرة</h2>
-        <button
-type="button"
-onClick={() =>
-window.open("https://app.fawaterk.com/events/448/عود%20على%20بدء", "_blank")
-} className="blog-link">
-    احجز تذكرتك الآن
-</button>
+        <Link href="/agenda"
+className="blog-link">
+اذهب للأجندة
+</Link>
         <div className="event-rules">
           <h2 className="section-title">قوانين الحدث</h2>
           <ol>
