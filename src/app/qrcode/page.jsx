@@ -92,34 +92,34 @@ export default function QRCodePage() {
                     <h3 className="button-title">{button.title}</h3>
                     <p className="button-subtitle">{button.subtitle}</p>
                     <p className="button-description">{button.description}</p>
-                    <div className="button-arrow">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                      </svg>
-                    </div>
+                  </div>
+                  <div className="button-arrow">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
                   </div>
                   <div className="button-bg"></div>
                 </div>
               ) : (
-                <Link
+                <div
                   key={button.id}
-                  href={button.link}
                   className={`qr-button ${visible.includes(index) ? 'visible' : ''}`}
                   data-index={index}
+                  onClick={() => window.location.href = button.link}
                   style={{ '--delay': `${index * 0.15}s` }}
                 >
                   <div className="button-content">
                     <h3 className="button-title">{button.title}</h3>
                     <p className="button-subtitle">{button.subtitle}</p>
                     <p className="button-description">{button.description}</p>
-                    <div className="button-arrow">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                      </svg>
-                    </div>
+                  </div>
+                  <div className="button-arrow">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
                   </div>
                   <div className="button-bg"></div>
-                </Link>
+                </div>
               )
             ))}
           </div>
@@ -275,6 +275,7 @@ export default function QRCodePage() {
         .button-content {
           position: relative;
           z-index: 2;
+          padding-left: 60px;
         }
 
         .button-title {
@@ -302,7 +303,7 @@ export default function QRCodePage() {
         .button-arrow {
           position: absolute;
           top: 50%;
-          left: 30px;
+          left: 20px;
           transform: translateY(-50%);
           color: #9ca3af;
           transition: all 0.3s ease;
@@ -377,8 +378,12 @@ export default function QRCodePage() {
             font-size: 1.5rem;
           }
 
+          .button-content {
+            padding-left: 45px;
+          }
+
           .button-arrow {
-            left: 25px;
+            left: 12px;
           }
         }
 
@@ -395,8 +400,12 @@ export default function QRCodePage() {
             padding: 25px 20px;
           }
 
+          .button-content {
+            padding-left: 50px;
+          }
+
           .button-arrow {
-            left: 20px;
+            left: 15px;
           }
         }
       `}</style>
