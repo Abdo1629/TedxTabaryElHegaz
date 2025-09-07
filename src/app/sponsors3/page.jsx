@@ -7,6 +7,7 @@ import Image from "next/image";
 const sponsors = [
   // الترتيب المطلوب أولاً
   { name: "Special Courses Academy", tier: "ذهبي", logo: "/images/Real-Sponsors/Special%20Courses%20Academy.jpg", description: `أكاديمية تقدم كورسات لغات ومهنية بأسلوب عملي يوصل الطلبة والخريجين لسوق العمل (لغات – جرافيك – برمجة – موارد بشرية – مهارات شخصية).`, url: "https://specialcourse.io", social: { website: "https://specialcourse.io", facebook: "https://www.facebook.com/share/1BFAzfznZe/", instagram: "https://www.instagram.com/specialcourse_?igsh=bjRuZmNwY2tyMGE0", youtube: "https://youtube.com/@special-course?si=mqhtSy6qX59dfcT1", whatsapp: "https://wa.me/201556289284" } },
+  { name: "Digital Knights Academy", tier: "بلاتينيوم", logo: "/images/Real/Special%20Courses%20Academy.jpg", description: `Digital Knights Academy هي مؤسسة تعليمية متخصصة في إعداد وتأهيل الشباب لسوق العمل في مجالات التكنولوجيا الحديثة والبرمجة. تأسست الأكاديمية عام 2023 بهدف سد الفجوة بين الدراسة الأكاديمية والمهارات المطلوبة فعليًا في بيئة العمل.تقدم الأكاديمية برامج تدريبية عملية في مجالات مثل Web Development، Flutter، Cyber Security، UI/UX، Artificial Intelligence وغيرها، إلى جانب شهادات معتمدة وفرص تدريب داخل كبرى الشركات. من خلال رؤيتها ورسالتها، تسعى Digital Knights Academy إلى تمكين جيل جديد من المبرمجين ورواد التكنولوجيا القادرين على المنافسة محليًا وعالميًا.`, social: { website: "https://digitalknightacadmey.com/", facebook: "https://www.facebook.com/profile.php?id=61565603534961", whatsapp: "https://wa.me/+20 10 22893997" } },
   { name: "Qudraat", tier: "استراتيجي", logo: "/images/Real-Sponsors/Qudraat.jpg", description: `قدرات ليست مجرد شركة بل منصة تبدأ من سؤال "من أنا؟" وتساعد الشباب على استكشاف إمكانياتهم وتنمية مهاراتهم في مجالات متعددة. رؤيتنا: أن يكون الشباب قادرًا على مواكبة سوق العمل بمهارات حقيقية. نرى في الشباب بذرة تحتاج الثقة والعلم والفرص.`, url: "https://qudraat.com", social: { website: "https://qudraat.com", facebook: "https://www.facebook.com/share/1EL9kryogf/?mibextid=wwXIfr" } },
   { name: "QR Tag", tier: "ذهبي", logo: "/images/Real-Sponsors/QR%20Tag.jpg", description: `شركة متخصصة في تقديم حلول QR وNFC مبتكرة لمشاركة المعلومات والروابط والملفات بسهولة فائقة، بدون الحاجة إلى تطبيقات معقدة أو بطاقات ورقية. رؤيتهم أن يكونوا الخيار الأول للأفراد والشركات في الشرق الأوسط للتواصل الرقمي بطرق عصرية وصديقة للبيئة. منتجاتهم تشمل KeyTag NFC، كروت أعمال ذكية، وحلول مخصصة للشركات.`, url: "https://www.qrtagapp.com", social: { website: "https://www.qrtagapp.com", facebook: "https://www.facebook.com/share/1BAXVmK4rs/?mibextid=wwXIfr" } },
   { name: "Tseppas", tier: "داعم", logo: "/images/tseppas.png", description: `اسم عريق في عالم الحلويات الشرقية والغربية، يجمع بين الجودة والطعم المميز.`, social: {website: "https://tseppas.com", facebook: "https://www.facebook.com/TseppasMGEgypt/"} },
@@ -20,6 +21,7 @@ const sponsors = [
 
 const tierMeta = {
   استراتيجي: { gradient: 'linear-gradient(90deg,#ff2d2d,#ff8d4d)', ring: 'rgba(255,60,60,0.55)' },
+  بلاتينيوم: { gradient: 'linear-gradient(90deg,#ff2d2d,#ff8d4d)', ring: 'rgba(255,60,60,0.55)' },
   ذهبي: { gradient: 'linear-gradient(90deg,#ffb347,#ffd452)', ring: 'rgba(255,184,77,0.55)' },
   فضي: { gradient: 'linear-gradient(90deg,#cfd2d6,#f1f3f5)', ring: 'rgba(180,185,190,0.55)' },
   داعم: { gradient: 'linear-gradient(90deg,#656d78,#9aa1ab)', ring: 'rgba(120,128,138,0.55)' },
@@ -103,7 +105,7 @@ export default function SponsorsPage() {
         </div>
         <div className="controls-bar arabic-content">
           <div className="filters">
-            {['الكل', 'استراتيجي', 'ذهبي', 'فضي', 'داعم'].map(t => (
+            {['الكل', 'استراتيجي', 'بلاتينيوم', 'ذهبي', 'فضي', 'داعم'].map(t => (
               <button key={t} onClick={() => setActiveTier(t)} className={`filter-pill ${activeTier === t ? 'on' : ''}`}>{t}</button>
             ))}
           </div>
