@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import SponsorGameCard from "@/components/SponsorGameCard";
+import SponsorGameCard from "../../../components/SponsorGameCard";
 
 // بيانات الرعاة (يمكن نقلها لاحقاً إلى ملف JSON مستقل)
 const sponsors = [
