@@ -18,6 +18,8 @@
     "tedx-website": "file:"
   },
   "devDependencies": {
+    "@types/node": "24.3.2",
+    "@types/react": "19.1.13",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "postcss": "^8",

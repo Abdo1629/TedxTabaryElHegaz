@@ -1,167 +1,316 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
-type Sponsor = {
-  id: number;
+type SponsorGameProps = {
   name: string;
-  tier: string;
-  logo: string;
-  description: string;
-  url?: string;
+  prizes: string[];
+  description?: string;
+  logo?: string;
 };
 
-const tierMeta = {
-  استراتيجي: { gradient: 'linear-gradient(90deg,#ff2d2d,#ff8d4d)', ring: 'rgba(255,60,60,0.55)' },
-  بلاتينيوم: { gradient: 'linear-gradient(90deg,#ff2d2d,#ff8d4d)', ring: 'rgba(255,60,60,0.55)' },
-  ذهبي: { gradient: 'linear-gradient(90deg,#ffb347,#ffd452)', ring: 'rgba(255,184,77,0.55)' },
-};
+export default function SponsorGameCard({
+  name,
+  prizes,
+  description,
+  logo,
+}: SponsorGameProps) {
+  const [open, setOpen] = useState(false);
+  const [step, setStep] = useState<
+    "instructions" | "form" | "wheel" | "done"
+  >("instructions");
+  const [spinning, setSpinning] = useState(false);
+  const [result, setResult] = useState<string | null>(null);
+  const [rotation, setRotation] = useState(0);
 
-export default function SponsorGameCard({ sponsor }: { sponsor: Sponsor }) {
-  const cardRef = useRef<HTMLDivElement | null>(null);
-  const [visible, setVisible] = useState(false);
-  const [score, setScore] = useState(0);
+  const [player, setPlayer] = useState({ name: "", phone: "", email: "" });
+  const audioRef = useRef<HTMLAudioElement>(null);
 
-  useEffect(() => {
-    const el = cardRef.current;
-    if (!el) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !visible) {
-            setVisible(true);
-            setScore((prev) => prev + 1);
-          }
-        });
-      },
-      { threshold: 0.4 }
-    );
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!player.name || !player.phone) return alert("املأ بياناتك كاملة");
+    setStep("wheel");
+    audioRef.current?.play();
+  };
 
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [visible]);
+  const spin = () => {
+    if (spinning) return;
+    setSpinning(true);
+
+    const randomIndex = Math.floor(Math.random() * prizes.length);
+    const slice = 360 / prizes.length;
+    const newRotation = 360 * 5 + randomIndex * slice + slice / 2;
+
+    setRotation(newRotation);
+
+    setTimeout(() => {
+      setResult(prizes[randomIndex]);
+      setSpinning(false);
+      localStorage.setItem("played", "true");
+    }, 5000);
+  };
 
   return (
-    <div className="game-wrapper">
-      {/* Score bar فوق الكارد */}
-      <div className="game-bar">
-        🎯 النقاط: {score}
-        <div className="progress">
-          <div className="fill" style={{ width: `${Math.min(score * 100, 100)}%` }} />
-        </div>
-      </div>
-
-      <div
-        ref={cardRef}
-        className={`sponsor-card ${visible ? "visible" : ""}`}
-        style={{
-          "--tier-ring": tierMeta[sponsor.tier]?.ring || "rgba(0,0,0,0.25)",
-        } as React.CSSProperties}
+    <div className="text-center sponsor-card">
+      {logo && (
+        <Image
+          src={logo}
+          alt={name}
+          width={100}
+          height={64}
+          className="object-contain h-16 mx-auto mb-3"
+        />
+      )}
+      <h2 className="text-lg font-bold">{name}</h2>
+      <p>{description}</p>
+      <button
+        onClick={() => setOpen(true)}
+        className="px-4 py-2 mt-2 font-bold text-white transition bg-red-600 rounded-lg hover:bg-red-700"
       >
-        <div className="header-row">
-          <h2 className="sponsor-name">{sponsor.name}</h2>
-          <span
-            className="badge tier"
-            style={{ background: tierMeta[sponsor.tier]?.gradient }}
-          >
-            {sponsor.tier}
-          </span>
+        إلعب الآن
+      </button>
+
+      {open && (
+        <div className="modal">
+          <div className="modal-content">
+            {/* تعليمات */}
+            {step === "instructions" && (
+              <div>
+                <h3 className="mb-4 text-2xl font-extrabold text-red-600">
+                  📜 التعليمات
+                </h3>
+                <p className="text-gray-300">
+                  هتلعب مرة واحدة بس. لازم تدخل بياناتك قبل اللعب.
+                </p>
+                <button
+                  onClick={() => setStep("form")}
+                  className="btn-primary"
+                >
+                  ابدأ اللعب
+                </button>
+              </div>
+            )}
+
+            {/* فورم */}
+            {step === "form" && (
+              <form onSubmit={handleFormSubmit} className="space-y-4">
+                <h3 className="mb-4 text-2xl font-extrabold text-red-600">
+                  📝 سجل بياناتك
+                </h3>
+                <input
+                  type="text"
+                  placeholder="الاسم"
+                  value={player.name}
+                  onChange={(e) =>
+                    setPlayer({ ...player, name: e.target.value })
+                  }
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="رقم الموبايل"
+                  value={player.phone}
+                  onChange={(e) =>
+                    setPlayer({ ...player, phone: e.target.value })
+                  }
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="الإيميل"
+                  value={player.email}
+                  onChange={(e) =>
+                    setPlayer({ ...player, email: e.target.value })
+                  }
+                />
+                <button type="submit" className="w-full btn-primary">
+                  سجل وادخل اللعبة
+                </button>
+              </form>
+            )}
+
+            {/* عجلة */}
+            {step === "wheel" && (
+              <div>
+                <div className="wheel-wrapper">
+                  <svg
+                    width="350"
+                    height="350"
+                    viewBox="0 0 300 300"
+                    style={{
+                      transform: `rotate(${rotation}deg)`,
+                      transition: spinning ? "transform 5s ease-out" : "none",
+                    }}
+                  >
+                    {prizes.map((prize, i) => {
+                      const slice = (2 * Math.PI) / prizes.length;
+                      const x1 = 150 + 150 * Math.cos(i * slice);
+                      const y1 = 150 + 150 * Math.sin(i * slice);
+                      const x2 = 150 + 150 * Math.cos((i + 1) * slice);
+                      const y2 = 150 + 150 * Math.sin((i + 1) * slice);
+
+                      return (
+                        <g key={i}>
+                          <path
+                            d={`M150,150 L${x1},${y1} A150,150 0 0,1 ${x2},${y2} Z`}
+                            fill={i % 2 === 0 ? "#E62B1E" : "#222"}
+                            stroke="#fff"
+                            strokeWidth="2"
+                          />
+                          <text
+                            x="150"
+                            y="150"
+                            transform={`rotate(${
+                              (i * 360) / prizes.length +
+                              360 / prizes.length / 2
+                            },150,150) translate(70,-10)`}
+                            textAnchor="middle"
+                            fontSize="12"
+                            fill="#fff"
+                          >
+                            {prize}
+                          </text>
+                        </g>
+                      );
+                    })}
+                  </svg>
+                  <div className="pointer">⬆</div>
+                </div>
+                <button
+                  onClick={spin}
+                  disabled={spinning || result !== null}
+                  className="btn-primary"
+                >
+                  {spinning ? "⏳ بتلف..." : "لف العجلة"}
+                </button>
+                {result && (
+                  <p className="mt-4 font-bold text-red-500 result">
+                    🎉 مبروك يا {player.name}! كسبت: {result}
+                  </p>
+                )}
+              </div>
+            )}
+
+            {/* لعب قبل كده */}
+            {step === "done" && (
+              <div>
+                <h3 className="mb-2 text-xl font-bold text-red-600">
+                  ❌ انت لعبت قبل كده
+                </h3>
+                <p className="text-gray-300">شكراً لمشاركتك!</p>
+              </div>
+            )}
+
+            <button className="close" onClick={() => setOpen(false)}>
+              ✖
+            </button>
+          </div>
+
+          {/* موسيقى */}
+          <audio ref={audioRef} loop>
+            <source src="/sounds/game-music.mp3" type="audio/mpeg" />
+          </audio>
         </div>
-        <div className="logo-box">
-          <Image
-            src={sponsor.logo}
-            alt={sponsor.name}
-            fill
-            className="logo-img"
-            sizes="(max-width:768px) 140px, 200px"
-          />
-        </div>
-        <p className="desc">{sponsor.description}</p>
-      </div>
+      )}
 
       <style jsx>{`
-        .game-wrapper {margin-bottom: 30px;}
-        .game-bar {
-          background: #fff;
-          padding: 8px 14px;
-          border-radius: 12px;
-          font-weight: 700;
-          margin-bottom: 10px;
-          font-size: 14px;
-          box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-        }
-        .progress {
-          margin-top: 6px;
-          width: 100%;
-          height: 6px;
-          background: #eee;
-          border-radius: 6px;
-          overflow: hidden;
-        }
-        .fill {
-          height: 100%;
-          background: linear-gradient(90deg, #ff2d2d, #ff8d4d);
-          transition: width 0.6s ease;
-        }
-
-        .sponsor-card {
-          opacity: 0;
-          transform: translateY(60px) scale(0.9);
-          transition: all 0.7s cubic-bezier(.17,.67,.83,.67);
-          background: #fff;
-          padding: 30px;
-          border-radius: 24px;
-          box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        }
-        .sponsor-card.visible {
-          opacity: 1;
-          transform: translateY(0) scale(1);
-        }
-        .header-row {
+        .modal {
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.95);
           display: flex;
+          justify-content: center;
           align-items: center;
-          gap: 14px;
-          margin-bottom: 16px;
+          z-index: 9999;
+          animation: fadeIn 0.4s ease-in-out;
         }
-        .sponsor-name {
-          margin: 0;
-          font-size: 1.5rem;
-          font-weight: 800;
-        }
-        .badge {
-          padding: 6px 14px;
+        .modal-content {
+          background: #111;
           border-radius: 20px;
-          font-size: 12px;
+          padding: 30px;
+          text-align: center;
+          color: white;
+          max-width: 420px;
+          width: 90%;
+          position: relative;
+          animation: scaleIn 0.3s ease;
+        }
+        .btn-primary {
+          margin-top: 15px;
+          padding: 12px 20px;
+          color: #fff;
+          background: #e62b1e;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          font-weight: bold;
+          font-size: 16px;
+          transition: background 0.2s ease;
+        }
+        .btn-primary:hover {
+          background: #b71c1c;
+        }
+        form input {
+          display: block;
+          width: 100%;
+          margin: 8px 0;
+          padding: 10px;
+          border-radius: 8px;
+          border: 1px solid #333;
+          background: #000;
+          color: white;
+        }
+        form input:focus {
+          border-color: #e62b1e;
+          outline: none;
+        }
+        .wheel-wrapper {
+          position: relative;
+          margin: 20px auto;
+          width: 350px;
+          height: 350px;
+        }
+        .pointer {
+          position: absolute;
+          top: -25px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 28px;
+          font-weight: bold;
+          color: #e62b1e;
+        }
+        .close {
+          position: absolute;
+          top: 12px;
+          right: 15px;
+          background: transparent;
+          border: none;
+          font-size: 22px;
+          color: #888;
+          cursor: pointer;
+        }
+        .close:hover {
           color: #fff;
         }
-        .logo-box {
-          position: relative;
-          width: 160px;
-          height: 160px;
-          margin-bottom: 16px;
-          border-radius: 20px;
-          overflow: hidden;
-          background: #fafafa;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
         }
-        .logo-img {
-          object-fit: contain;
-        }
-        .sponsor-card.visible .logo-img {
-          animation: bounce 1s infinite alternate;
-        }
-        .desc {
-          font-size: 14px;
-          color: #444;
-          line-height: 1.6;
-        }
-        @keyframes bounce {
-          from { transform: translateY(0); }
-          to { transform: translateY(-6px); }
+        @keyframes scaleIn {
+          from {
+            transform: scale(0.9);
+            opacity: 0.8;
+          }
+          to {
+            transform: scale(1);
+            opacity: 1;
+          }
         }
       `}</style>
     </div>

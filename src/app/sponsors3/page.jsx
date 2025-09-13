@@ -2,14 +2,36 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import SponsorGameCard from "../../components/SponsorGameCard";
+import SponsorGameCard from "../components/SponsorGameCard";
 
 // بيانات الرعاة (يمكن نقلها لاحقاً إلى ملف JSON مستقل)
 const sponsors = [
   // الترتيب المطلوب أولاً
   { name: "Special Courses Academy", tier: "ذهبي", logo: "/images/Real-Sponsors/Special%20Courses%20Academy.jpg", description: `أكاديمية تقدم كورسات لغات ومهنية بأسلوب عملي يوصل الطلبة والخريجين لسوق العمل (لغات – جرافيك – برمجة – موارد بشرية – مهارات شخصية).`, url: "https://specialcourse.io", social: { website: "https://specialcourse.io", facebook: "https://www.facebook.com/share/1BFAzfznZe/", instagram: "https://www.instagram.com/specialcourse_?igsh=bjRuZmNwY2tyMGE0", youtube: "https://youtube.com/@special-course?si=mqhtSy6qX59dfcT1", whatsapp: "https://wa.me/201556289284" } },
-  { name: "Digital Knights Academy", tier: "بلاتينيوم", logo: "/images/Real-Sponsors/digital.jpg",game:<SponsorGameCard />, description: `Digital Knights Academy هي مؤسسة تعليمية متخصصة في إعداد وتأهيل الشباب لسوق العمل في مجالات التكنولوجيا الحديثة والبرمجة. تأسست الأكاديمية عام 2023 بهدف سد الفجوة بين الدراسة الأكاديمية والمهارات المطلوبة فعليًا في بيئة العمل.تقدم الأكاديمية برامج تدريبية عملية في مجالات مثل Web Development، Flutter، Cyber Security، UI/UX، Artificial Intelligence وغيرها، إلى جانب شهادات معتمدة وفرص تدريب داخل كبرى الشركات. من خلال رؤيتها ورسالتها، تسعى Digital Knights Academy إلى تمكين جيل جديد من المبرمجين ورواد التكنولوجيا القادرين على المنافسة محليًا وعالميًا.`, social: { website: "https://digitalknightacadmey.com/", facebook: "https://www.facebook.com/profile.php?id=61565603534961", whatsapp: "https://wa.me/+20 10 22893997" } },
-  { name: "Qudraat", tier: "استراتيجي", logo: "/images/Real-Sponsors/Qudraat.jpg", description: `قدرات ليست مجرد شركة بل منصة تبدأ من سؤال "من أنا؟" وتساعد الشباب على استكشاف إمكانياتهم وتنمية مهاراتهم في مجالات متعددة. رؤيتنا: أن يكون الشباب قادرًا على مواكبة سوق العمل بمهارات حقيقية. نرى في الشباب بذرة تحتاج الثقة والعلم والفرص.`, url: "https://qudraat.com", social: { website: "https://qudraat.com", facebook: "https://www.facebook.com/share/1EL9kryogf/?mibextid=wwXIfr" } },
+{
+    name: "Digital Knights Academy",
+    tier: "بلاتينيوم",
+    logo: "/images/Real-Sponsors/digital.jpg",
+    game: {
+      name: "Digital Knights Academy",
+      colors: { primary: "#0f172a", secondary: "#ff2d2d" },
+      prizes: [
+        "خصم 30% على برنامج تدريبي",
+        "Mug + T-shirt",
+        "منحة كاملة",
+        "دفتر + قلم أنيق",
+        "Webinar حصري مجاني",
+      ],
+      description: "إلعب معانا واكسب جوائز من Digital Knights Academy 🎓",
+      logo: "/images/Real-Sponsors/digital.jpg",
+    },
+    description: `Digital Knights Academy هي مؤسسة تعليمية متخصصة في إعداد وتأهيل الشباب لسوق العمل في مجالات التكنولوجيا الحديثة والبرمجة. تأسست الأكاديمية عام 2023 بهدف سد الفجوة بين الدراسة الأكاديمية والمهارات المطلوبة فعليًا في بيئة العمل. تقدم الأكاديمية برامج تدريبية عملية في مجالات مثل Web Development، Flutter، Cyber Security، UI/UX، Artificial Intelligence وغيرها، إلى جانب شهادات معتمدة وفرص تدريب داخل كبرى الشركات. من خلال رؤيتها ورسالتها، تسعى Digital Knights Academy إلى تمكين جيل جديد من المبرمجين ورواد التكنولوجيا القادرين على المنافسة محليًا وعالميًا.`,
+    social: {
+      website: "https://digitalknightacadmey.com/",
+      facebook: "https://www.facebook.com/profile.php?id=61565603534961",
+      whatsapp: "https://wa.me/+201022893997",
+    },
+  },  { name: "Qudraat", tier: "استراتيجي", logo: "/images/Real-Sponsors/Qudraat.jpg", description: `قدرات ليست مجرد شركة بل منصة تبدأ من سؤال "من أنا؟" وتساعد الشباب على استكشاف إمكانياتهم وتنمية مهاراتهم في مجالات متعددة. رؤيتنا: أن يكون الشباب قادرًا على مواكبة سوق العمل بمهارات حقيقية. نرى في الشباب بذرة تحتاج الثقة والعلم والفرص.`, url: "https://qudraat.com", social: { website: "https://qudraat.com", facebook: "https://www.facebook.com/share/1EL9kryogf/?mibextid=wwXIfr" } },
   { name: "QR Tag", tier: "ذهبي", logo: "/images/Real-Sponsors/QR%20Tag.jpg", description: `شركة متخصصة في تقديم حلول QR وNFC مبتكرة لمشاركة المعلومات والروابط والملفات بسهولة فائقة، بدون الحاجة إلى تطبيقات معقدة أو بطاقات ورقية. رؤيتهم أن يكونوا الخيار الأول للأفراد والشركات في الشرق الأوسط للتواصل الرقمي بطرق عصرية وصديقة للبيئة. منتجاتهم تشمل KeyTag NFC، كروت أعمال ذكية، وحلول مخصصة للشركات.`, url: "https://www.qrtagapp.com", social: { website: "https://www.qrtagapp.com", facebook: "https://www.facebook.com/share/1BAXVmK4rs/?mibextid=wwXIfr" } },
   { name: "Tseppas", tier: "داعم", logo: "/images/tseppas.png", description: `اسم عريق في عالم الحلويات الشرقية والغربية، يجمع بين الجودة والطعم المميز.`, social: {website: "https://tseppas.com", facebook: "https://www.facebook.com/TseppasMGEgypt/"} },
   { name: "LinkOut", tier: "داعم", logo: "/images/Real-Sponsors/LinkOut.jpg", description: `شركة ناشئة مصرية متخصصة في تقديم حلول ذكية وسريعة لمشاركة المعلومات عبر QR وNFC. بتركز على ربط الأفراد والشركات مع بعض بشكل عصري وسهل.`, url: "https://linkout.odoo.com", social: { website: "https://linkout.odoo.com", facebook: "https://www.facebook.com/LinkOut20" } },
@@ -33,6 +55,10 @@ export default function SponsorsPage() {
   const [visible, setVisible] = useState([]);
   const [activeTier, setActiveTier] = useState('الكل');
   const [q, setQ] = useState('');
+  const [activeGameSponsor, setActiveGameSponsor] = useState(null);
+  const wheelRef = useRef(null);
+  const [spinning, setSpinning] = useState(false);
+  const [result, setResult] = useState(null);
 
   // Helper: escape regex special chars
   const escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -97,6 +123,51 @@ export default function SponsorsPage() {
     return () => observer.disconnect();
   }, []);
 
+  // spin function for wheel modal
+  const spinWheel = (game) => {
+    if (!wheelRef.current || spinning) return;
+    const prizes = game.prizes || [];
+    if (!prizes.length) return;
+    setResult(null);
+    setSpinning(true);
+
+    const n = prizes.length;
+    const segAngle = 360 / n;
+    const targetIndex = Math.floor(Math.random() * n);
+
+    const spins = 6 + Math.floor(Math.random() * 3); // number of full rotations
+    const randomOffset = (Math.random() - 0.5) * segAngle * 0.6; // small offset so not always centered
+    // compute degrees so that chosen segment ends at top pointer (0deg)
+    const finalDeg = 360 * spins + (360 - (targetIndex * segAngle + segAngle / 2)) + randomOffset;
+
+    const el = wheelRef.current;
+    el.style.transition = "transform 4s cubic-bezier(.33,1,.68,1)";
+    el.style.transform = `rotate(${finalDeg}deg)`;
+
+    const onEnd = () => {
+      el.style.transition = "";
+      // set to resting angle mod 360 for future spins
+      const resting = finalDeg % 360;
+      el.style.transform = `rotate(${resting}deg)`;
+      setSpinning(false);
+      setResult(prizes[targetIndex]);
+      el.removeEventListener("transitionend", onEnd);
+    };
+
+    el.addEventListener("transitionend", onEnd);
+  };
+
+  // clean modal (on close)
+  const closeModal = () => {
+    setActiveGameSponsor(null);
+    setResult(null);
+    setSpinning(false);
+    if (wheelRef.current) {
+      wheelRef.current.style.transition = "";
+      wheelRef.current.style.transform = `rotate(0deg)`;
+    }
+  };
+
   return (
     <main dir="rtl" className="sponsors-page-wrapper">
       <div className="inner">
@@ -143,21 +214,45 @@ export default function SponsorsPage() {
                     sizes="(max-width:768px) 140px, 200px"
                   />
                 </div>
-                <div className="link-row">
-                  {/* Simple buttons instead of complex icons */}
+                 <div className="link-row">
                   {sponsor.social && (
                     <div className="social-buttons">
-                      {(sponsor.game) && (
-                        <a 
-                          href={sponsor.game} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="social-btn website-btn"
-                          aria-label={`لعبة ${sponsor.name}`}
-                        >
-                          العب الان
-                        </a>
-                      )}
+ {/** زرار إلعب الآن - يظهر بس لو عند الراعي لعبة */}
+{sponsor.game && (
+  <button
+    onClick={() => setActiveGameSponsor(sponsor)}
+    className="px-6 py-2 font-semibold text-white transition duration-200 bg-red-600 rounded-lg shadow-md hover:bg-red-700"
+  >
+   إلعب الآن
+  </button>
+)}
+
+{/** المودال بتاع اللعبة */}
+{activeGameSponsor?.game && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
+    <div className="relative w-full max-w-lg p-6 bg-white shadow-2xl rounded-2xl">
+      {/* زرار إغلاق */}
+      <button
+        onClick={() => setActiveGameSponsor(null)}
+        className="absolute text-gray-500 top-3 right-3 hover:text-black"
+      >
+        ✖
+      </button>
+
+      <SponsorGameCard
+        name={activeGameSponsor.game.name}
+        colors={activeGameSponsor.game.colors}
+        prizes={activeGameSponsor.game.prizes}
+        description={activeGameSponsor.game.description}
+        logo={activeGameSponsor.game.logo}
+      />
+    </div>
+  </div>
+)}
+
+
+
+
                       {(sponsor.social.website || sponsor.url) && (
                         <a 
                           href={sponsor.social.website || sponsor.url} 
@@ -180,7 +275,7 @@ export default function SponsorsPage() {
                           فيسبوك
                         </a>
                       )}
-                      {(sponsor.social.youtube) && (
+                      {sponsor.social.youtube && (
                         <a 
                           href={sponsor.social.youtube} 
                           target="_blank" 
@@ -191,7 +286,7 @@ export default function SponsorsPage() {
                           يوتيوب
                         </a>
                       )}
-                      {(sponsor.social.whatsapp) && (
+                      {sponsor.social.whatsapp && (
                         <a 
                           href={sponsor.social.whatsapp} 
                           target="_blank" 
@@ -202,7 +297,7 @@ export default function SponsorsPage() {
                           واتساب
                         </a>
                       )}
-                      {(sponsor.social.instagram) && (
+                      {sponsor.social.instagram && (
                         <a 
                           href={sponsor.social.instagram} 
                           target="_blank" 
@@ -213,7 +308,7 @@ export default function SponsorsPage() {
                           إنستجرام
                         </a>
                       )}
-                      {(sponsor.social.linkedin) && (
+                      {sponsor.social.linkedin && (
                         <a 
                           href={sponsor.social.linkedin} 
                           target="_blank" 
