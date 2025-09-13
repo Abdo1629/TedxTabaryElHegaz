@@ -53,7 +53,7 @@ const EventsSection = () => {
                 <div className="event-content">
                   <h3 className="event-title">{event.name}</h3>
                   <h4 className="season">{event.season}</h4>
-                  <p className={`event-state ${event.id === 3 ? "soon" : ""}`}>{event.status}</p>
+                  <p className={`event-state ${event.id === 3 ? "ended" : ""}`}>{event.status}</p>
                   <div className="event-meta">
                     <span className="event-date">{event.date}</span>
                   </div>
