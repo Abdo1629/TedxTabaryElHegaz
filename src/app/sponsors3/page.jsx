@@ -237,6 +237,29 @@ export default function SponsorsPage() {
   const wheelRef = useRef(null);
   const [spinning, setSpinning] = useState(false);
   const [result, setResult] = useState(null);
+  const [playedMap, setPlayedMap] = useState({});
+
+  const keyFor = (sName) => {
+    const slug = String(sName || '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+    return `tedx_sponsor_played_${slug}`;
+  };
+
+  useEffect(() => {
+    // Build a quick map of which sponsors were played to tweak UI badges client-side
+    try {
+      const m = {};
+      sponsors.forEach(s => {
+        const k = keyFor(s.game?.name || s.name);
+        if (typeof window !== 'undefined' && localStorage.getItem(k)) m[k] = true;
+      });
+      setPlayedMap(m);
+    } catch {}
+  }, []);
 
   // Helper: escape regex special chars
   const escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -382,6 +405,11 @@ export default function SponsorsPage() {
                   <h2 className="sponsor-name">{sponsor.name}</h2>
                   <span className="badge tier" style={{ background: tierMeta[sponsor.tier]?.gradient }}>{sponsor.tier}</span>
                   <span className="badge order-badge">#{index + 1}</span>
+                  {!!sponsor.game && playedMap[keyFor(sponsor.game?.name || sponsor.name)] && (
+                    <span className="badge" title="لعبت هذه اللعبة">
+                      ✓ تم اللعب
+                    </span>
+                  )}
                 </div>
                 <div className="logo-box">
                   <Image

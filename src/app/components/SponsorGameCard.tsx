@@ -35,6 +35,8 @@ export default function SponsorGameCard({
   const [rotation, setRotation] = useState(0);
   // Mount flag to safely use "document" and portal on the client only
   const [mounted, setMounted] = useState(false);
+  // Local lock: user can play ONCE per sponsor (stored in localStorage)
+  const [hasPlayed, setHasPlayed] = useState(false);
   const [player, setPlayer] = useState<Player>({ name: "", phone: "", email: "" });
   const [errors, setErrors] = useState<{ name?: string; phone?: string; email?: string }>({});
   const [touched, setTouched] = useState<{ name: boolean; phone: boolean; email: boolean }>({ name: false, phone: false, email: false });
@@ -57,6 +59,29 @@ export default function SponsorGameCard({
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // derive a stable storage key per-sponsor
+  const sponsorStorageKey = (() => {
+    const slug = name
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '') // strip diacritics
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+    return `tedx_sponsor_played_${slug}`;
+  })();
+
+  // on mount, read localStorage to know if the user already played this sponsor
+  useEffect(() => {
+    if (!mounted) return;
+    try {
+      const raw = localStorage.getItem(sponsorStorageKey);
+      if (raw) {
+        setHasPlayed(true);
+      }
+    } catch {}
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mounted]);
 
   useEffect(() => {
     if (!mounted) return;
@@ -123,6 +148,8 @@ export default function SponsorGameCard({
   };
 
   const spin = () => {
+    // One-time lock: if user already played, block immediately
+    if (hasPlayed) return;
     if (spinning) return;
     setSpinning(true);
     setResult(null);
@@ -132,6 +159,15 @@ export default function SponsorGameCard({
       spinAudioRef.current.currentTime = 0;
       spinAudioRef.current.play();
     }
+
+    // Mark as played at spin start so they can't retry (even if they close early)
+    try {
+      localStorage.setItem(
+        sponsorStorageKey,
+        JSON.stringify({ at: Date.now(), sponsor: name })
+      );
+      setHasPlayed(true);
+    } catch {}
 
     // اختيار الجائزة الفائزة
     const winnerIndex = Math.floor(Math.random() * prizes.length);
@@ -194,6 +230,13 @@ export default function SponsorGameCard({
             userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : undefined,
           }),
         }).catch(() => { });
+        // also update stored record with prize (best-effort)
+        try {
+          const prev = localStorage.getItem(sponsorStorageKey);
+          const parsed = prev ? JSON.parse(prev) : {};
+          parsed.prize = prizes[winnerIndex];
+          localStorage.setItem(sponsorStorageKey, JSON.stringify(parsed));
+        } catch {}
       } catch { }
     }, 4000);
   };
@@ -272,11 +315,24 @@ export default function SponsorGameCard({
       <h2 className="text-lg font-bold">{name}</h2>
       <p>{description}</p>
       <button
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          if (hasPlayed) {
+            // Friendly notice
+            alert("لقد لعبت بالفعل مع هذا الراعي. شكراً لمشاركتك!");
+            return;
+          }
+          setOpen(true);
+        }}
         className="game-trigger-btn"
+        disabled={hasPlayed}
       >
-        🎰 إلعب الآن
+        {hasPlayed ? "✓ لعبت بالفعل" : "🎰 إلعب الآن"}
       </button>
+      {hasPlayed && (
+        <div style={{ marginTop: 8, color: '#777', fontSize: 12 }} className="arabic-content">
+          مسموح مرة واحدة لكل راعٍ.
+        </div>
+      )}
       {mounted && open && createPortal(
         <div className="modal">
           <div className="modal-content">
@@ -289,8 +345,14 @@ export default function SponsorGameCard({
                 <p className="text-sm text-gray-300">
                   هتلعب مرة واحدة بس. لازم تدخل بياناتك قبل اللعب.
                 </p>
+                {hasPlayed && (
+                  <p className="text-sm" style={{color:'#fca5a5', marginTop: 6}}>
+                    لقد لعبت بالفعل مع هذا الراعي.
+                  </p>
+                )}
                 <button
                   onClick={() => {
+                    if (hasPlayed) return; // extra guard
                     setStep("form");
                     setErrors({});
                     setTouched({ name: false, phone: false, email: false });
@@ -308,14 +370,15 @@ export default function SponsorGameCard({
                     setPhoneDisplay(formatGroups(digits));
                   }}
                   className="start-game-btn"
+                  disabled={hasPlayed}
                 >
-                  🚀 ابدأ اللعب
+                  {hasPlayed ? 'تم اللعب' : '🚀 ابدأ اللعب'}
                 </button>
               </div>
             )}
 
             {/* فورم */}
-            {step === "form" && (
+            {step === "form" && !hasPlayed && (
               <form onSubmit={handleFormSubmit} className="space-y-4" noValidate>
                 <h3 className="mb-2 text-lg font-bold text-red-600">
                   📝 سجل بياناتك
@@ -451,6 +514,12 @@ export default function SponsorGameCard({
                   📝 سجل وادخل اللعبة
                 </button>
               </form>
+            )}
+            {step === "form" && hasPlayed && (
+              <div className="space-y-3">
+                <h3 className="mb-2 text-lg font-bold text-red-600">تمت المحاولة</h3>
+                <p className="text-sm" style={{color:'#ddd'}}>لقد لعبت بالفعل مع هذا الراعي. نراك في ألعاب الرعاة الآخرين 🙌</p>
+              </div>
             )}
 
             {/* عجلة */}
@@ -596,10 +665,10 @@ export default function SponsorGameCard({
                 </div>
                 <button
                   onClick={spin}
-                  disabled={spinning}
+                  disabled={spinning || hasPlayed}
                   className="spin-btn"
                 >
-                  {spinning ? "🎰 بتلف..." : "🎯 لف العجلة"}
+                  {spinning ? "🎰 بتلف..." : hasPlayed ? "تم اللعب" : "🎯 لف العجلة"}
                 </button>
                 {result && (
                   <div className="result-container">
@@ -621,13 +690,10 @@ export default function SponsorGameCard({
                         </a>
                       )}
                       <button
-                        onClick={() => {
-                          setResult(null);
-                          setRotation(0);
-                        }}
+                        onClick={() => { setOpen(false); setShowConfetti(false); }}
                         className="play-again-btn"
                       >
-                        🔄 العب تاني
+                        ✖ إغلاق
                       </button>
                     </div>
                   </div>
@@ -681,6 +747,14 @@ export default function SponsorGameCard({
         .game-trigger-btn:active {
           transform: translateY(-1px);
           box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+        }
+        .game-trigger-btn:disabled {
+          opacity: .7;
+          cursor: not-allowed;
+          background: #8f8f8f;
+          box-shadow: none;
+          transform: none;
+          text-shadow: none;
         }
         
         .modal {
