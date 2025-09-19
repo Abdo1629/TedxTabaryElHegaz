@@ -7,7 +7,27 @@ import SponsorGameCard from "../components/SponsorGameCard";
 // بيانات الرعاة (يمكن نقلها لاحقاً إلى ملف JSON مستقل)
 const sponsors = [
   // الترتيب المطلوب أولاً
-  { name: "Special Courses Academy", tier: "ذهبي", logo: "/images/Real-Sponsors/Special%20Courses%20Academy.jpg", description: `أكاديمية تقدم كورسات لغات ومهنية بأسلوب عملي يوصل الطلبة والخريجين لسوق العمل (لغات – جرافيك – برمجة – موارد بشرية – مهارات شخصية).`, url: "https://specialcourse.io", social: { website: "https://specialcourse.io", facebook: "https://www.facebook.com/share/1BFAzfznZe/", instagram: "https://www.instagram.com/specialcourse_?igsh=bjRuZmNwY2tyMGE0", youtube: "https://youtube.com/@special-course?si=mqhtSy6qX59dfcT1", whatsapp: "https://wa.me/201556289284" } },
+  { 
+    name: "Special Courses Academy", 
+    tier: "ذهبي", 
+    logo: "/images/Real-Sponsors/Special%20Courses%20Academy.jpg", 
+    game: {
+      name: "Special Courses Academy",
+      colors: { primary: "#4A90E2", secondary: "#2E5BBA" },
+      prizes: [
+        "خصم 50% على أي كورس",
+        "كورس مجاني كامل",
+        "شهادة معتمدة",
+        "استشارة مهنية مجانية",
+        "مواد تعليمية حصرية",
+      ],
+      description: "إلعب معانا واكسب جوائز من Special Courses Academy 🎓",
+      logo: "/images/Real-Sponsors/Special%20Courses%20Academy.jpg",
+    },
+    description: `أكاديمية تقدم كورسات لغات ومهنية بأسلوب عملي يوصل الطلبة والخريجين لسوق العمل (لغات – جرافيك – برمجة – موارد بشرية – مهارات شخصية).`,
+    url: "https://specialcourse.io", 
+    social: { website: "https://specialcourse.io", facebook: "https://www.facebook.com/share/1BFAzfznZe/", instagram: "https://www.instagram.com/specialcourse_?igsh=bjRuZmNwY2tyMGE0", youtube: "https://youtube.com/@special-course?si=mqhtSy6qX59dfcT1", whatsapp: "https://wa.me/201556289284" } 
+  },
 {
     name: "Digital Knights Academy",
     tier: "بلاتينيوم",
@@ -31,15 +51,173 @@ const sponsors = [
       facebook: "https://www.facebook.com/profile.php?id=61565603534961",
       whatsapp: "https://wa.me/+201022893997",
     },
-  },  { name: "Qudraat", tier: "استراتيجي", logo: "/images/Real-Sponsors/Qudraat.jpg", description: `قدرات ليست مجرد شركة بل منصة تبدأ من سؤال "من أنا؟" وتساعد الشباب على استكشاف إمكانياتهم وتنمية مهاراتهم في مجالات متعددة. رؤيتنا: أن يكون الشباب قادرًا على مواكبة سوق العمل بمهارات حقيقية. نرى في الشباب بذرة تحتاج الثقة والعلم والفرص.`, url: "https://qudraat.com", social: { website: "https://qudraat.com", facebook: "https://www.facebook.com/share/1EL9kryogf/?mibextid=wwXIfr" } },
-  { name: "QR Tag", tier: "ذهبي", logo: "/images/Real-Sponsors/QR%20Tag.jpg", description: `شركة متخصصة في تقديم حلول QR وNFC مبتكرة لمشاركة المعلومات والروابط والملفات بسهولة فائقة، بدون الحاجة إلى تطبيقات معقدة أو بطاقات ورقية. رؤيتهم أن يكونوا الخيار الأول للأفراد والشركات في الشرق الأوسط للتواصل الرقمي بطرق عصرية وصديقة للبيئة. منتجاتهم تشمل KeyTag NFC، كروت أعمال ذكية، وحلول مخصصة للشركات.`, url: "https://www.qrtagapp.com", social: { website: "https://www.qrtagapp.com", facebook: "https://www.facebook.com/share/1BAXVmK4rs/?mibextid=wwXIfr" } },
-  { name: "Tseppas", tier: "داعم", logo: "/images/tseppas.png", description: `اسم عريق في عالم الحلويات الشرقية والغربية، يجمع بين الجودة والطعم المميز.`, social: {website: "https://tseppas.com", facebook: "https://www.facebook.com/TseppasMGEgypt/"} },
-  { name: "LinkOut", tier: "داعم", logo: "/images/Real-Sponsors/LinkOut.jpg", description: `شركة ناشئة مصرية متخصصة في تقديم حلول ذكية وسريعة لمشاركة المعلومات عبر QR وNFC. بتركز على ربط الأفراد والشركات مع بعض بشكل عصري وسهل.`, url: "https://linkout.odoo.com", social: { website: "https://linkout.odoo.com", facebook: "https://www.facebook.com/LinkOut20" } },
-  { name: "English Capsules", tier: "داعم", logo: "/images/Real-Sponsors/English%20Capsules.jpg", description: `المؤسسة التعليمية الرائدة منذ 2015، ساهمت في تمكين أكثر من 100,000 طالب من تطوير مهاراتهم اللغوية والمهنية.`, url: "http://englishcapsules.com", social: { website: "http://englishcapsules.com", facebook: "https://www.facebook.com/English.Capsules" } },
-  { name: "Apple Mechanic", tier: "داعم", logo: "/images/Real-Sponsors/Apple%20Mechanic.jpg", description: `Apple Mechanic هو مركز رائد ومتخصص في صيانة أجهزة أبل وأندرويد، تأسس عام 2010 لخدمة من يبحث عن الثقة والإتقان. خدمنا أكثر من 15,000 عميل ودرّبنا أكثر من 1,000 طالب. رؤيتنا أن نصبح المرجع الأول في مصر والشرق الأوسط لصيانة أجهزة أبل وتدريب الفنيين المحترفين. مهمتنا تقديم صيانة موثوقة وبرامج تدريب متخصصة. قيمنا: الثقة – الإتقان – الأمانة – المعرفة قوة – الابتكار.`, url: "https://www.facebook.com/AppleMechanic.eg", social: { facebook: "https://www.facebook.com/AppleMechanic.eg" } },
+  },  { 
+    name: "Qudraat", 
+    tier: "استراتيجي", 
+    logo: "/images/Real-Sponsors/Qudraat.jpg", 
+    game: {
+      name: "Qudraat",
+      colors: { primary: "#007BFF", secondary: "#28A745" },
+      prizes: [
+        "برنامج تدريبي مجاني",
+        "استشارة مهنية شخصية",
+        "خصم 40% على البرامج",
+        "ورشة عمل حصرية",
+        "شهادة تطوير ذاتي",
+      ],
+      description: "إلعب معانا واكسب جوائز من قدرات 🌟",
+      logo: "/images/Real-Sponsors/Qudraat.jpg",
+    },
+    description: `قدرات ليست مجرد شركة بل منصة تبدأ من سؤال "من أنا؟" وتساعد الشباب على استكشاف إمكانياتهم وتنمية مهاراتهم في مجالات متعددة. رؤيتنا: أن يكون الشباب قادرًا على مواكبة سوق العمل بمهارات حقيقية. نرى في الشباب بذرة تحتاج الثقة والعلم والفرص.`, 
+    url: "https://qudraat.com", 
+    social: { website: "https://qudraat.com", facebook: "https://www.facebook.com/share/1EL9kryogf/?mibextid=wwXIfr" } 
+  },
+  { 
+    name: "QR Tag", 
+    tier: "ذهبي", 
+    logo: "/images/Real-Sponsors/QR%20Tag.jpg", 
+    game: {
+      name: "QR Tag",
+      colors: { primary: "#000000", secondary: "#333333" },
+      prizes: [
+        "KeyTag NFC مجاني",
+        "كرت أعمال ذكي",
+        "خصم 30% على المنتجات",
+        "حل QR مخصص",
+        "استشارة تقنية مجانية",
+      ],
+      description: "إلعب معانا واكسب جوائز من QR Tag 📱",
+      logo: "/images/Real-Sponsors/QR%20Tag.jpg",
+    },
+    description: `شركة متخصصة في تقديم حلول QR وNFC مبتكرة لمشاركة المعلومات والروابط والملفات بسهولة فائقة، بدون الحاجة إلى تطبيقات معقدة أو بطاقات ورقية. رؤيتهم أن يكونوا الخيار الأول للأفراد والشركات في الشرق الأوسط للتواصل الرقمي بطرق عصرية وصديقة للبيئة. منتجاتهم تشمل KeyTag NFC، كروت أعمال ذكية، وحلول مخصصة للشركات.`, 
+    url: "https://www.qrtagapp.com", 
+    social: { website: "https://www.qrtagapp.com", facebook: "https://www.facebook.com/share/1BAXVmK4rs/?mibextid=wwXIfr" } 
+  },
+  { 
+    name: "Tseppas", 
+    tier: "داعم", 
+    logo: "/images/tseppas.png", 
+    game: {
+      name: "Tseppas",
+      colors: { primary: "#00CED1", secondary: "#20B2AA" },
+      prizes: [
+        "بوكس حلويات مجاني",
+        "خصم 25% على الطلبات",
+        "كيك عيد ميلاد مجاني",
+        "عضوية VIP",
+        "حلويات مناسبات خاصة",
+      ],
+      description: "إلعب معانا واكسب حلويات شهية من Tseppas 🍰",
+      logo: "/images/tseppas.png",
+    },
+    description: `اسم عريق في عالم الحلويات الشرقية والغربية، يجمع بين الجودة والطعم المميز.`, 
+    social: {website: "https://tseppas.com", facebook: "https://www.facebook.com/TseppasMGEgypt/"} 
+  },
+  { 
+    name: "LinkOut", 
+    tier: "داعم", 
+    logo: "/images/Real-Sponsors/LinkOut.jpg", 
+    game: {
+      name: "LinkOut",
+      colors: { primary: "#FF6B35", secondary: "#F7931E" },
+      prizes: [
+        "حل NFC مخصص مجاني",
+        "خصم 35% على الخدمات",
+        "كرت ذكي شخصي",
+        "استشارة تقنية",
+        "تصميم QR احترافي",
+      ],
+      description: "إلعب معانا واكسب جوائز من LinkOut 🔗",
+      logo: "/images/Real-Sponsors/LinkOut.jpg",
+    },
+    description: `شركة ناشئة مصرية متخصصة في تقديم حلول ذكية وسريعة لمشاركة المعلومات عبر QR وNFC. بتركز على ربط الأفراد والشركات مع بعض بشكل عصري وسهل.`, 
+    url: "https://linkout.odoo.com", 
+    social: { website: "https://linkout.odoo.com", facebook: "https://www.facebook.com/LinkOut20" } 
+  },
+  { 
+    name: "English Capsules", 
+    tier: "داعم", 
+    logo: "/images/Real-Sponsors/English%20Capsules.jpg", 
+    game: {
+      name: "English Capsules",
+      colors: { primary: "#28A745", secondary: "#20C997" },
+      prizes: [
+        "كورس إنجليزي مجاني",
+        "خصم 45% على البرامج",
+        "جلسة محادثة مجانية",
+        "كتاب تعليمي مجاني",
+        "شهادة إتقان معتمدة",
+      ],
+      description: "إلعب معانا واكسب جوائز من English Capsules 🎓",
+      logo: "/images/Real-Sponsors/English%20Capsules.jpg",
+    },
+    description: `المؤسسة التعليمية الرائدة منذ 2015، ساهمت في تمكين أكثر من 100,000 طالب من تطوير مهاراتهم اللغوية والمهنية.`, 
+    url: "http://englishcapsules.com", 
+    social: { website: "http://englishcapsules.com", facebook: "https://www.facebook.com/English.Capsules" } 
+  },
+  { 
+    name: "Apple Mechanic", 
+    tier: "داعم", 
+    logo: "/images/Real-Sponsors/Apple%20Mechanic.jpg", 
+    game: {
+      name: "Apple Mechanic",
+      colors: { primary: "#007AFF", secondary: "#5856D6" },
+      prizes: [
+        "فحص مجاني للجهاز",
+        "خصم 30% على الصيانة",
+        "كورس صيانة أساسي",
+        "استشارة تقنية مجانية",
+        "قطع غيار بخصم خاص",
+      ],
+      description: "إلعب معانا واكسب جوائز من Apple Mechanic 🔧",
+      logo: "/images/Real-Sponsors/Apple%20Mechanic.jpg",
+    },
+    description: `Apple Mechanic هو مركز رائد ومتخصص في صيانة أجهزة أبل وأندرويد، تأسس عام 2010 لخدمة من يبحث عن الثقة والإتقان. خدمنا أكثر من 15,000 عميل ودرّبنا أكثر من 1,000 طالب. رؤيتنا أن نصبح المرجع الأول في مصر والشرق الأوسط لصيانة أجهزة أبل وتدريب الفنيين المحترفين. مهمتنا تقديم صيانة موثوقة وبرامج تدريب متخصصة. قيمنا: الثقة – الإتقان – الأمانة – المعرفة قوة – الابتكار.`, 
+    url: "https://www.facebook.com/AppleMechanic.eg", 
+    social: { facebook: "https://www.facebook.com/AppleMechanic.eg" } 
+  },
   // باقي الرعاة
-  { name: "Elavate Holding", tier: "ذهبي", logo: "/sponsors/elavate.png", description: `إيلافيت هولدنغ هي شركة متخصصة في تقديم حلول إدارة المشاريع، وتقديم نتائج بامتياز، بالإضافة إلى كونها مركز اتصال رئيسي متخصص في خدمة العملاء، التسويق عبر الهاتف والاستشارات التجارية. نحن ملتزمون بتزويد عملائنا بخدمات استثنائية من خلال توظيف أفضل الكفاءات وتبني أحدث الأساليب.`, url: "https://elavate.com", social: { linkedin: "https://www.linkedin.com/company/elevateholding" } },
-  { name: "Covix Care", tier: "ذهبي", logo: "/images/CovixCare.png", description: `علامة سعودية مبتكرة في العناية الشخصية والصحية، بمنتجات فعّالة وآمنة تركز على النظافة والعناية بالبشرة.`, social: { website: "http://englishcapsules.com", facebook: "https://www.facebook.com/English.Capsules" }},
+  { 
+    name: "Elavate Holding", 
+    tier: "ذهبي", 
+    logo: "/sponsors/elavate.png", 
+    game: {
+      name: "Elavate Holding",
+      colors: { primary: "#6F42C1", secondary: "#9954CC" },
+      prizes: [
+        "استشارة إدارية مجانية",
+        "خصم 40% على الخدمات",
+        "تحليل مشروع مجاني",
+        "ورشة عمل في الإدارة",
+        "جلسة توجيه مهني",
+      ],
+      description: "إلعب معانا واكسب جوائز من Elavate Holding 💼",
+      logo: "/sponsors/elavate.png",
+    },
+    description: `إيلافيت هولدنغ هي شركة متخصصة في تقديم حلول إدارة المشاريع، وتقديم نتائج بامتياز، بالإضافة إلى كونها مركز اتصال رئيسي متخصص في خدمة العملاء، التسويق عبر الهاتف والاستشارات التجارية. نحن ملتزمون بتزويد عملائنا بخدمات استثنائية من خلال توظيف أفضل الكفاءات وتبني أحدث الأساليب.`, 
+    url: "https://elavate.com", 
+    social: { linkedin: "https://www.linkedin.com/company/elevateholding" } 
+  },
+  { 
+    name: "Covix Care", 
+    tier: "ذهبي", 
+    logo: "/images/CovixCare.png", 
+    game: {
+      name: "Covix Care",
+      colors: { primary: "#E91E63", secondary: "#FF69B4" },
+      prizes: [
+        "مجموعة منتجات مجانية",
+        "خصم 35% على كل المنتجات",
+        "استشارة جمالية مجانية",
+        "كيت عناية شخصية",
+        "عضوية VIP للخصومات",
+      ],
+      description: "إلعب معانا واكسب منتجات العناية من Covix Care 💄",
+      logo: "/images/CovixCare.png",
+    },
+    description: `علامة سعودية مبتكرة في العناية الشخصية والصحية، بمنتجات فعّالة وآمنة تركز على النظافة والعناية بالبشرة.`, 
+    social: { website: "http://englishcapsules.com", facebook: "https://www.facebook.com/English.Capsules" }
+  },
 ];
 
 const tierMeta = {
@@ -219,34 +397,26 @@ export default function SponsorsPage() {
                     <div className="social-buttons">
  {/** زرار إلعب الآن - يظهر بس لو عند الراعي لعبة */}
 {sponsor.game && (
-  <button
-    onClick={() => setActiveGameSponsor(sponsor)}
-    className="px-6 py-2 font-semibold text-white transition duration-200 bg-red-600 rounded-lg shadow-md hover:bg-red-700"
-  >
-   إلعب الآن
-  </button>
-)}
-
-{/** المودال بتاع اللعبة */}
-{activeGameSponsor?.game && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
-    <div className="relative w-full max-w-lg p-6 bg-white shadow-2xl rounded-2xl">
-      {/* زرار إغلاق */}
-      <button
-        onClick={() => setActiveGameSponsor(null)}
-        className="absolute text-gray-500 top-3 right-3 hover:text-black"
-      >
-        ✖
-      </button>
-
-      <SponsorGameCard
-        name={activeGameSponsor.game.name}
-        colors={activeGameSponsor.game.colors}
-        prizes={activeGameSponsor.game.prizes}
-        description={activeGameSponsor.game.description}
-        logo={activeGameSponsor.game.logo}
-      />
-    </div>
+  <div className="mt-4">
+    <SponsorGameCard
+      name={sponsor.game.name}
+      prizes={sponsor.game.prizes}
+      description={sponsor.game.description}
+      logo={sponsor.game.logo}
+      colors={sponsor.game.colors}
+      cta={{
+        label: "زور موقعنا",
+        url:
+          sponsor.social?.website ||
+          sponsor.url ||
+          sponsor.social?.facebook ||
+          sponsor.social?.instagram ||
+          sponsor.social?.linkedin ||
+          sponsor.social?.youtube ||
+          sponsor.social?.whatsapp ||
+          "#",
+      }}
+    />
   </div>
 )}
 
