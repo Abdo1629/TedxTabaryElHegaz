@@ -33,7 +33,8 @@ export default function SponsorsSection() {
         "/images/spon4.jpg",
         "/images/spon5.jpg",
         "/images/spon6.jpg",
-        "/images/spon7.jpg"
+        "/images/spon7.jpg",
+        "/images/Real-Sponsors/DigitalWeb.jpg"
     ];
 
     useEffect(() => {
