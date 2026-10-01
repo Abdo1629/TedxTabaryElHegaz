@@ -19,6 +19,7 @@ The website was designed as a complete digital experience for the TEDx event, wi
 - Custom visual design
 - Reusable React components
 - Responsive layouts for mobile and desktop
+- Analytics integration
 
 ## Tech Stack
 
@@ -34,7 +35,17 @@ The website was designed as a complete digital experience for the TEDx event, wi
 
 Designed and developed the website experience, implementing the responsive UI, reusable components, event content structure, and interactive elements.
 
+## Architecture
+
+Built with Next.js and reusable React components, with responsive layouts designed for both desktop and mobile experiences.
+
 ## Status
 
 Completed event project.
 
+## Local Development
+
+npm install
+npm run dev
+
+Then open http://localhost:3000.
